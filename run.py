@@ -1,0 +1,20 @@
+import os
+
+from lensguide.app import app
+
+
+def ssl_context():
+    """HTTPS when a cert has been generated (scripts/gen_cert.sh) or ad-hoc requested."""
+    if os.path.exists("certs/cert.pem") and os.path.exists("certs/key.pem"):
+        return ("certs/cert.pem", "certs/key.pem")
+    if os.environ.get("SSL_ADHOC"):
+        return "adhoc"
+    return None
+
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 8000))
+    host = os.environ.get("HOST", "0.0.0.0")
+    ssl = ssl_context()
+    print(f"LensGuide running at http{'s' if ssl else ''}://{host}:{port}")
+    app.run(host=host, port=port, debug=False, ssl_context=ssl)

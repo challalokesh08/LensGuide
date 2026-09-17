@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<meta name="theme-color" content="#0b1220">
+<title>LensGuide</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <span class="logo">◉</span>
+    <span class="brand-name">LensGuide</span>
+    <span id="provider-badge" class="provider">…</span>
+  </div>
+  <label class="switch" title="Offline demo mode">
+    <input type="checkbox" id="offline-toggle" onchange="toggleOffline()">
+    <span class="slider"></span>
+    <span class="switch-label">Offline</span>
+  </label>
+</header>
+
+<nav class="tabs">
+  <button class="tab active" id="tab-snap" data-tab="snap">Snap</button>
+  <button class="tab" id="tab-translate" data-tab="translate">Translate</button>
+  <button class="tab" id="tab-browse" data-tab="browse">Explore</button>
+</nav>
+
+<main>
+  <!-- ============ SNAP ============ -->
+  <section id="view-snap" class="view active">
+    <div id="camera-box" class="camera-box">
+      <video id="camera" autoplay playsinline muted></video>
+      <div id="camera-off" class="camera-off" hidden>
+        <p class="off-title">Camera unavailable</p>
+        <p class="off-sub">On LAN over plain HTTP the camera is blocked by the browser.
+          Use <strong>HTTPS</strong> (see README) or upload a photo instead.</p>
+      </div>
+    </div>
+    <div class="snap-actions">
+      <button id="btn-upload" class="btn btn-ghost" onclick="pickUpload()">Upload</button>
+      <input type="file" id="file-input" accept="image/*" capture="environment" hidden>
+      <button id="btn-snap" class="btn btn-primary btn-round" onclick="snap()">Snap</button>
+      <button id="btn-identify" class="btn btn-accent" onclick="identify()" disabled>Identify</button>
+    </div>
+
+    <div id="result-card" hidden></div>
+  </section>
+
+  <!-- ============ TRANSLATE ============ -->
+  <section id="view-translate" class="view">
+    <div class="panel">
+      <h2>Sign &amp; menu translation</h2>
+      <p class="hint">Point at a sign or menu, or paste the text you can't read. Output to English.</p>
+      <div class="translate-controls">
+        <input type="file" id="tr-file" accept="image/*" capture="environment" hidden>
+        <button class="btn btn-ghost" onclick="document.getElementById('tr-file').click()">From image</button>
+        <span id="tr-img-name" class="chip" hidden></span>
+      </div>
+      <textarea id="tr-text" rows="4" placeholder="…or paste sign text here"></textarea>
+      <button id="btn-translate" class="btn btn-accent" onclick="translate()">Translate</button>
+      <div id="tr-result" hidden></div>
+    </div>
+  </section>
+
+  <!-- ============ EXPLORE ============ -->
+  <section id="view-browse" class="view">
+    <div class="panel">
+      <h2>Pick a place</h2>
+      <p class="hint">Offline browse mode — every place served straight from the database.</p>
+      <select id="poi-select" class="select" onchange="loadPoiFromSelect()"></select>
+      <div id="browse-card" hidden></div>
+    </div>
+  </section>
+</main>
+
+<!-- Nearby sheet -->
+<div id="nearby-sheet" class="sheet" hidden>
+  <div class="sheet-head">
+    <div>
+      <h3>Nearby</h3>
+      <span id="nearby-context" class="sub"></span>
+    </div>
+    <button class="close" onclick="closeSheet('nearby-sheet')">×</button>
+  </div>
+  <div class="mode-tabs">
+    <button class="mtab active" data-mode="best" onclick="loadNearby('best')">Best</button>
+    <button class="mtab" data-mode="walk" onclick="loadNearby('walk')">Walk</button>
+    <button class="mtab" data-mode="cab" onclick="loadNearby('cab')">Cab</button>
+  </div>
+  <div id="nearby-list" class="sheet-body"></div>
+</div>
+
+<!-- Book / modal -->
+<div id="book-modal" class="sheet" hidden>
+  <div class="sheet-head">
+    <div><h3 id="book-title">Details</h3></div>
+    <button class="close" onclick="closeSheet('book-modal')">×</button>
+  </div>
+  <div id="book-body" class="sheet-body"></div>
+</div>
+
+<div id="toast" class="toast" hidden></div>
+<div id="loading" class="loading" hidden></div>
+
+<script src="app.js"></script>
+</body>
+</html>
