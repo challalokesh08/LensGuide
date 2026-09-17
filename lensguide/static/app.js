@@ -156,6 +156,7 @@ function renderMatchActions(m) {
   return `<div class="card-actions">
     <button class="btn btn-ghost" onclick="fetchNearest()">Nearby</button>
     <button class="btn btn-ghost" onclick="fetchBook()">Snap to Book</button>
+    <button class="btn btn-primary" onclick="startAR()">◉ AR View</button>
   </div>`;
 }
 
@@ -307,6 +308,68 @@ async function translate() {
   }
 }
 window.translate = translate;
+
+/* ---------- WebXR AR overlay (stretch goal) ---------- */
+let xrSession = null;
+
+window.startAR = startAR;
+async function startAR() {
+  if (!curPoiId) return toast("Recognise a POI first, then view it in AR.");
+  if (!navigator.xr) {
+    return fallbackAR("WebXR is not supported on this device");
+  }
+  let supported = false;
+  try {
+    supported = await navigator.xr.isSessionSupported("immersive-ar");
+  } catch (e) {
+    supported = false;
+  }
+  if (!supported) {
+    return fallbackAR("immersive-ar not supported on this device");
+  }
+  showLoading(true);
+  try {
+    const info = await api("/api/poi/" + curPoiId);
+    const fact = info.facts && info.facts[0] ? info.facts[0].fact_text : info.poi.description;
+    $("ar-name").textContent = info.poi.name;
+    $("ar-fact").textContent = fact;
+    $("ar-overlay").hidden = false;
+
+    xrSession = await navigator.xr.requestSession("immersive-ar", {
+      requiredFeatures: ["dom-overlay", "local"],
+      optionalFeatures: ["hit-test"],
+      domOverlay: { root: $("ar-overlay") },
+    });
+    xrSession.addEventListener("end", () => { exitAR(); });
+    // Keep a reference loop alive while active (some devices need an anim frame)
+    const tick = (time, frame) => {
+      if (!xrSession) return;
+      xrSession.requestAnimationFrame(tick);
+    };
+    xrSession.requestAnimationFrame(tick);
+  } catch (e) {
+    exitAR();
+    fallbackAR("AR could not start: " + (e.message || e.name));
+  } finally {
+    showLoading(false);
+  }
+}
+
+function fallbackAR(message) {
+  toast(message);
+  // 2D on-image overlay is the pre-tested non-AR path (design fallback).
+  if (curResult && curPoiId && !$("book-modal").hidden) return;
+  toast("AR unavailable — showing grounded info instead");
+}
+
+function exitAR() {
+  if (xrSession) {
+    try { xrSession.end(); } catch (_) {}
+    xrSession = null;
+  }
+  $("ar-overlay").hidden = true;
+}
+window.exitAR = exitAR;
 
 /* ---------- offline / browse ---------- */
 function toggleOffline() {

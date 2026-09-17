@@ -1,4 +1,12 @@
 import os
+from pathlib import Path
+
+for line in Path(__file__).parent.joinpath(".env").read_text().splitlines():
+    line = line.strip()
+    if not line or line.startswith("#") or "=" not in line:
+        continue
+    k, v = line.split("=", 1)
+    os.environ.setdefault(k.strip(), v.strip())
 
 from lensguide.app import app
 

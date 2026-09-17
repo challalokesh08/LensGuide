@@ -104,6 +104,17 @@
 <div id="toast" class="toast" hidden></div>
 <div id="loading" class="loading" hidden></div>
 
+<!-- WebXR AR overlay (stretch goal) -->
+<div id="ar-overlay" hidden>
+  <div id="ar-label" class="ar-label">
+    <span id="ar-name" class="ar-name">…</span>
+    <span id="ar-fact" class="ar-fact"></span>
+  </div>
+  <div class="ar-bar">
+    <button id="btn-ar-exit" class="btn btn-primary" onclick="exitAR()">× Exit AR</button>
+  </div>
+</div>
+
 <script src="app.js"></script>
 </body>
 </html>
