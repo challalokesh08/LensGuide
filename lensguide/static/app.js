@@ -309,64 +309,76 @@ async function translate() {
 }
 window.translate = translate;
 
-/* ---------- WebXR AR overlay (stretch goal) ---------- */
+/* ---------- AR view (WebXR when available, camera overlay everywhere) ---------- */
 let xrSession = null;
+let camStream = null;
 
 window.startAR = startAR;
 async function startAR() {
   if (!curPoiId) return toast("Recognise a POI first, then view it in AR.");
-  if (!navigator.xr) {
-    return fallbackAR("WebXR is not supported on this device");
-  }
-  let supported = false;
-  try {
-    supported = await navigator.xr.isSessionSupported("immersive-ar");
-  } catch (e) {
-    supported = false;
-  }
-  if (!supported) {
-    return fallbackAR("immersive-ar not supported on this device");
-  }
   showLoading(true);
+  let info;
   try {
-    const info = await api("/api/poi/" + curPoiId);
-    const fact = info.facts && info.facts[0] ? info.facts[0].fact_text : info.poi.description;
-    $("ar-name").textContent = info.poi.name;
-    $("ar-fact").textContent = fact;
-    $("ar-overlay").hidden = false;
-
-    xrSession = await navigator.xr.requestSession("immersive-ar", {
-      requiredFeatures: ["dom-overlay", "local"],
-      optionalFeatures: ["hit-test"],
-      domOverlay: { root: $("ar-overlay") },
-    });
-    xrSession.addEventListener("end", () => { exitAR(); });
-    // Keep a reference loop alive while active (some devices need an anim frame)
-    const tick = (time, frame) => {
-      if (!xrSession) return;
-      xrSession.requestAnimationFrame(tick);
-    };
-    xrSession.requestAnimationFrame(tick);
+    info = await api("/api/poi/" + curPoiId);
   } catch (e) {
-    exitAR();
-    fallbackAR("AR could not start: " + (e.message || e.name));
-  } finally {
     showLoading(false);
+    return toast("Could not load POI details");
   }
+  $("ar-name").textContent = info.poi.name;
+  $("ar-fact").textContent =
+    info.facts && info.facts[0] ? info.facts[0].fact_text : info.poi.description;
+
+  // 1) True WebXR immersive-ar where the device supports it.
+  let xrOK = false;
+  if (navigator.xr) {
+    try { xrOK = await navigator.xr.isSessionSupported("immersive-ar"); }
+    catch (_) { xrOK = false; }
+  }
+  if (xrOK) {
+    try {
+      xrSession = await navigator.xr.requestSession("immersive-ar", {
+        requiredFeatures: ["dom-overlay", "local"],
+        optionalFeatures: ["hit-test"],
+        domOverlay: { root: $("ar-overlay") },
+      });
+      $("ar-cam").hidden = true;          // WebXR renders its own camera
+      $("ar-overlay").hidden = false;
+      xrSession.addEventListener("end", exitAR);
+      const tick = () => { if (xrSession) xrSession.requestAnimationFrame(tick); };
+      xrSession.requestAnimationFrame(tick);
+      showLoading(false);
+      return;
+    } catch (e) {
+      exitAR();
+    }
+  }
+  showLoading(false);
+  // 2) Universal camera-overlay AR — works on every device over HTTPS.
+  await startCameraOverlayAR();
 }
 
-function fallbackAR(message) {
-  toast(message);
-  // 2D on-image overlay is the pre-tested non-AR path (design fallback).
-  if (curResult && curPoiId && !$("book-modal").hidden) return;
-  toast("AR unavailable — showing grounded info instead");
+async function startCameraOverlayAR() {
+  if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia || !isSecure()) {
+    return toast("AR overlay needs camera + HTTPS. Use the grounded info below instead.");
+  }
+  try {
+    camStream = await navigator.mediaDevices.getUserMedia({
+      video: { facingMode: "environment" },
+      audio: false,
+    });
+    $("ar-cam").srcObject = camStream;
+    $("ar-cam").hidden = false;
+    $("ar-overlay").hidden = false;
+  } catch (e) {
+    toast("Camera unavailable (" + (e.name || e.message) + ") — see grounded info below.");
+  }
 }
 
 function exitAR() {
-  if (xrSession) {
-    try { xrSession.end(); } catch (_) {}
-    xrSession = null;
-  }
+  if (xrSession) { try { xrSession.end(); } catch (_) {} xrSession = null; }
+  if (camStream) { camStream.getTracks().forEach((t) => t.stop()); camStream = null; }
+  $("ar-cam").srcObject = null;
+  $("ar-cam").hidden = true;
   $("ar-overlay").hidden = true;
 }
 window.exitAR = exitAR;
