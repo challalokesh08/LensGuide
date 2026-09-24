@@ -29,4 +29,4 @@ if __name__ == "__main__":
     host = os.environ.get("HOST", "0.0.0.0")
     ssl = ssl_context()
     print(f"LensGuide running at http{'s' if ssl else ''}://{host}:{port}")
-    app.run(host=host, port=port, debug=False, ssl_context=ssl)
+    app.run(host=host, port=port, debug=False, threaded=True, ssl_context=ssl)
