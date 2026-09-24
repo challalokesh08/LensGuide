@@ -7,3 +7,8 @@ instance/
 .DS_Store
 *.log
 certs/
+# Expo app
+expo-app/node_modules/
+expo-app/.expo/
+expo-app/dist/
+expo-app/npm-debug.*

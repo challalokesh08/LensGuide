@@ -1,0 +1,32 @@
+{
+  "expo": {
+    "name": "LensGuide",
+    "slug": "lensguide",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "backgroundColor": "#041017",
+    "splash": {
+      "backgroundColor": "#041017"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "LensGuide uses the camera to recognise landmarks, dishes and signs."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#041017",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "permissions": ["CAMERA"]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
+}

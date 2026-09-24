@@ -12,7 +12,11 @@ from lensguide.app import app
 
 
 def ssl_context():
-    """HTTPS when a cert has been generated (scripts/gen_cert.sh) or ad-hoc requested."""
+    """HTTPS when a cert has been generated (scripts/gen_cert.sh) or ad-hoc requested.
+    Set LENSGUIDE_NO_SSL=1 to serve plain HTTP — required by the Expo app
+    (React Native won't trust a self-signed cert)."""
+    if os.environ.get("LENSGUIDE_NO_SSL") == "1":
+        return None
     if os.path.exists("certs/cert.pem") and os.path.exists("certs/key.pem"):
         return ("certs/cert.pem", "certs/key.pem")
     if os.environ.get("SSL_ADHOC"):
