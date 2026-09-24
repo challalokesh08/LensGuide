@@ -2,9 +2,15 @@ import base64
 import json
 import os
 import re
+import time
 from urllib import request, error
 
 from lensguide import db
+
+# Leave at least this long between LLM calls to stay under free-tier per-minute
+# rate limits during demos (Google ~60 req/min).
+_MIN_INTERVAL = 1.5
+_last_llm_call = 0.0
 
 
 def provider():
@@ -17,8 +23,13 @@ def _raw_http(url, payload, headers):
         data=json.dumps(payload).encode(),
         headers={"Content-Type": "application/json", **headers},
     )
-    with request.urlopen(req, timeout=90) as resp:
-        return json.loads(resp.read().decode())
+    try:
+        with request.urlopen(req, timeout=90) as resp:
+            return json.loads(resp.read().decode())
+    except error.HTTPError as e:
+        if e.code == 429:
+            raise RuntimeError("LLM provider is rate-limited (429). Wait ~1 minute, then retry.")
+        raise RuntimeError(f"LLM provider error ({e.code}): {e.reason}")
 
 
 def _openai_call(messages):
@@ -80,12 +91,19 @@ def _gemini_call(messages):
 
 
 def _llm(messages):
+    global _last_llm_call
+    wait = _MIN_INTERVAL - (time.monotonic() - _last_llm_call)
+    if wait > 0:
+        time.sleep(wait)
     p = provider()
     if p == "openai":
-        return json.loads(_openai_call(messages))
-    if p == "gemini":
-        return json.loads(_gemini_call(messages))
-    raise RuntimeError(f"No LLM provider configured (got {p!r})")
+        out = _openai_call(messages)
+    elif p == "gemini":
+        out = _gemini_call(messages)
+    else:
+        raise RuntimeError(f"No LLM provider configured (got {p!r})")
+    _last_llm_call = time.monotonic()
+    return json.loads(out)
 
 
 def image_message(image_b64, mime):
