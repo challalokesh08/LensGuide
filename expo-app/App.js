@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { SafeAreaView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { StatusBar } from "expo-status-bar";
 import SnapScreen from "./src/SnapScreen";
 import TranslateScreen from "./src/TranslateScreen";
 import ExploreScreen from "./src/ExploreScreen";
 import ARView from "./src/ARView";
+import { ping } from "./src/api";
 import { C } from "./src/theme";
 
 const TABS = [
@@ -16,15 +17,32 @@ const TABS = [
 export default function App() {
   const [tab, setTab] = useState("snap");
   const [arScene, setArScene] = useState(null);
+  const [server, setServer] = useState("checking"); // checking | ok | error
+
+  async function checkServer() {
+    setServer("checking");
+    const fail = await ping();
+    setServer(fail ? "error" : "ok");
+  }
+  useEffect(() => {
+    checkServer();
+  }, []);
+
+  const pillText =
+    server === "ok" ? "● Server online" : server === "error" ? "✗ Server unreachable — tap" : "… checking";
 
   return (
     <SafeAreaView style={s.root}>
       <StatusBar style="light" />
       <View style={s.header}>
         <Text style={s.logo}>🪄 LensGuide</Text>
-        <View style={s.badge}>
-          <Text style={s.badgeText}>GEMINI</Text>
-        </View>
+        <TouchableOpacity onPress={checkServer}>
+          <View style={[s.badge, server === "ok" ? s.badgeOk : s.badgeBad]}>
+            <Text style={[s.badgeText, { color: server === "ok" ? C.good : server === "error" ? C.bad : C.muted }]}>
+              {pillText}
+            </Text>
+          </View>
+        </TouchableOpacity>
       </View>
 
       <View style={{ flex: 1 }}>
@@ -61,13 +79,14 @@ const s = StyleSheet.create({
   },
   logo: { color: C.text, fontSize: 18, fontWeight: "800" },
   badge: {
-    backgroundColor: "rgba(56,225,255,.15)",
     borderWidth: 1,
-    borderColor: C.accent,
+    borderColor: C.line,
     borderRadius: 999,
     paddingHorizontal: 10,
     paddingVertical: 3,
   },
+  badgeOk: { borderColor: C.good },
+  badgeBad: { borderColor: C.bad },
   badgeText: { color: C.accent, fontSize: 11, fontWeight: "800", letterSpacing: 1 },
   tabs: {
     flexDirection: "row",
