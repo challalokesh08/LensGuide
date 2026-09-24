@@ -8,8 +8,9 @@ from urllib import request, error
 from lensguide import db
 
 # Leave at least this long between LLM calls to stay under free-tier per-minute
-# rate limits during demos (Google ~60 req/min).
-_MIN_INTERVAL = 1.5
+# rate limits during demos. Free tier for flash models is ~10-15 req/min,
+# so 4.5s spacing (<=13 req/min) keeps us safely under.
+_MIN_INTERVAL = 4.5
 _last_llm_call = 0.0
 
 

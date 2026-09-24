@@ -329,9 +329,10 @@ def match_poi(label_class, name):
 @app.route("/api/translate", methods=["POST"])
 def translate():
     data = request.get_json(silent=True) or {}
-    text = (data.get("text") or "").strip()
-    source = data.get("source", "auto")
-    target = data.get("target", "en-IN")
+    form = request.form
+    text = (data.get("text") or form.get("text") or "").strip()
+    source = data.get("source") or form.get("source") or "auto"
+    target = data.get("target") or form.get("target") or "en-IN"
 
     upload = request.files.get("image")
     b64, mime = None, None
