@@ -535,6 +535,32 @@ async function loadPoiList() {
 }
 window.loadPoiList = loadPoiList;
 
+async function useMyLocation() {
+  if (!("geolocation" in navigator)) { toast("Geolocation not supported"); return; }
+  toast("Getting your location…");
+  navigator.geolocation.getCurrentPosition(
+    async (pos) => {
+      const { latitude: lat, longitude: lng } = pos.coords;
+      try {
+        const d = await api(`/api/nearby?lat=${lat}&lng=${lng}&limit=10`);
+        const list = d.nearby.map((p, i) =>
+          `<button class="btn btn-ghost candidate" onclick="loadPoiFromSelect(); $('poi-select').value='${p.poi_id}'; loadPoiFromSelect();">
+             ${i + 1}. ${esc(p.name)} · <span class="sub">${p.distance_km} km</span>
+           </button>`
+        ).join("");
+        $("browse-card").hidden = false;
+        $("browse-card").innerHTML = `<div class="card"><div class="card-body"><h3>Nearby (${d.nearby.length})</h3>${list || "<span class='hint'>No POIs nearby.</span>"}</div></div>`;
+        toast("Location found — showing nearby places");
+      } catch (e) {
+        toast("Failed to load nearby places");
+      }
+    },
+    () => toast("Location permission denied"),
+    { enableHighAccuracy: true, timeout: 10000 }
+  );
+}
+window.useMyLocation = useMyLocation;
+
 async function loadPoiFromSelect() {
   const id = $("poi-select").value;
   const box = $("browse-card");

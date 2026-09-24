@@ -1,3 +1,4 @@
+import math
 import os
 
 from flask import Flask, jsonify, request, send_from_directory
@@ -153,6 +154,37 @@ def nearby(poi_id):
         )
     conn.close()
     return jsonify({"mode": mode, "nearby": rows})
+
+
+@app.route("/api/nearby")
+def nearby_location():
+    """Return POIs sorted by Haversine distance from (lat, lng)."""
+    try:
+        lat = float(request.args.get("lat"))
+        lng = float(request.args.get("lng"))
+    except (TypeError, ValueError):
+        return jsonify({"error": "lat and lng required"}), 400
+    limit = min(max(int(request.args.get("limit", 10)), 1), 25)
+    conn = db.connect()
+    rows = []
+    for r in conn.execute(
+        "SELECT poi_id, name, poi_category, city_id, lat, lng, poi_category, popularity_score FROM activities_poi WHERE lat IS NOT NULL AND lng IS NOT NULL AND status='active'"
+    ).fetchall():
+        d = _haversine(lat, lng, float(r["lat"]), float(r["lng"]))
+        rows.append({**dict(r), "distance_km": round(d, 2)})
+    conn.close()
+    rows.sort(key=lambda x: x["distance_km"])
+    rows = rows[:limit]
+    return jsonify({"lat": lat, "lng": lng, "nearby": rows})
+
+
+def _haversine(lat1, lng1, lat2, lng2):
+    R = 6371.0
+    p = math.pi / 180
+    dlat = (lat2 - lat1) * p
+    dlng = (lng2 - lng1) * p
+    a = math.sin(dlat / 2) ** 2 + math.cos(lat1 * p) * math.cos(lat2 * p) * math.sin(dlng / 2) ** 2
+    return 2 * R * math.asin(math.sqrt(a))
 
 
 @app.route("/api/poi/<poi_id>/book")
