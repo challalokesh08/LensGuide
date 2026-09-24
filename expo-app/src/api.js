@@ -32,9 +32,13 @@ export async function ping() {
   }
 }
 
-function postImage(path, uri) {
+async function postImage(path, uri) {
+  // RN 0.86 no longer accepts { uri, name, type } parts in FormData —
+  // read the file into a Blob first.
+  const data = await fetch(uri);
+  const blob = await data.blob();
   const form = new FormData();
-  form.append("image", { uri, name: "photo.jpg", type: "image/jpeg" });
+  form.append("image", blob, "photo.jpg");
   return api(path, { method: "POST", body: form });
 }
 
