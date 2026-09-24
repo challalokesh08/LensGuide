@@ -56,25 +56,84 @@ function isSecure() {
 function stopCamera() {
   if (stream) { stream.getTracks().forEach((t) => t.stop()); stream = null; }
 }
-async function startCamera() {
+let camState = "idle"; // idle | starting | ready | denied | insecure | error
+
+function camIsSupported() {
+  return !!(navigator.mediaDevices && navigator.mediaDevices.getUserMedia);
+}
+
+function showCamOverlay(kind, title, sub) {
+  camState = kind;
+  const off = $("camera-off"), start = $("cam-start");
+  if (kind === "ready") { off.hidden = true; start.hidden = true; return; }
+  $("cam-off-title").textContent = title;
+  $("cam-off-sub").textContent = sub;
+  const retry = $("btn-cam-retry");
+  retry.hidden = kind === "insecure" || kind === "idle";
+  retry.style.display = retry.hidden ? "none" : "";
+  off.hidden = false;
+  start.hidden = true;
+}
+
+function showCamStart() {
+  camState = "idle";
   $("camera-off").hidden = true;
-  if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia || !isSecure()) {
-    $("camera-off").hidden = false;
+  $("cam-start").hidden = false;
+}
+
+function camErrorMessage(name) {
+  switch (name) {
+    case "NotAllowedError":
+    case "SecurityError":
+      return ["Camera blocked", "Tap the camera icon (🔒) in the address bar → Allow, then Retry. Or use Upload."];
+    case "NotFoundError":
+    case "OverconstrainedError":
+      return ["No camera found", "This device has no rear camera. Use Upload instead."];
+    case "NotReadableError":
+      return ["Camera in use", "Another app holds the camera. Close it, then Retry."];
+    default:
+      return ["Camera could not start", "Error " + (name || "unknown") + ". Retry, or use Upload."];
+  }
+}
+
+async function startCamera(force) {
+  if (!camIsSupported()) {
+    showCamOverlay("insecure", "Camera not supported", "This browser has no camera support. Use Upload.");
     return;
   }
-  if (stream) return;
+  if (!isSecure()) {
+    showCamOverlay("insecure", "Camera needs HTTPS", "Open the page from the laptop's https://… address, or use Upload. (Camera is blocked on plain http.)");
+    return;
+  }
+  if (stream) { showCamOverlay("ready", "", ""); return; }
+  if (camState === "starting" && !force) return;
+  camState = "starting";
+  if (navigator.permissions && navigator.permissions.query) {
+    try {
+      const st = await navigator.permissions.query({ name: "camera" });
+      if (st.state === "denied") {
+        showCamOverlay("denied", "Camera blocked",
+          "You previously denied camera access. Allow it in the browser settings (site permissions), then Retry — or use Upload.");
+        return;
+      }
+    } catch (e) { /* camera permission enum unsupported — try getUserMedia anyway */ }
+  }
   try {
     stream = await navigator.mediaDevices.getUserMedia({
       video: { facingMode: "environment", aspectRatio: 4 / 3 },
       audio: false,
     });
     $("camera").srcObject = stream;
+    showCamOverlay("ready", "", "");
   } catch (e) {
     console.warn(e);
-    $("camera-off").hidden = false;
-    $("camera-off").querySelector(".off-sub").textContent =
-      "Camera could not start (" + e.name + "). Use Upload, or serve over HTTPS.";
+    const [t, s] = camErrorMessage(e.name);
+    showCamOverlay("error", t, s);
   }
+}
+
+function startCameraFromTap() {
+  startCamera(true);
 }
 
 function pickUpload() { $("file-input").click(); }
@@ -91,7 +150,13 @@ function setImage(file) {
   $("btn-identify").disabled = false;
 }
 function snap() {
+  if (!stream) {
+    if (curImage) return toast("Photo already selected — tap Identify");
+    showCamStart();
+    return toast("Camera not ready. Tap Start camera (or Upload).", 3200);
+  }
   const v = $("camera");
+  if (!v.videoWidth) { showCamStart(); return toast("Camera still starting — wait a moment, then retry.", 3200); }
   const canvas = document.createElement("canvas");
   canvas.width = v.videoWidth || 1280;
   canvas.height = v.videoHeight || 960;
@@ -433,4 +498,4 @@ window.loadPoiFromSelect = loadPoiFromSelect;
 
 /* ---------- shell ---------- */
 window.addEventListener("pagehide", stopCamera);
-startCamera();
+showCamStart();

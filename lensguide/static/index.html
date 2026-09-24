@@ -32,10 +32,17 @@
   <section id="view-snap" class="view active">
     <div id="camera-box" class="camera-box">
       <video id="camera" autoplay playsinline muted></video>
-      <div id="camera-off" class="camera-off" hidden>
-        <p class="off-title">Camera unavailable</p>
-        <p class="off-sub">On LAN over plain HTTP the camera is blocked by the browser.
-          Use <strong>HTTPS</strong> (see README) or upload a photo instead.</p>
+      <div id="cam-start" class="cam-center" hidden>
+        <button class="btn btn-primary" onclick="startCameraFromTap()">▶ Start camera</button>
+        <p class="off-sub">or upload a photo below</p>
+      </div>
+      <div id="camera-off" class="cam-center" hidden>
+        <div class="off-title" id="cam-off-title">Camera unavailable</div>
+        <div class="off-sub" id="cam-off-sub"></div>
+        <div class="off-actions">
+          <button class="btn btn-ghost" id="btn-cam-retry" onclick="startCameraFromTap()">Retry</button>
+          <button class="btn btn-ghost" onclick="pickUpload()">Upload instead</button>
+        </div>
       </div>
     </div>
     <div class="snap-actions">
