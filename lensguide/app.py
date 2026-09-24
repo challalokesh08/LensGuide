@@ -6,11 +6,34 @@ from flask import Flask, jsonify, request, send_from_directory
 from lensguide import db, llm
 
 app = Flask(__name__, static_folder="static", static_url_path="/")
+ALLOWED_TARGET_LANGUAGES = {"en-IN", "kn-IN", "te-IN"}
+
+
+def _llm_error_response(error):
+    """Return a consistent, actionable provider error to web and mobile."""
+    payload = {
+        "error": str(error),
+        "code": getattr(error, "code", "llm_unavailable"),
+    }
+    provider = getattr(error, "provider", None)
+    if provider:
+        payload["provider"] = provider
+    retry_after = getattr(error, "retry_after", None)
+    if retry_after is not None:
+        payload["retry_after"] = retry_after
+    if getattr(error, "status", None) == 429:
+        payload["quota_exhausted"] = True
+    response = jsonify(payload)
+    if retry_after is not None:
+        response.headers["Retry-After"] = str(max(1, int(retry_after)))
+    return response, getattr(error, "status", 503)
 
 
 @app.errorhandler(Exception)
 def handle_error(e):
     app.logger.exception("Unhandled error")
+    if isinstance(e, llm.LLMError):
+        return _llm_error_response(e)
     status = getattr(e, "code", 500)
     if isinstance(e, (RuntimeError, ValueError)):
         status = 400
@@ -82,7 +105,18 @@ def index():
 
 @app.route("/api/health")
 def health():
-    return jsonify({"ok": True, "provider": llm.provider(), "pois": len(list_pois())})
+    return jsonify(
+        {
+            "ok": True,
+            "provider": llm.provider(),
+            "fallback_provider": llm.fallback_provider(),
+            "configured_providers": llm.configured_providers(),
+            "ai_configured": llm.ai_configured(),
+            "local_ai": llm.is_local_openai(),
+            "cache": llm.cache_stats(),
+            "pois": len(list_pois()),
+        }
+    )
 
 
 def list_pois():
@@ -218,11 +252,26 @@ def identify():
     file = request.files.get("image")
     if not file:
         return jsonify({"error": "No image uploaded (field name 'image')"}), 400
+    
+    # Optional location from device
+    lat = request.form.get("lat")
+    lng = request.form.get("lng")
+    has_location = False
+    if lat is not None and lng is not None:
+        try:
+            lat = float(lat)
+            lng = float(lng)
+            has_location = True
+        except (TypeError, ValueError):
+            pass
+    
     b64, mime = llm.image_to_b64(file)
     try:
         result = llm.identify_poi(b64, mime)
+    except llm.LLMError as e:
+        return _llm_error_response(e)
     except RuntimeError as e:
-        return jsonify({"error": str(e), "insecure": True}), 503
+        return jsonify({"error": str(e)}), 503
 
     kind = result.get("kind")
     label_class = (result.get("label_class") or "").strip()
@@ -233,22 +282,62 @@ def identify():
     score = _parse_score(result, confidence)
 
     # ---- Confidence Gate ----
-    # Above the threshold we may name the subject and behave as before.
-    # Below it we must NOT name a subject: offer up to three candidates
-    # (with scores) or refuse honestly. Never fabricate a name.
     THRESH = 0.85
     ocr_text = (result.get("text") or "").strip()
     matched = None
     candidates = []
     status = "not_recognised"
     reason = "no_candidate"
+    identified_place = None
+    nearby_pois = []
 
-    if kind == "sign" and ocr_text:
-        # The subject IS the text — recognition means the OCR read succeeded.
+    # PRIMARY: If location provided, find nearest known POI as the identified place
+    min_dist = None
+    nearest_row = None
+    if has_location:
+        conn = db.connect()
+        min_dist = float('inf')
+        for r in conn.execute(
+            "SELECT poi_id, name, poi_category, city_id, lat, lng, popularity_score, description "
+            "FROM activities_poi WHERE lat IS NOT NULL AND lng IS NOT NULL AND status='active'"
+        ).fetchall():
+            d = _haversine(lat, lng, float(r["lat"]), float(r["lng"]))
+            if d < min_dist:
+                min_dist = d
+                nearest_row = {**dict(r), "distance_km": round(d, 2)}
+        conn.close()
+        
+        if nearest_row:
+            identified_place = nearest_row
+            # Use this as the matched POI
+            matched = {"poi_id": nearest_row["poi_id"], "name": nearest_row["name"]}
+            status = "recognised"
+            reason = "location_match"
+            name = nearest_row["name"]
+            confidence = "high"
+            score = 1.0
+            
+            # Fetch nearby POIs from the IDENTIFIED place location (not device location)
+            place_lat, place_lng = nearest_row["lat"], nearest_row["lng"]
+            conn = db.connect()
+            nearby_rows = []
+            for r in conn.execute(
+                "SELECT poi_id, name, poi_category, city_id, lat, lng, popularity_score FROM activities_poi WHERE lat IS NOT NULL AND lng IS NOT NULL AND status='active'"
+            ).fetchall():
+                d = _haversine(place_lat, place_lng, float(r["lat"]), float(r["lng"]))
+                if d > 0.05:  # exclude the place itself (within 50m)
+                    nearby_rows.append({**dict(r), "distance_km": round(d, 2)})
+            conn.close()
+            nearby_rows.sort(key=lambda x: x["distance_km"])
+            nearby_pois = nearby_rows[:10]
+    
+    # SECONDARY: Visual recognition (for signs, or when no location match)
+    if not identified_place and kind == "sign" and ocr_text:
         status, reason = "recognised", "above_threshold"
         name = ocr_text
         confidence, score = "high", max(score, 1.0)
-    elif score >= THRESH:
+        identified_place = None  # signs don't have a fixed location
+    elif not identified_place and score >= THRESH:
         status, reason = "recognised", "above_threshold"
         poi_id = match_poi(label_class, name)
         if poi_id:
@@ -256,11 +345,70 @@ def identify():
             if info:
                 matched = {"poi_id": poi_id, "name": info["poi"]["name"]}
         confidence = "high" if score >= THRESH else confidence
-    else:
+    elif not identified_place:
         candidates = poi_candidates(label_class, name, limit=3)
         if candidates:
             status, reason = "candidates", "below_threshold"
-        name = ""  # never expose the model's low-confidence guess
+        name = ""
+    
+    # FALLBACK: If location provided but nearest catalogued POI is far (>2km),
+    # also try LLM's visual identification as the place name
+    if has_location and min_dist is not None and min_dist > 2.0:
+        # LLM already identified something from the image
+        if kind in ("landmark", "food", "sign") and name and score >= 0.6:
+            # For signs, use OCR text as the name
+            visual_name = name if kind != "sign" else (ocr_text[:200] if ocr_text else name)
+            # Try to fuzzy-match LLM's name to our database
+            poi_id = match_poi(label_class, visual_name)
+            if poi_id:
+                info = poi_info(poi_id)
+                if info:
+                    matched = {"poi_id": poi_id, "name": info["poi"]["name"]}
+                    identified_place = info["poi"]
+                    identified_place["distance_km"] = round(_haversine(lat, lng, identified_place["lat"], identified_place["lng"]), 2)
+                    status = "recognised"
+                    reason = "visual_match_fuzzy"
+                    # Re-fetch nearby from the matched place
+                    place_lat, place_lng = identified_place["lat"], identified_place["lng"]
+                    conn = db.connect()
+                    nearby_rows = []
+                    for r in conn.execute(
+                        "SELECT poi_id, name, poi_category, city_id, lat, lng, popularity_score FROM activities_poi WHERE lat IS NOT NULL AND lng IS NOT NULL AND status='active'"
+                    ).fetchall():
+                        d = _haversine(place_lat, place_lng, float(r["lat"]), float(r["lng"]))
+                        if d > 0.05:
+                            nearby_rows.append({**dict(r), "distance_km": round(d, 2)})
+                    conn.close()
+                    nearby_rows.sort(key=lambda x: x["distance_km"])
+                    nearby_pois = nearby_rows[:10]
+            else:
+                # No database match - return LLM's identification as "identified_place" 
+                # with flag that it's not in our catalogue
+                identified_place = {
+                    "name": visual_name,
+                    "poi_category": label_class or kind,
+                    "description": result.get("description", ""),
+                    "poi_id": None,
+                    "in_catalogue": False,
+                    "confidence": confidence,
+                    "confidence_score": score,
+                    "distance_km": round(min_dist, 2)
+                }
+                matched = None  # Clear matched - this is visual ID, not database match
+                status = "recognised"
+                reason = "visual_identification"
+                
+                # Fetch nearby POIs from DEVICE location (not database POI)
+                conn = db.connect()
+                nearby_rows = []
+                for r in conn.execute(
+                    "SELECT poi_id, name, poi_category, city_id, lat, lng, popularity_score FROM activities_poi WHERE lat IS NOT NULL AND lng IS NOT NULL AND status='active'"
+                ).fetchall():
+                    d = _haversine(lat, lng, float(r["lat"]), float(r["lng"]))
+                    nearby_rows.append({**dict(r), "distance_km": round(d, 2)})
+                conn.close()
+                nearby_rows.sort(key=lambda x: x["distance_km"])
+                nearby_pois = nearby_rows[:10]
 
     return jsonify(
         {
@@ -275,6 +423,9 @@ def identify():
             "ocr_text": ocr_text,
             "matched": matched,
             "candidates": candidates,
+            "identified_place": identified_place,
+            "nearby": nearby_pois,
+            "location": {"lat": lat, "lng": lng} if has_location else None,
         }
     )
 
@@ -365,57 +516,158 @@ def translate():
     text = (data.get("text") or form.get("text") or "").strip()
     source = data.get("source") or form.get("source") or "auto"
     target = data.get("target") or form.get("target") or "en-IN"
+    if not isinstance(target, str) or target not in ALLOWED_TARGET_LANGUAGES:
+        return jsonify({"error": "Unsupported target language"}), 400
 
     upload = request.files.get("image")
     b64, mime = None, None
     if upload:
         b64, mime = llm.image_to_b64(upload)
 
+    def _norm_lang(tag):
+        t = (tag or "auto").strip().lower()
+        if t in ("english", "en", "en-in", "en-us", "en-gb"):
+            return "en"
+        if t in ("kannada", "kn", "kn-in"):
+            return "kn"
+        if t in ("telugu", "te", "te-in"):
+            return "te"
+        if t in ("hindi", "hi", "hi-in"):
+            return "hi"
+        return t or "auto"
+
+    def _detect_script_lang(text):
+        """Detect language from script in text."""
+        if not text:
+            return "auto"
+        # Check for Kannada script
+        if any(0x0C80 <= ord(c) <= 0x0CFF for c in text):
+            return "kn"
+        # Check for Telugu script
+        if any(0x0C00 <= ord(c) <= 0x0C7F for c in text):
+            return "te"
+        # Check for Devanagari
+        if any(0x0900 <= ord(c) <= 0x097F for c in text):
+            return "hi"
+        # Check for Latin
+        if any(0x0041 <= ord(c) <= 0x005A or 0x0061 <= ord(c) <= 0x007A for c in text):
+            return "en"
+        return "auto"
+
+    ocr_text = ""
+    ocr_source = "auto"
     if not text and b64:
         try:
             ocr = llm.identify_poi(b64, mime)
+        except llm.LLMError as e:
+            return _llm_error_response(e)
         except RuntimeError as e:
             return jsonify({"error": str(e)}), 503
-        text = (ocr.get("text") or "").strip()
-        if ocr.get("kind") == "sign":
-            source = ocr.get("label_class") or source
+        ocr_text = (ocr.get("text") or "").strip()
+        ocr_source = _norm_lang(ocr.get("source_language"))
+        if ocr_source == "auto":
+            ocr_source = _detect_script_lang(ocr_text)
+        text = ocr_text
+        source = ocr_source
 
     if not text:
         return jsonify({"error": "No text to translate"}), 400
 
+    # Prefer the bundled English reference for exact dataset text.
+    reference = find_reference_translation(text, "en-IN")
+    if reference and target == "en-IN":
+        return jsonify(_dataset_reference_payload(text, source, target))
+
+    translation_input = text
+    translation_source = source
+    translation_basis = "direct"
+
+    # For kn-IN/te-IN targets, pivot through English (model can't do direct kn↔te)
+    if target in ("kn-IN", "te-IN"):
+        # Translate to English first
+        english_result = llm.translate_text(text, source=source, target="en-IN")
+        translation_input = english_result.get("translation", "")
+        translation_source = "en"
+        translation_basis = "english_pivot"
+    # For exact dataset matches, use the known reference translation
+    elif reference and target in ("kn-IN", "te-IN"):
+        translation_input = reference["reference_translation"]
+        translation_source = "en"
+        translation_basis = "dataset_reference"
+
     try:
-        result = llm.translate_text(text, source=source, target=target)
+        result = llm.translate_text(
+            translation_input,
+            source=translation_source,
+            target=target,
+        )
+    except llm.LLMError as e:
+        fallback = _dataset_reference_payload(text, source, target)
+        if fallback:
+            return jsonify(fallback)
+        return _llm_error_response(e)
     except RuntimeError as e:
+        fallback = _dataset_reference_payload(text, source, target)
+        if fallback:
+            return jsonify(fallback)
         return jsonify({"error": str(e)}), 503
 
     translation = (result.get("translation") or "").strip()
-    reference = find_reference_translation(text)
     return jsonify(
         {
             "ocr_text": text,
             "translation": translation,
-            "source_language": result.get("source_language") or source,
+            "source_language": (
+                reference.get("source_language")
+                if translation_basis == "dataset_reference"
+                else result.get("source_language") or source
+            ),
             "target_language": target,
             "confidence": (result.get("confidence") or "low").lower(),
             "reference": reference,
             "matches_reference": bool(
-                reference and translation.strip().lower() == reference["reference_translation"].strip().lower()
+                target == "en-IN"
+                and reference
+                and translation.strip().lower() == reference["reference_translation"].strip().lower()
             ),
+            "translation_basis": translation_basis,
         }
     )
 
 
-def find_reference_translation(text):
-    """Score translation against menu_sign_images ground truth (train+eval)."""
+def find_reference_translation(text, target="en-IN"):
+    """Return only an exact, target-matching dataset translation.
+
+    Exact matching prevents an arbitrary OCR fragment from being compared with
+    an unrelated sign. This is grounded data, not generated translation.
+    """
     conn = db.connect()
     row = conn.execute(
-        "SELECT image_id, kind, reference_translation, difficulty, is_safety_critical, dataset_split "
-        "FROM menu_sign_images WHERE trim(source_text_truth) = trim(?) OR "
-        "instr(trim(source_text_truth), trim(?)) > 0 LIMIT 1",
-        (text, text),
+        "SELECT image_id, kind, source_language, reference_translation, "
+        "difficulty, is_safety_critical, dataset_split "
+        "FROM menu_sign_images WHERE trim(source_text_truth) = trim(?) "
+        "AND (trim(target_language) = trim(?) OR target_language IS NULL) "
+        "ORDER BY CASE WHEN trim(target_language) = trim(?) THEN 0 ELSE 1 END, image_id LIMIT 1",
+        (text, target, target),
     ).fetchone()
     conn.close()
     return dict(row) if row else None
+
+
+def _dataset_reference_payload(text, source, target):
+    reference = find_reference_translation(text, target)
+    if not reference:
+        return None
+    return {
+        "ocr_text": text,
+        "translation": reference["reference_translation"],
+        "source_language": reference.get("source_language") or source,
+        "target_language": target,
+        "confidence": "high",
+        "reference": reference,
+        "matches_reference": True,
+        "fallback": "dataset_reference",
+    }
 
 
 @app.route("/api/classes")

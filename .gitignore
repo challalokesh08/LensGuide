@@ -4,6 +4,7 @@ __pycache__/
 venv/
 .env
 instance/
+.cache/
 .DS_Store
 *.log
 certs/

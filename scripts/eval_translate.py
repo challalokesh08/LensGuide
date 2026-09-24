@@ -101,6 +101,10 @@ def main():
             print(f"[{i}/{len(rows)}] {r['image_id']} FAILED: {err}")
             continue
         pred = (res.get("translation") or "").strip()
+        if res.get("fallback") == "dataset_reference":
+            fails.append((r["image_id"], "dataset reference fallback used"))
+            print(f"[{i}/{len(rows)}] {r['image_id']} FAILED: dataset reference fallback used")
+            continue
         em = pred.lower() == ref.lower()
         f1 = token_f1(pred, ref)
         n += 1

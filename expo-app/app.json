@@ -14,7 +14,8 @@
       "supportsTablet": true,
       "infoPlist": {
         "NSCameraUsageDescription": "LensGuide uses the camera to recognise landmarks, dishes and signs."
-      }
+      },
+      "bundleIdentifier": "com.challalokesh08.lensguide"
     },
     "android": {
       "adaptiveIcon": {
@@ -23,7 +24,10 @@
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
       },
-      "permissions": ["CAMERA"]
+      "permissions": [
+        "CAMERA"
+      ],
+      "package": "com.challalokesh08.lensguide"
     },
     "web": {
       "favicon": "./assets/favicon.png"

@@ -76,6 +76,7 @@ export default function TranslateScreen() {
                 <Chip text="→" />
                 <Chip text={result.target_language} />
                 <Chip text={result.confidence} tone={result.confidence === "high" ? "good" : "mid"} />
+                {result.fallback === "dataset_reference" ? <Chip text="offline dataset" /> : null}
               </View>
               {result.reference ? (
                 <View style={[s.block, { marginTop: 10 }]}>

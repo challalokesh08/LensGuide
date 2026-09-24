@@ -1,0 +1,61 @@
+scene_id,entity_type,entity_id,city_id,name,scene_type,default_yaw_deg,default_pitch_deg,real_scale_metres,total_bytes,supports_webxr,supports_ar_placement,fallback_media_id,licence,status,updated_at
+xrs_d07530d9,hotel,htl_4374ecd9,cty_b6ccbb3b,Grand Bagh Heritage — immersive preview,model_3d,276,-4,30.85,1698819,1,1,,synthetic_cc0,active,2026-08-18T10:00:00+05:30
+xrs_89f031ed,hotel,htl_c8756032,cty_c0f2d9de,Indigo Vihar Inn — immersive preview,model_3d,272,9,6.74,3247184,0,1,,synthetic_cc0,active,2026-08-18T10:00:00+05:30
+xrs_2284657e,hotel,htl_bf05fe97,cty_621f4a84,Royal Nest Resort — immersive preview,panorama_360,237,-7,8.27,5867570,1,0,,synthetic_cc0,active,2026-08-18T10:00:00+05:30
+xrs_214e0ad6,hotel,htl_fe67eead,cty_36afaa5c,Amber Vihar Suites — immersive preview,model_3d,249,6,20.88,10340218,0,1,,synthetic_cc0,active,2026-08-18T10:00:00+05:30
+xrs_4a3225e7,hotel,htl_cb869e4b,cty_828a7777,Hillview Palms Boutique Stay — immersive preview,model_3d,281,-4,29.08,12822685,1,1,,synthetic_cc0,active,2026-08-18T10:00:00+05:30
+xrs_bc55ef09,hotel,htl_a4d27c8c,cty_5698a7ab,Hillview Niwas by the Lake — immersive preview,model_3d,334,1,39.47,17923656,0,1,,synthetic_cc0,active,2026-08-18T10:00:00+05:30
+xrs_5f2cce4c,hotel,htl_7920dc76,cty_0d9ab6ff,Casa Mahal & Spa — immersive preview,panorama_360,295,8,,24699696,1,0,,synthetic_cc0,active,2026-08-18T10:00:00+05:30
+xrs_f45cc73a,hotel,htl_30f184fa,cty_905fd8a1,The Old Residency Resort — immersive preview,panorama_360,48,-9,,1478239,1,0,,synthetic_cc0,active,2026-08-18T10:00:00+05:30
+xrs_56cdb3e5,hotel,htl_8179b205,cty_f8b75f8e,Grand Courtyard — immersive preview,panorama_360,31,-10,30.25,3177112,1,0,,synthetic_cc0,active,2026-08-18T10:00:00+05:30
+xrs_fa16553f,hotel,htl_d526541d,cty_aa759717,Hillview Sarovar by the Lake — immersive preview,panorama_360,77,5,15.48,6175680,1,0,,synthetic_cc0,active,2026-08-18T10:00:00+05:30
+xrs_6da96263,hotel,htl_245a6528,cty_d4f5e3a5,The Old Niwas & Spa — immersive preview,model_3d,43,1,39.23,10861121,1,1,,synthetic_cc0,active,2026-08-18T10:00:00+05:30
+xrs_8bdd9fb1,hotel,htl_aceeb75d,cty_17b8ef2f,Hotel Residency Homestay — immersive preview,model_3d,354,-5,27.67,13120164,1,1,,synthetic_cc0,active,2026-08-18T10:00:00+05:30
+xrs_7c62c08b,hotel,htl_1b0f8353,cty_c97e6cd5,Indigo Meadows Boutique Stay — immersive preview,panorama_360,103,-1,19.18,17885795,0,0,,synthetic_cc0,active,2026-08-18T10:00:00+05:30
+xrs_f4dbae04,hotel,htl_fe5eb48a,cty_a50bc5dd,Garden Ghat House Resort — immersive preview,panorama_360,230,-4,33.18,24618440,1,0,,synthetic_cc0,active,2026-08-18T10:00:00+05:30
+xrs_eba937c8,hotel,htl_97daa761,cty_10cbee86,Indigo Verandah Homestay — immersive preview,photogrammetry,286,0,34.54,1298434,1,1,,synthetic_cc0,active,2026-08-18T10:00:00+05:30
+xrs_7f78341e,hotel,htl_b1b494c7,cty_a97c33ad,The Old Orchard & Spa — immersive preview,model_3d,171,-6,4.12,3253756,1,1,,synthetic_cc0,active,2026-08-18T10:00:00+05:30
+xrs_f5079dc9,hotel,htl_5e432970,cty_009c9fd2,Hillview Niwas Resort — immersive preview,model_3d,303,-8,14.53,5707986,1,1,,synthetic_cc0,active,2026-08-18T10:00:00+05:30
+xrs_f25ce1fd,hotel,htl_44f1ae8b,cty_718f03c7,Casa Meadows Inn — immersive preview,model_3d,204,-9,36.84,10392989,0,1,,synthetic_cc0,active,2026-08-18T10:00:00+05:30
+xrs_526c9172,hotel,htl_8d39efd7,cty_590d4b7b,Grand Orchard & Spa — immersive preview,model_3d,124,-10,6.18,13458030,1,1,,synthetic_cc0,active,2026-08-18T10:00:00+05:30
+xrs_29c34795,hotel,htl_d73d2dd8,cty_79cbc59b,Royal Meadows by the Lake — immersive preview,panorama_360,160,10,,18151243,1,0,,synthetic_cc0,active,2026-08-18T10:00:00+05:30
+xrs_35c3c12a,hotel,htl_5ea20ea8,cty_51a149b7,The Bungalow by the Lake — immersive preview,panorama_360,87,-5,8.93,24655382,1,0,,synthetic_cc0,active,2026-08-18T10:00:00+05:30
+xrs_d603e1b0,hotel,htl_daff4ec9,cty_0b7f5985,Heritage Verandah Suites — immersive preview,panorama_360,290,-4,34.8,2038812,1,0,,synthetic_cc0,active,2026-08-18T10:00:00+05:30
+xrs_57f9f3ec,hotel,htl_1723889f,cty_6320eea9,The Retreat Homestay — immersive preview,photogrammetry,29,-2,,3239563,0,1,,synthetic_cc0,active,2026-08-18T10:00:00+05:30
+xrs_6f471521,hotel,htl_dfe97fda,cty_7cb0b529,Villa Verandah by the Lake — immersive preview,panorama_360,51,-9,15.24,5727552,0,0,,synthetic_cc0,active,2026-08-18T10:00:00+05:30
+xrs_02d1fca4,hotel,htl_601e876f,cty_b6ccbb3b,Casa Verandah Resort — immersive preview,model_3d,186,8,38.12,10491717,1,1,,synthetic_cc0,active,2026-08-18T10:00:00+05:30
+xrs_30567dc1,hotel,htl_c8c81865,cty_009c9fd2,Grand Mahal by the Lake — immersive preview,panorama_360,146,0,10.25,13224658,1,0,,synthetic_cc0,active,2026-08-18T10:00:00+05:30
+xrs_d3da48e8,hotel,htl_ee1f6167,cty_8fc1539e,The Old Sarovar Resort — immersive preview,model_3d,83,-6,5.39,18334407,1,1,,synthetic_cc0,active,2026-08-18T10:00:00+05:30
+xrs_25cc13dc,hotel,htl_764cb54e,cty_d4f5e3a5,Palm Sanctuary Resort — immersive preview,panorama_360,139,-6,13.35,24820574,1,0,,synthetic_cc0,active,2026-08-18T10:00:00+05:30
+xrs_69ef4cd3,hotel,htl_b58f3951,cty_bbb31d67,Palm Regency Boutique Stay — immersive preview,panorama_360,27,-10,24.7,1468154,1,0,,synthetic_cc0,active,2026-08-18T10:00:00+05:30
+xrs_1755ab12,hotel,htl_82a0debc,cty_5d572c8a,Garden Kothi & Spa — immersive preview,photogrammetry,48,-7,,3105751,1,1,,synthetic_cc0,active,2026-08-18T10:00:00+05:30
+xrs_be6cd625,poi,poi_ac60ca43,cty_541018a9,Wayanad Viewpoint — immersive preview,panorama_360,136,5,6.27,5756226,1,0,,synthetic_cc0,active,2026-08-18T10:00:00+05:30
+xrs_bd5eb7a4,poi,poi_b5219b13,cty_621f4a84,Paragliding Launch — immersive preview,model_3d,96,-9,39.93,10580600,1,1,,synthetic_cc0,active,2026-08-18T10:00:00+05:30
+xrs_ba6adde2,poi,poi_481e5628,cty_67ee7f6f,Cooking Class at Old Town — immersive preview,model_3d,149,-10,9.64,13224448,0,1,,synthetic_cc0,active,2026-08-18T10:00:00+05:30
+xrs_b07f9c30,poi,poi_60c9ded0,cty_5698a7ab,Lucknow Bird Sanctuary — immersive preview,photogrammetry,161,-9,30.33,18361667,1,1,,synthetic_cc0,active,2026-08-18T10:00:00+05:30
+xrs_b46304ba,poi,poi_35d011e8,cty_32e8e65c,Botanical Gardens — immersive preview,panorama_360,108,-6,10.13,24785614,1,0,,synthetic_cc0,active,2026-08-18T10:00:00+05:30
+xrs_92e9b66e,poi,poi_387a71ad,cty_c0f2d9de,Kathmandu Lake — immersive preview,panorama_360,322,-9,,1881116,0,0,,synthetic_cc0,active,2026-08-18T10:00:00+05:30
+xrs_61be79d1,poi,poi_6ba7ee43,cty_1ced6ede,City Walls Walk — immersive preview,panorama_360,165,0,,3300408,0,0,,synthetic_cc0,active,2026-08-18T10:00:00+05:30
+xrs_8684be37,poi,poi_3514f780,cty_5d572c8a,"Jazz Cellar, Udaipur — immersive preview",panorama_360,100,-2,27.54,6148177,1,0,,synthetic_cc0,active,2026-08-18T10:00:00+05:30
+xrs_123d2ddd,poi,poi_30fe338a,cty_17b8ef2f,Quiet Bay — immersive preview,model_3d,179,9,32.98,10054568,1,1,,synthetic_cc0,active,2026-08-18T10:00:00+05:30
+xrs_78b4edc6,poi,poi_f2bc64a8,cty_cf1c6ac5,Lighthouse Beach — immersive preview,video_360,90,0,,12934386,0,0,,synthetic_cc0,active,2026-08-18T10:00:00+05:30
+xrs_a3f8f386,poi,poi_2b00dd1d,cty_aa759717,Textile Museum — immersive preview,panorama_360,287,4,,17952057,1,0,,synthetic_cc0,active,2026-08-18T10:00:00+05:30
+xrs_185685a9,poi,poi_7bd45bdd,cty_d35a9652,Fishermen's Cove — immersive preview,panorama_360,328,-6,24.76,24834882,1,0,,synthetic_cc0,active,2026-08-18T10:00:00+05:30
+xrs_fe6e6238,poi,poi_c3285efc,cty_caf3c1ee,Butterfly Reserve — immersive preview,panorama_360,172,-2,29.19,1468030,1,0,,synthetic_cc0,active,2026-08-18T10:00:00+05:30
+xrs_c5090381,poi,poi_abed8837,cty_7be8559f,Riverside Lounge — immersive preview,photogrammetry,85,10,10.47,3069584,1,1,,synthetic_cc0,active,2026-08-18T10:00:00+05:30
+xrs_ee592be3,poi,poi_6949e353,cty_5d572c8a,Great Mosque of Udaipur — immersive preview,model_3d,172,-5,33.27,6021907,0,1,,synthetic_cc0,active,2026-08-18T10:00:00+05:30
+xrs_80965228,poi,poi_6532241a,cty_79cbc59b,Cliff Walk — immersive preview,panorama_360,224,3,,10389213,0,0,,synthetic_cc0,active,2026-08-18T10:00:00+05:30
+xrs_296cebca,poi,poi_132d3868,cty_95d040d8,Cliff Walk — immersive preview,model_3d,23,6,22.36,13019032,1,1,,synthetic_cc0,active,2026-08-18T10:00:00+05:30
+xrs_8bf25b04,poi,poi_fb892134,cty_a5f16904,Cycling Loop — immersive preview,panorama_360,176,4,37.38,18135984,0,0,,synthetic_cc0,active,2026-08-18T10:00:00+05:30
+xrs_dc61ec75,poi,poi_cbc7b76a,cty_cfec17b6,Hot Springs — immersive preview,panorama_360,167,6,,24936856,0,0,,synthetic_cc0,active,2026-08-18T10:00:00+05:30
+xrs_a433d821,poi,poi_7213a07d,cty_32e8e65c,Quiet Bay — immersive preview,model_3d,337,-2,30.42,1390753,0,1,,synthetic_cc0,active,2026-08-18T10:00:00+05:30
+xrs_9638bc10,poi,poi_09155f8c,cty_32e8e65c,Quiet Bay — immersive preview,model_3d,18,-7,12.6,3129012,1,1,,synthetic_cc0,active,2026-08-18T10:00:00+05:30
+xrs_5dac1a0e,poi,poi_b52743ff,cty_b6ccbb3b,Elephant Camp — immersive preview,model_3d,210,-8,28.37,6139290,1,1,,synthetic_cc0,active,2026-08-18T10:00:00+05:30
+xrs_361cedf3,poi,poi_c806ff41,cty_828a7777,Chhatri Complex — immersive preview,panorama_360,185,-9,,10495176,1,0,,synthetic_cc0,active,2026-08-18T10:00:00+05:30
+xrs_182d6067,poi,poi_6a46e565,cty_1ced6ede,North Beach — immersive preview,panorama_360,31,-2,26.05,12815935,1,0,,synthetic_cc0,active,2026-08-18T10:00:00+05:30
+xrs_47402ff2,poi,poi_091fe344,cty_828a7777,Srinagar Lake — immersive preview,panorama_360,127,7,5.33,18233164,1,0,,synthetic_cc0,active,2026-08-18T10:00:00+05:30
+xrs_7d6b34f8,poi,poi_493eac5b,cty_009c9fd2,"St Mary's Church, Kandy — immersive preview",panorama_360,325,3,9.44,24826394,1,0,,synthetic_cc0,active,2026-08-18T10:00:00+05:30
+xrs_71a39b5e,poi,poi_48787ec6,cty_95d040d8,Zipline Point — immersive preview,panorama_360,254,-8,,1447750,1,0,,synthetic_cc0,active,2026-08-18T10:00:00+05:30
+xrs_6a4ba46d,poi,poi_c54e9c8a,cty_6320eea9,Cliff Walk — immersive preview,panorama_360,35,-1,31.54,3471703,0,0,,synthetic_cc0,active,2026-08-18T10:00:00+05:30
+xrs_b510b8ff,poi,poi_d607a9e8,cty_076e8e86,Yoga Shala — immersive preview,panorama_360,308,-3,13.33,5725435,0,0,,synthetic_cc0,active,2026-08-18T10:00:00+05:30
+xrs_8dac05fa,poi,poi_be89732e,cty_ab50efee,Hot Springs — immersive preview,model_3d,112,10,7.73,10543438,1,1,,synthetic_cc0,active,2026-08-18T10:00:00+05:30

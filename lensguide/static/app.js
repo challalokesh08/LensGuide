@@ -8,6 +8,7 @@ let curResult = null; // identify result
 let curPoiId = null; // currently loaded poi_id
 let offlineMode = false;
 let availablePois = null;
+let curLocation = null; // { lat, lng } from device
 
 /* ---------- tabs ---------- */
 document.querySelectorAll(".tab").forEach((t) => {
@@ -17,7 +18,10 @@ function switchTab(name) {
   document.querySelectorAll(".tab").forEach((t) => t.classList.toggle("active", t.dataset.tab === name));
   document.querySelectorAll(".view").forEach((v) => v.classList.remove("active"));
   $("view-" + name).classList.add("active");
-  if (name === "snap") startCamera();
+  if (name === "snap") {
+    startCamera();
+    requestSnapLocation(); // get device location for nearby landmarks
+  }
   if (name === "browse" && !availablePois) loadPoiList();
 }
 window.switchTab = switchTab;
@@ -45,9 +49,35 @@ async function api(path, opts) {
 /* ---------- provider badge ---------- */
 api("/api/health").then((h) => {
   const b = $("provider-badge");
-  b.classList.add(h.provider === "offline" ? "offline" : "live");
-  b.textContent = h.provider === "offline" ? "offline" : h.provider.toUpperCase();
+  const live = h.ai_configured && h.provider !== "offline";
+  b.classList.add(live ? "live" : "offline");
+  if (!live) {
+    b.textContent = h.provider === "offline" ? "offline" : "no AI";
+  } else if (h.local_ai) {
+    b.textContent = "LOCAL";
+  } else if (h.fallback_provider && (h.configured_providers || []).includes(h.fallback_provider)) {
+    b.textContent = `${h.provider.toUpperCase()} + ${h.fallback_provider.toUpperCase()}`;
+  } else {
+    b.textContent = h.provider.toUpperCase();
+  }
 }).catch(() => {});
+
+/* ---------- location for snap ---------- */
+function requestSnapLocation() {
+  if (!("geolocation" in navigator)) return;
+  // Don't spam if we already have recent location
+  if (curLocation && Date.now() - (curLocation.ts || 0) < 5 * 60 * 1000) return;
+  navigator.geolocation.getCurrentPosition(
+    (pos) => {
+      curLocation = { lat: pos.coords.latitude, lng: pos.coords.longitude, ts: Date.now() };
+      console.log("Snap location acquired:", curLocation);
+    },
+    (err) => {
+      console.warn("Geolocation failed:", err.code, err.message);
+    },
+    { enableHighAccuracy: true, timeout: 8000, maximumAge: 5 * 60 * 1000 }
+  );
+}
 
 /* ---------- camera ---------- */
 function isSecure() {
@@ -180,17 +210,26 @@ function dismissSnapOverlay() {
 /* ---------- identify ---------- */
 async function identify() {
   if (!curImage) return toast("Snap or upload a photo first");
+  const button = $("btn-identify");
+  button.disabled = true;
   showLoading(true);
   try {
     const fd = new FormData();
     fd.append("image", curImage.file);
+    // Include device location if available
+    if (curLocation) {
+      fd.append("lat", curLocation.lat);
+      fd.append("lng", curLocation.lng);
+    }
     const r = await api("/api/identify", { method: "POST", body: fd });
     curResult = r;
     renderIdentify(r);
   } catch (e) {
+    $("result-card").hidden = false;
     $("result-card").innerHTML = errorBox(e);
   } finally {
     showLoading(false);
+    button.disabled = !curImage;
   }
 }
 $("btn-identify").addEventListener("click", identify);
@@ -203,6 +242,55 @@ function renderIdentify(r) {
   if (r.status === "candidates") return renderCandidates(el, r);
   if (r.status === "not_recognised") return renderRefusal(el, r);
 
+  // PRIMARY: Show identified place from location match or visual identification
+  if (r.identified_place) {
+    const p = r.identified_place;
+    const dist = p.distance_km !== undefined ? `${p.distance_km.toFixed(2)} km away` : "";
+    curPoiId = p.poi_id;
+    const inCatalogue = p.in_catalogue !== false;
+    
+    let html = `<div class="card"><div class="card-head">
+      <div><h2>${esc(p.name)}</h2>
+      <div class="sub">${esc(p.poi_category || "")} ${dist ? "· " + dist : ""}</div></div>
+      <span class="kind-tag conf ${levelClass(r.confidence)}">${esc(r.confidence)} · ${Math.round(r.confidence_score * 100)}%</span></div>`;
+    
+    if (!inCatalogue) {
+      html += `<div class="card-body"><p class="hint">🔍 Visually identified (${r.reason || "visual_identification"}) — not in local catalogue</p></div>`;
+    } else if (r.reason === "location_match") {
+      html += `<div class="card-body"><p class="hint">📍 Identified from your location</p></div>`;
+    } else if (r.reason === "visual_match_fuzzy") {
+      html += `<div class="card-body"><p class="hint">🖼️ Visually matched to catalogue (${r.reason})</p></div>`;
+    } else {
+      html += `<div class="card-body"><p class="hint">Identified (${r.reason || "visual_identification"})</p></div>`;
+    }
+    
+    if (inCatalogue) {
+      html += renderMatchActions({poi_id: p.poi_id, name: p.name});
+      loadPoiInfo(p.poi_id).then((infoHtml) => {
+        $("poi-info-slot").innerHTML = infoHtml;
+      });
+    }
+    
+    // Show nearby from the identified place
+    if (r.nearby && r.nearby.length > 0) {
+      html += `<div class="card-body"><h3>📍 Nearby Landmarks</h3>
+        <div class="nearby-list">`;
+      r.nearby.forEach((np, i) => {
+        const ndist = np.distance_km !== undefined ? `${np.distance_km.toFixed(1)} km` : "";
+        html += `<button class="btn btn-ghost nearby-item" onclick="openPoiDetail('${np.poi_id}')">
+          <span class="nearby-name">${esc(np.name)}</span>
+          <span class="nearby-meta">${esc(np.poi_category || "")} ${ndist ? "· " + ndist : ""}</span>
+        </button>`;
+      });
+      html += `</div></div>`;
+    }
+    
+    html += `<div id="poi-info-slot"></div></div>`;
+    el.innerHTML = html;
+    return;
+  }
+
+  // SECONDARY: Visual recognition result (signs, or no location)
   let html = `<div class="card"><div class="card-head">
     <div><h2>${esc(r.name || "Hmm, not sure")}</h2>
     <div class="sub">${esc(r.description || "")}</div></div>
@@ -210,7 +298,7 @@ function renderIdentify(r) {
 
   if (r.ocr_text) {
     html += `<div class="card-body"><div class="fact-box"><p class="fact-text"><b>OCR:</b> ${esc(r.ocr_text)}</p>
-      <button class="btn btn-accent" style="width:100%" onclick="openTranslateFromText(${JSON.stringify(r.ocr_text)})">Translate</button></div></div>`;
+      <button class="btn btn-accent" style="width:100%" data-translate-ocr>Translate</button></div></div>`;
     curText = r.ocr_text;
   }
 
@@ -223,8 +311,26 @@ function renderIdentify(r) {
   } else if (r.kind && r.kind !== "unknown") {
     html += `<div class="card-body"><p class="hint">Recognised, but this subject is not in the catalogue — pick from the explore tab, or try again.</p></div>`;
   }
+
+  if (r.nearby && r.nearby.length > 0) {
+    html += `<div class="card-body"><h3>📍 Landmarks Nearby</h3>
+      <div class="nearby-list">`;
+    r.nearby.forEach((p, i) => {
+      const dist = p.distance_km !== undefined ? `${p.distance_km.toFixed(1)} km` : "";
+      html += `<button class="btn btn-ghost nearby-item" onclick="openPoiDetail('${p.poi_id}')">
+        <span class="nearby-name">${esc(p.name)}</span>
+        <span class="nearby-meta">${esc(p.poi_category || "")} ${dist ? "· " + dist : ""}</span>
+      </button>`;
+    });
+    html += `</div></div>`;
+  }
+
   html += `<div id="poi-info-slot"></div></div>`;
   el.innerHTML = html;
+  const translateButton = el.querySelector("[data-translate-ocr]");
+  if (translateButton) {
+    translateButton.addEventListener("click", () => openTranslateFromText(r.ocr_text));
+  }
 }
 
 function renderCandidates(el, r) {
@@ -309,7 +415,18 @@ function renderKnowledge(kb) {
 }
 function levelClass(c) { return ["high", "medium", "low"].includes(c) ? c : "low"; }
 function esc(s) { return (s ?? "").toString().replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c])); }
-function errorBox(e) { return `<div class="card"><div class="card-body error-box">⚠ ${esc(e.message || e)}</div></div>`; }
+function errorBox(e) { return `<div class="card"><div class="card-body error-box">
+
+/* Open POI detail from nearby list */
+function openPoiDetail(poiId) {
+  curPoiId = poiId;
+  switchTab("browse");
+  loadPoiInfo(poiId).then((html) => {
+    $("browse-card").innerHTML = html;
+  });
+}
+window.openPoiDetail = openPoiDetail;
+⚠ ${esc(e.message || e)}</div></div>`; }
 
 /* ---------- nearby ---------- */
 async function fetchNearest() {
@@ -373,6 +490,21 @@ async function fetchBook() {
 window.fetchBook = fetchBook;
 
 /* ---------- translate ---------- */
+const targetLanguageLabels = {
+  "en-IN": "English (Default)",
+  "kn-IN": "Kannada (ಕನ್ನಡ)",
+  "te-IN": "Telugu (తెలుగు)",
+};
+
+function targetLanguageLabel(code) {
+  return targetLanguageLabels[code] || code;
+}
+
+$("target-language").addEventListener("change", () => {
+  $("tr-result").hidden = true;
+  $("tr-result").innerHTML = "";
+});
+
 $("tr-file").addEventListener("change", (e) => {
   const f = e.target.files[0];
   if (!f) return;
@@ -393,6 +525,7 @@ function decodeText(t) {
 
 async function translate() {
   const text = $("tr-text").value.trim();
+  const target = $("target-language").value;
   const img = window.__trFile;
   if (!text && !img) return toast("Add sign text or pick an image");
   showLoading(true);
@@ -400,6 +533,7 @@ async function translate() {
     const fd = new FormData();
     if (text) fd.append("text", text);
     if (img) fd.append("image", img);
+    fd.append("target", target);
     const r = await api("/api/translate", { method: "POST", body: fd });
     const el = $("tr-result");
     el.hidden = false;
@@ -407,7 +541,8 @@ async function translate() {
       <p class="fact-text"><b>Original:</b> ${esc(r.ocr_text || text)}</p>
       <p class="fact-text" style="font-size:16px"><b>${esc(r.translation)}</b></p>
       <span class="conf ${levelClass(r.confidence)}">${esc(r.confidence)}</span>
-      <span class="sub"> · ${esc(r.source_language)} → ${esc(r.target_language)}</span>`;
+      <span class="sub"> · Source: ${esc(r.source_language || "Auto-detected")} → Target: ${esc(targetLanguageLabel(r.target_language))}</span>
+      ${r.fallback === "dataset_reference" ? '<div class="chip">offline dataset match</div>' : ""}`;
     if (r.reference) {
       html += `<div class="fact-box" style="margin-top:10px">
         <p class="fact-text"><b>Reference:</b> ${esc(r.reference.reference_translation)}</p>
@@ -419,12 +554,14 @@ async function translate() {
     html += `</div></div>`;
     el.innerHTML = html;
   } catch (e) {
+    $("tr-result").hidden = false;
     $("tr-result").innerHTML = errorBox(e);
   } finally {
     showLoading(false);
   }
 }
 window.translate = translate;
+$("btn-translate").addEventListener("click", translate);
 
 /* ---------- AR view (WebXR when available, camera overlay everywhere) ---------- */
 let xrSession = null;
@@ -530,6 +667,7 @@ async function loadPoiList() {
       .map((p) => `<option value="${p.poi_id}">${esc(p.name)} · ${esc(p.city)}</option>`)
       .join("");
   } catch (e) {
+    $("browse-card").hidden = false;
     $("browse-card").innerHTML = errorBox(e);
   }
 }

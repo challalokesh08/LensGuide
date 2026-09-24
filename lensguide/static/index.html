@@ -53,7 +53,7 @@
       <button id="btn-upload" class="btn btn-ghost" onclick="pickUpload()">Upload</button>
       <input type="file" id="file-input" accept="image/*" capture="environment" hidden>
       <button id="btn-snap" class="btn btn-primary btn-round" onclick="snap()">Snap</button>
-      <button id="btn-identify" class="btn btn-accent" onclick="identify()" disabled>Identify</button>
+      <button id="btn-identify" class="btn btn-accent" disabled>Identify</button>
     </div>
 
     <div id="result-card" hidden></div>
@@ -63,14 +63,20 @@
   <section id="view-translate" class="view">
     <div class="panel">
       <h2>Sign &amp; menu translation</h2>
-      <p class="hint">Point at a sign or menu, or paste the text you can't read. Output to English.</p>
+      <p class="hint">Point at a sign or menu, or paste the text you can't read. Choose your target language.</p>
+      <label class="field-label" for="target-language">Target Language:</label>
+      <select id="target-language" class="select" aria-label="Target language">
+        <option value="en-IN">English (Default)</option>
+        <option value="kn-IN">Kannada (ಕನ್ನಡ)</option>
+        <option value="te-IN">Telugu (తెలుగు)</option>
+      </select>
       <div class="translate-controls">
         <input type="file" id="tr-file" accept="image/*" capture="environment" hidden>
         <button class="btn btn-ghost" onclick="document.getElementById('tr-file').click()">From image</button>
         <span id="tr-img-name" class="chip" hidden></span>
       </div>
       <textarea id="tr-text" rows="4" placeholder="…or paste sign text here"></textarea>
-      <button id="btn-translate" class="btn btn-accent" onclick="translate()">Translate</button>
+      <button id="btn-translate" class="btn btn-accent">Translate</button>
       <div id="tr-result" hidden></div>
     </div>
   </section>
