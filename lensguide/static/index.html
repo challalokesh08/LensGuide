@@ -32,6 +32,10 @@
   <section id="view-snap" class="view active">
     <div id="camera-box" class="camera-box">
       <video id="camera" autoplay playsinline muted></video>
+      <div id="snap-overlay" class="cam-center" onclick="dismissSnapOverlay()" hidden>
+        <img id="snap-img" alt="snapshot">
+        <span class="snap-close">✕</span>
+      </div>
       <div id="cam-start" class="cam-center" hidden>
         <button class="btn btn-primary" onclick="startCameraFromTap()">▶ Start camera</button>
         <p class="off-sub">or upload a photo below</p>

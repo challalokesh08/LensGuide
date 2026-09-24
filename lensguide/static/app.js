@@ -142,16 +142,19 @@ $("file-input").addEventListener("change", (e) => {
   if (f) setImage(f);
 });
 function setImage(file) {
+  stopCamera();
   if (curImage) URL.revokeObjectURL(curImage.objectUrl);
   curImage = { file, objectUrl: URL.createObjectURL(file) };
   const cam = $("camera");
   cam.srcObject = null;
   cam.src = curImage.objectUrl;
+  $("snap-overlay").hidden = true;
   $("btn-identify").disabled = false;
 }
+window.dismissSnapOverlay = dismissSnapOverlay;
 function snap() {
   if (!stream) {
-    if (curImage) return toast("Photo already selected — tap Identify");
+    if (curImage) { dismissSnapOverlay(); return toast("Photo captured — tap Identify"); }
     showCamStart();
     return toast("Camera not ready. Tap Start camera (or Upload).", 3200);
   }
@@ -162,8 +165,16 @@ function snap() {
   canvas.height = v.videoHeight || 960;
   canvas.getContext("2d").drawImage(v, 0, 0, canvas.width, canvas.height);
   canvas.toBlob((blob) => {
-    setImage(new File([blob], "snap.jpg", { type: "image/jpeg" }));
+    if (curImage) URL.revokeObjectURL(curImage.objectUrl);
+    curImage = { file: new File([blob], "snap.jpg", { type: "image/jpeg" }), objectUrl: URL.createObjectURL(blob) };
+    $("snap-img").src = curImage.objectUrl;
+    $("snap-overlay").hidden = false;
+    $("btn-identify").disabled = false;
   }, "image/jpeg", 0.92);
+}
+
+function dismissSnapOverlay() {
+  $("snap-overlay").hidden = true;
 }
 
 /* ---------- identify ---------- */
