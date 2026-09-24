@@ -419,6 +419,8 @@ async function startAR() {
       });
       $("ar-cam").hidden = true;          // WebXR renders its own camera
       $("ar-overlay").hidden = false;
+      $("ar-mode").textContent = "WebXR AR";
+      $("ar-mode").classList.add("conf", "high");
       xrSession.addEventListener("end", exitAR);
       const tick = () => { if (xrSession) xrSession.requestAnimationFrame(tick); };
       xrSession.requestAnimationFrame(tick);
@@ -445,6 +447,8 @@ async function startCameraOverlayAR() {
     $("ar-cam").srcObject = camStream;
     $("ar-cam").hidden = false;
     $("ar-overlay").hidden = false;
+    $("ar-mode").textContent = "Overlay AR";
+    $("ar-mode").classList.remove("conf", "high");
   } catch (e) {
     toast("Camera unavailable (" + (e.name || e.message) + ") — see grounded info below.");
   }
