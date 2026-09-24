@@ -68,6 +68,8 @@ main { flex: 1; overflow-y: auto; }
 .view { display: none; padding: 14px; padding-bottom: calc(20px + env(safe-area-inset-bottom)); }
 .view.active { display: block; }
 
+[hidden] { display: none !important; }
+
 .camera-box {
   position: relative; width: 100%; aspect-ratio: 3/4; max-height: 60vh;
   background: #000; border-radius: 16px; overflow: hidden;
