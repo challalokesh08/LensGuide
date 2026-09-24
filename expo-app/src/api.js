@@ -1,5 +1,7 @@
 import { API_BASE } from "./config";
 
+import * as FileSystem from "expo-file-system/legacy";
+
 async function api(path, opts = {}, timeoutMs = 12000) {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), timeoutMs);
@@ -33,13 +35,23 @@ export async function ping() {
 }
 
 async function postImage(path, uri) {
-  // RN 0.86 no longer accepts { uri, name, type } parts in FormData —
-  // read the file into a Blob first.
-  const data = await fetch(uri);
-  const blob = await data.blob();
-  const form = new FormData();
-  form.append("image", blob, "photo.jpg");
-  return api(path, { method: "POST", body: form });
+  // Native multipart upload — no JS Blob/base64 round-trip (expo-file-system).
+  const r = await FileSystem.uploadAsync(`${API_BASE}${path}`, uri, {
+    httpMethod: "POST",
+    uploadType: FileSystem.FileSystemUploadType.MULTIPART,
+    fieldName: "image",
+    mimeType: "image/jpeg",
+  });
+  let parsed;
+  try {
+    parsed = JSON.parse(r.body);
+  } catch (_) {
+    throw new Error(`Bad server response (status ${r.status})`);
+  }
+  if (r.status < 200 || r.status >= 300) {
+    throw new Error(parsed.error || `Server error (${r.status})`);
+  }
+  return parsed;
 }
 
 export const identify = (uri) => postImage("/api/identify", uri);
