@@ -198,25 +198,101 @@ def identify():
     confidence = (result.get("confidence") or "low").lower()
     if confidence not in ("high", "medium", "low"):
         confidence = "low"
+    score = _parse_score(result, confidence)
 
-    poi_id = match_poi(label_class, name)
+    # ---- Confidence Gate ----
+    # Above the threshold we may name the subject and behave as before.
+    # Below it we must NOT name a subject: offer up to three candidates
+    # (with scores) or refuse honestly. Never fabricate a name.
+    THRESH = 0.85
+    ocr_text = (result.get("text") or "").strip()
     matched = None
-    if poi_id:
-        info = poi_info(poi_id)
-        if info:
-            matched = {"poi_id": poi_id, "name": info["poi"]["name"]}
+    candidates = []
+    status = "not_recognised"
+    reason = "no_candidate"
+
+    if kind == "sign" and ocr_text:
+        # The subject IS the text — recognition means the OCR read succeeded.
+        status, reason = "recognised", "above_threshold"
+        name = ocr_text
+        confidence, score = "high", max(score, 1.0)
+    elif score >= THRESH:
+        status, reason = "recognised", "above_threshold"
+        poi_id = match_poi(label_class, name)
+        if poi_id:
+            info = poi_info(poi_id)
+            if info:
+                matched = {"poi_id": poi_id, "name": info["poi"]["name"]}
+        confidence = "high" if score >= THRESH else confidence
+    else:
+        candidates = poi_candidates(label_class, name, limit=3)
+        if candidates:
+            status, reason = "candidates", "below_threshold"
+        name = ""  # never expose the model's low-confidence guess
 
     return jsonify(
         {
             "kind": kind,
-            "label_class": label_class if kind != "sign" else None,
+            "label_class": label_class if kind != "sign" and status == "recognised" else None,
             "name": name,
             "confidence": confidence,
+            "confidence_score": round(score, 2),
+            "status": status,
+            "reason": reason,
             "description": result.get("description", ""),
-            "ocr_text": result.get("text", "") if kind == "sign" else "",
+            "ocr_text": ocr_text,
             "matched": matched,
+            "candidates": candidates,
         }
     )
+
+
+def _parse_score(result, confidence):
+    """Numeric 0..1. Prefer the LLM's confidence_score; fall back to the label."""
+    raw = result.get("confidence_score")
+    if raw is not None:
+        try:
+            s = float(raw)
+            if 0.0 <= s <= 1.0:
+                return s
+        except (TypeError, ValueError):
+            pass
+    return {"high": 0.9, "medium": 0.65, "low": 0.35}.get(confidence, 0.35)
+
+
+def poi_candidates(label_class, name, limit=3, min_score=0.45):
+    """Top plausible POIs for a below-threshold input. Each has a score; the
+    CLIENT asks the traveller to pick one, then grounds on it."""
+    conn = db.connect()
+    rows = conn.execute(
+        "SELECT poi_id, name FROM activities_poi WHERE status='active'"
+    ).fetchall()
+    conn.close()
+    scored = []
+    if label_class and label_class != "none":
+        pid = db.POI_INDEX.get(label_class)
+        if pid:
+            for r in rows:
+                if r["poi_id"] == pid:
+                    scored.append((pid, r["name"], 0.95))
+                    break
+    if name:
+        name_l = name.lower()
+        for r in rows:
+            if any(s[0] == r["poi_id"] for s in scored):
+                continue
+            target = r["name"].lower()
+            if target == name_l:
+                s = 0.9
+            elif name_l in target or target in name_l:
+                s = 0.7
+            else:
+                tokens = set(name_l.split())
+                s = len(tokens & set(target.split())) / max(len(tokens), 1)
+            if s >= min_score:
+                scored.append((r["poi_id"], r["name"], s))
+    best = sorted(scored, key=lambda t: -t[2])[:limit]
+    return [{"poi_id": p, "name": n, "score": round(s, 2)} for p, n, s in best]
 
 
 def match_poi(label_class, name):

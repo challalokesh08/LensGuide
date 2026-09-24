@@ -198,17 +198,19 @@ $("btn-identify").addEventListener("click", identify);
 function renderIdentify(r) {
   const el = $("result-card");
   el.hidden = false;
+
+  // Confidence Gate: below threshold we never name a subject.
+  if (r.status === "candidates") return renderCandidates(el, r);
+  if (r.status === "not_recognised") return renderRefusal(el, r);
+
   let html = `<div class="card"><div class="card-head">
     <div><h2>${esc(r.name || "Hmm, not sure")}</h2>
     <div class="sub">${esc(r.description || "")}</div></div>
-    <span class="kind-tag conf ${levelClass(r.confidence)}">${esc(r.confidence)}</span></div>`;
+    <span class="kind-tag conf ${levelClass(r.confidence)}">${esc(r.confidence)} · ${Math.round(r.confidence_score * 100)}%</span></div>`;
 
   if (r.ocr_text) {
     html += `<div class="card-body"><div class="fact-box"><p class="fact-text"><b>OCR:</b> ${esc(r.ocr_text)}</p>
       <button class="btn btn-accent" style="width:100%" onclick="openTranslateFromText(${JSON.stringify(r.ocr_text)})">Translate</button></div></div>`;
-  }
-  // OCR text used as upload preview
-  if (r.ocr_text) {
     curText = r.ocr_text;
   }
 
@@ -219,11 +221,50 @@ function renderIdentify(r) {
       $("poi-info-slot").innerHTML = infoHtml;
     });
   } else if (r.kind && r.kind !== "unknown") {
-    html += `<div class="card-body"><p class="hint">Recognition was not confident enough to ground to a POI. Pick from the explore tab, or try again.</p></div>`;
+    html += `<div class="card-body"><p class="hint">Recognised, but this subject is not in the catalogue — pick from the explore tab, or try again.</p></div>`;
   }
   html += `<div id="poi-info-slot"></div></div>`;
   el.innerHTML = html;
-  if (!r.matched && !r.ocr_text) toast("Low confidence — nothing grounded yet");
+}
+
+function renderCandidates(el, r) {
+  el.innerHTML = `<div class="card"><div class="card-head">
+    <div><h2>Which one did you mean?</h2>
+    <div class="sub">That photo didn't clear the confidence bar (${Math.round(r.confidence_score * 100)}%) — tap the match below.</div></div>
+    <span class="kind-tag conf medium">choose one</span></div>
+    <div class="card-body">
+      ${r.candidates.map((c) => `<button class="btn btn-ghost candidate" onclick="chooseCandidate('${c.poi_id}')">
+        <span>${esc(c.name)}</span><span class="conf medium">${Math.round(c.score * 100)}%</span></button>`).join("")}
+    </div></div>`;
+}
+
+function renderRefusal(el) {
+  el.innerHTML = `<div class="card"><div class="card-head">
+    <div><h2>Not recognised</h2>
+    <div class="sub">No match was confident enough — I won't guess.</div></div>
+    <span class="kind-tag conf medium">no guess</span></div>
+    <div class="card-body">
+      <p class="hint">Try a clearer straight-on angle, or search the catalogue manually.</p>
+      <button class="btn btn-accent" style="width:100%" onclick="switchTab('browse')">Browse catalogue</button>
+    </div></div>`;
+}
+
+async function chooseCandidate(poiId) {
+  curPoiId = poiId;
+  const el = $("result-card");
+  el.hidden = false;
+  el.innerHTML = `<div class="card"><div class="sub">Grounding on your choice…</div><div id="poi-info-slot"></div></div>`;
+  showLoading(true);
+  try {
+    const infoHtml = await loadPoiInfo(poiId);
+    el.innerHTML = `<div class="card">${renderMatchActions({ poi_id: poiId, name: "" })}<div id="poi-info-slot">${infoHtml}</div></div>`;
+    curResult = { matched: { poi_id: poiId, name: el.querySelector("h2")?.textContent || "" } };
+    toast("Grounded on your choice");
+  } catch (e) {
+    el.innerHTML = errorBox(e);
+  } finally {
+    showLoading(false);
+  }
 }
 
 let curText = "";

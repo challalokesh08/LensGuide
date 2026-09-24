@@ -96,7 +96,8 @@ def image_message(image_b64, mime):
 
 
 def identify_poi(image_b64, mime):
-    """Vision-LLM recognition. Returns {kind, label_class, name, confidence, description}.
+    """Vision-LLM recognition. Returns {kind, label_class, name, confidence,
+    confidence_score, description, text}.
     kind is one of landmark | food | sign | unknown."""
     class_list = json.dumps(db.LABEL_CLASSES)
     system = (
@@ -106,10 +107,14 @@ def identify_poi(image_b64, mime):
         'sign, menu, or warning text, kind="sign"; otherwise kind="unknown". '
         f"Known landmark classes:\n{class_list}\n"
         'Return exactly: {"kind": str, "label_class": str, "name": str, '
-        '"confidence": "high"|"medium"|"low", "description": str, "text": str or ""}\n'
+        '"confidence": "high"|"medium"|"low", "confidence_score": 0.0, '
+        '"description": str, "text": str or ""}\n'
         "where label_class is one of the listed classes or \"none\", name is the "
-        "human-readable POI name or empty, confidence reflects how sure you are, "
-        "description is one short sentence, and text is the OCR text if kind==sign.\n"
+        "human-readable POI name or empty string when unsure, confidence reflects "
+        "how sure you are, confidence_score is a single number from 0.0 to 1.0 "
+        "reflecting how confident you are in the identification (be honest: a "
+        "blurry, ambiguous, or partial view must get a LOW score), description is "
+        "one short sentence, and text is the OCR text if kind==sign.\n"
     )
     messages = [
         {"role": "system", "content": system},

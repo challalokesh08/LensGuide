@@ -103,6 +103,7 @@ main { flex: 1; overflow-y: auto; }
   background: var(--panel2); min-height: 48px;
 }
 .btn:disabled { opacity: .4; }
+.candidate { width: 100%; display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; text-align: left; }
 .btn-primary { background: var(--accent); color: #00131a; }
 .btn-accent { background: var(--accent2); }
 .btn-ghost { background: var(--panel2); border: 1px solid var(--line); }
