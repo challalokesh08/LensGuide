@@ -42,11 +42,12 @@ def _retry_after(e):
     return None
 
 
-def _raw_http(url, payload, headers, max_retries=1):
-    # One short retry on 429: recovers from a transient quota blip without
-    # hanging the request for minutes; if the bucket is exhausted it's
-    # exhausted, so fail fast and let the user retry.
+def _raw_http(url, payload, headers, max_retries=1, max_503_retries=2):
+    # Short retries: one on 429 (transient quota blip) and up to two on 5xx
+    # (Google occasionally returns 503s in bursts). Fail fast on persistent
+    # quota exhaustion so the user gets a clear message instead of a hang.
     retries = 0
+    retries_503 = 0
     while True:
         req = request.Request(
             url,
@@ -66,6 +67,10 @@ def _raw_http(url, payload, headers, max_retries=1):
                 raise RuntimeError(
                     "The translation service is rate-limited. Wait a few seconds, then press Translate again."
                 )
+            if e.code >= 500 and retries_503 < max_503_retries:
+                retries_503 += 1
+                time.sleep(2 * retries_503)  # 2s, then 4s
+                continue
             raise RuntimeError(f"LLM provider error ({e.code}): {e.reason}")
 
 
