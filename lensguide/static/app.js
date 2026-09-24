@@ -392,6 +392,8 @@ let camStream = null;
 window.startAR = startAR;
 async function startAR() {
   if (!curPoiId) return toast("Recognise a POI first, then view it in AR.");
+  stopCamera();              // release the snap camera so AR gets the sole feed
+  $("snap-overlay").hidden = true;
   showLoading(true);
   let info;
   try {
@@ -450,7 +452,8 @@ async function startCameraOverlayAR() {
     $("ar-mode").textContent = "Overlay AR";
     $("ar-mode").classList.remove("conf", "high");
   } catch (e) {
-    toast("Camera unavailable (" + (e.name || e.message) + ") — see grounded info below.");
+    toast("AR camera unavailable (" + (e.name || e.message) + ") — tap × Exit AR and give camera permission.", 4000);
+    console.warn(e);
   }
 }
 
