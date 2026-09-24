@@ -1,0 +1,345 @@
+image_id,city_id,kind,file_path,source_text_truth,source_language,reference_translation,target_language,script,difficulty,dataset_split,is_safety_critical,updated_at
+sgn_cc242f63,cty_a5f16904,menu,media/signs/menu/000.jpg,"இட்லி - ₹40
+தோசை - ₹60
+பொங்கல் - ₹70",ta,"Idli - ₹40
+Dosa - ₹60
+Pongal - ₹70",en-IN,Taml,easy,eval,0,2026-08-18T10:00:00+05:30
+sgn_a8ea2fa5,cty_51a149b7,warning,media/signs/warning/001.jpg,ਖ਼ਤਰਾ – ਉੱਚ ਵੋਲਟੇਜ,pa,Danger – high voltage,en-IN,Guru,hard,train,1,2026-08-18T10:00:00+05:30
+sgn_324b396e,cty_10cbee86,notice,media/signs/notice/002.jpg,ചെരുപ്പ് പുറത്ത് വയ്ക്കുക,ml,Please leave footwear outside,en-IN,Mlym,hard,train,0,2026-08-18T10:00:00+05:30
+sgn_4a82b2de,cty_0b7f5985,warning,media/signs/warning/003.jpg,ਖ਼ਤਰਾ – ਉੱਚ ਵੋਲਟੇਜ,pa,Danger – high voltage,en-IN,Guru,easy,train,1,2026-08-18T10:00:00+05:30
+sgn_065d2a0d,cty_c0f2d9de,warning,media/signs/warning/004.jpg,गहरा पानी – तैरना मना है,hi,Deep water – swimming prohibited,en-IN,Deva,medium,eval,1,2026-08-18T10:00:00+05:30
+sgn_dcb48ebe,cty_5d572c8a,warning,media/signs/warning/005.jpg,गहरा पानी – तैरना मना है,hi,Deep water – swimming prohibited,en-IN,Deva,medium,train,1,2026-08-18T10:00:00+05:30
+sgn_29ad03f4,cty_d35a9652,menu,media/signs/menu/006.jpg,"मिसळ पाव - ₹70
+साबुदाणा खिचडी - ₹90",mr,"Misal pav - ₹70
+Sabudana khichdi - ₹90",en-IN,Deva,easy,train,0,2026-08-18T10:00:00+05:30
+sgn_c393619e,cty_9aa02925,menu,media/signs/menu/007.jpg,"आलू पराठा - ₹80
+छोले भटूरे - ₹120",hi,"Aloo paratha - ₹80
+Chole bhature - ₹120",en-IN,Deva,medium,train,0,2026-08-18T10:00:00+05:30
+sgn_181f80c7,cty_b43cdd57,warning,media/signs/warning/008.jpg,ਖ਼ਤਰਾ – ਉੱਚ ਵੋਲਟੇਜ,pa,Danger – high voltage,en-IN,Guru,medium,eval,1,2026-08-18T10:00:00+05:30
+sgn_cb78f290,cty_6320eea9,warning,media/signs/warning/009.jpg,ਖ਼ਤਰਾ – ਉੱਚ ਵੋਲਟੇਜ,pa,Danger – high voltage,en-IN,Guru,medium,train,1,2026-08-18T10:00:00+05:30
+sgn_2230c637,cty_c43cfa94,notice,media/signs/notice/010.jpg,ചെരുപ്പ് പുറത്ത് വയ്ക്കുക,ml,Please leave footwear outside,en-IN,Mlym,easy,train,0,2026-08-18T10:00:00+05:30
+sgn_5fbea10b,cty_c9f34ba7,menu,media/signs/menu/011.jpg,"मिसळ पाव - ₹70
+साबुदाणा खिचडी - ₹90",mr,"Misal pav - ₹70
+Sabudana khichdi - ₹90",en-IN,Deva,easy,train,0,2026-08-18T10:00:00+05:30
+sgn_96c13c1f,cty_ccb4fb74,warning,media/signs/warning/012.jpg,ਖ਼ਤਰਾ – ਉੱਚ ਵੋਲਟੇਜ,pa,Danger – high voltage,en-IN,Guru,hard,eval,1,2026-08-18T10:00:00+05:30
+sgn_b1fd0844,cty_8b6b1652,street_sign,media/signs/street_sign/013.jpg,ప్రవేశం ఉచితం,te,Entry free,en-IN,Telu,easy,train,0,2026-08-18T10:00:00+05:30
+sgn_df40aa17,cty_32e8e65c,warning,media/signs/warning/014.jpg,ಎಚ್ಚರಿಕೆ – ಜಾರುವ ನೆಲ,kn,Caution – slippery floor,en-IN,Knda,medium,train,1,2026-08-18T10:00:00+05:30
+sgn_9cdd357f,cty_5d572c8a,warning,media/signs/warning/015.jpg,ਖ਼ਤਰਾ – ਉੱਚ ਵੋਲਟੇਜ,pa,Danger – high voltage,en-IN,Guru,hard,train,1,2026-08-18T10:00:00+05:30
+sgn_de9000be,cty_6320eea9,street_sign,media/signs/street_sign/016.jpg,ప్రవేశం ఉచితం,te,Entry free,en-IN,Telu,hard,eval,0,2026-08-18T10:00:00+05:30
+sgn_a0768ef7,cty_95d040d8,warning,media/signs/warning/017.jpg,ਖ਼ਤਰਾ – ਉੱਚ ਵੋਲਟੇਜ,pa,Danger – high voltage,en-IN,Guru,easy,train,1,2026-08-18T10:00:00+05:30
+sgn_165e81a9,cty_541018a9,transit_board,media/signs/transit_board/018.jpg,প্ল্যাটফর্ম ৩ – হাওড়া লোকাল,bn,Platform 3 – Howrah local,en-IN,Beng,hard,train,0,2026-08-18T10:00:00+05:30
+sgn_7bb9f644,cty_8b6b1652,warning,media/signs/warning/019.jpg,गहरा पानी – तैरना मना है,hi,Deep water – swimming prohibited,en-IN,Deva,medium,train,1,2026-08-18T10:00:00+05:30
+sgn_4f7ba8da,cty_c0f2d9de,menu,media/signs/menu/020.jpg,"मिसळ पाव - ₹70
+साबुदाणा खिचडी - ₹90",mr,"Misal pav - ₹70
+Sabudana khichdi - ₹90",en-IN,Deva,easy,eval,0,2026-08-18T10:00:00+05:30
+sgn_0e2dace0,cty_43d0a650,transit_board,media/signs/transit_board/021.jpg,প্ল্যাটফর্ম ৩ – হাওড়া লোকাল,bn,Platform 3 – Howrah local,en-IN,Beng,hard,train,0,2026-08-18T10:00:00+05:30
+sgn_990443b7,cty_7fc82336,menu,media/signs/menu/022.jpg,"आलू पराठा - ₹80
+छोले भटूरे - ₹120",hi,"Aloo paratha - ₹80
+Chole bhature - ₹120",en-IN,Deva,hard,train,0,2026-08-18T10:00:00+05:30
+sgn_2f5aa66b,cty_f288c6a0,warning,media/signs/warning/023.jpg,ਖ਼ਤਰਾ – ਉੱਚ ਵੋਲਟੇਜ,pa,Danger – high voltage,en-IN,Guru,hard,train,1,2026-08-18T10:00:00+05:30
+sgn_50aad1a4,cty_f288c6a0,menu,media/signs/menu/024.jpg,"आलू पराठा - ₹80
+छोले भटूरे - ₹120",hi,"Aloo paratha - ₹80
+Chole bhature - ₹120",en-IN,Deva,medium,eval,0,2026-08-18T10:00:00+05:30
+sgn_513f320b,cty_d401ef6b,street_sign,media/signs/street_sign/025.jpg,நுழைவு தடை,ta,No entry,en-IN,Taml,easy,train,0,2026-08-18T10:00:00+05:30
+sgn_e1d1dcf9,cty_ab50efee,street_sign,media/signs/street_sign/026.jpg,ప్రవేశం ఉచితం,te,Entry free,en-IN,Telu,medium,train,0,2026-08-18T10:00:00+05:30
+sgn_8436da1e,cty_0b7f5985,warning,media/signs/warning/027.jpg,गहरा पानी – तैरना मना है,hi,Deep water – swimming prohibited,en-IN,Deva,medium,train,1,2026-08-18T10:00:00+05:30
+sgn_5014ea15,cty_541018a9,notice,media/signs/notice/028.jpg,ചെരുപ്പ് പുറത്ത് വയ്ക്കുക,ml,Please leave footwear outside,en-IN,Mlym,medium,eval,0,2026-08-18T10:00:00+05:30
+sgn_bb60618f,cty_43d0a650,transit_board,media/signs/transit_board/029.jpg,প্ল্যাটফর্ম ৩ – হাওড়া লোকাল,bn,Platform 3 – Howrah local,en-IN,Beng,hard,train,0,2026-08-18T10:00:00+05:30
+sgn_5721e000,cty_bbb31d67,warning,media/signs/warning/030.jpg,ಎಚ್ಚರಿಕೆ – ಜಾರುವ ನೆಲ,kn,Caution – slippery floor,en-IN,Knda,easy,train,1,2026-08-18T10:00:00+05:30
+sgn_5473bec0,cty_34bbfdfe,warning,media/signs/warning/031.jpg,गहरा पानी – तैरना मना है,hi,Deep water – swimming prohibited,en-IN,Deva,hard,train,1,2026-08-18T10:00:00+05:30
+sgn_b02b87d1,cty_67ee7f6f,transit_board,media/signs/transit_board/032.jpg,প্ল্যাটফর্ম ৩ – হাওড়া লোকাল,bn,Platform 3 – Howrah local,en-IN,Beng,easy,eval,0,2026-08-18T10:00:00+05:30
+sgn_2dd74d0f,cty_828a7777,menu,media/signs/menu/033.jpg,"आलू पराठा - ₹80
+छोले भटूरे - ₹120",hi,"Aloo paratha - ₹80
+Chole bhature - ₹120",en-IN,Deva,easy,train,0,2026-08-18T10:00:00+05:30
+sgn_a0c9c932,cty_541018a9,menu,media/signs/menu/034.jpg,"आलू पराठा - ₹80
+छोले भटूरे - ₹120",hi,"Aloo paratha - ₹80
+Chole bhature - ₹120",en-IN,Deva,easy,train,0,2026-08-18T10:00:00+05:30
+sgn_608de239,cty_d401ef6b,warning,media/signs/warning/035.jpg,गहरा पानी – तैरना मना है,hi,Deep water – swimming prohibited,en-IN,Deva,medium,train,1,2026-08-18T10:00:00+05:30
+sgn_0d7eb4c2,cty_1ced6ede,warning,media/signs/warning/036.jpg,ਖ਼ਤਰਾ – ਉੱਚ ਵੋਲਟੇਜ,pa,Danger – high voltage,en-IN,Guru,easy,eval,1,2026-08-18T10:00:00+05:30
+sgn_6beb93f5,cty_009c9fd2,menu,media/signs/menu/037.jpg,"आलू पराठा - ₹80
+छोले भटूरे - ₹120",hi,"Aloo paratha - ₹80
+Chole bhature - ₹120",en-IN,Deva,easy,train,0,2026-08-18T10:00:00+05:30
+sgn_23fe63a1,cty_c0f2d9de,notice,media/signs/notice/038.jpg,ചെരുപ്പ് പുറത്ത് വയ്ക്കുക,ml,Please leave footwear outside,en-IN,Mlym,easy,train,0,2026-08-18T10:00:00+05:30
+sgn_02b22360,cty_5698a7ab,transit_board,media/signs/transit_board/039.jpg,প্ল্যাটফর্ম ৩ – হাওড়া লোকাল,bn,Platform 3 – Howrah local,en-IN,Beng,easy,train,0,2026-08-18T10:00:00+05:30
+sgn_b848b207,cty_076e8e86,menu,media/signs/menu/040.jpg,"आलू पराठा - ₹80
+छोले भटूरे - ₹120",hi,"Aloo paratha - ₹80
+Chole bhature - ₹120",en-IN,Deva,easy,eval,0,2026-08-18T10:00:00+05:30
+sgn_c0dc729e,cty_79cbc59b,menu,media/signs/menu/041.jpg,"आलू पराठा - ₹80
+छोले भटूरे - ₹120",hi,"Aloo paratha - ₹80
+Chole bhature - ₹120",en-IN,Deva,easy,train,0,2026-08-18T10:00:00+05:30
+sgn_45e8dfad,cty_f288c6a0,warning,media/signs/warning/042.jpg,ਖ਼ਤਰਾ – ਉੱਚ ਵੋਲਟੇਜ,pa,Danger – high voltage,en-IN,Guru,medium,train,1,2026-08-18T10:00:00+05:30
+sgn_a82bb862,cty_009c9fd2,notice,media/signs/notice/043.jpg,ചെരുപ്പ് പുറത്ത് വയ്ക്കുക,ml,Please leave footwear outside,en-IN,Mlym,easy,train,0,2026-08-18T10:00:00+05:30
+sgn_ee82229a,cty_7b89639e,transit_board,media/signs/transit_board/044.jpg,প্ল্যাটফর্ম ৩ – হাওড়া লোকাল,bn,Platform 3 – Howrah local,en-IN,Beng,hard,eval,0,2026-08-18T10:00:00+05:30
+sgn_81db6332,cty_590d4b7b,notice,media/signs/notice/045.jpg,ചെരുപ്പ് പുറത്ത് വയ്ക്കുക,ml,Please leave footwear outside,en-IN,Mlym,easy,train,0,2026-08-18T10:00:00+05:30
+sgn_e68f2602,cty_d4f5e3a5,warning,media/signs/warning/046.jpg,ਖ਼ਤਰਾ – ਉੱਚ ਵੋਲਟੇਜ,pa,Danger – high voltage,en-IN,Guru,medium,train,1,2026-08-18T10:00:00+05:30
+sgn_361a9353,cty_7f673457,street_sign,media/signs/street_sign/047.jpg,நுழைவு தடை,ta,No entry,en-IN,Taml,easy,train,0,2026-08-18T10:00:00+05:30
+sgn_d667862d,cty_ccb4fb74,street_sign,media/signs/street_sign/048.jpg,ప్రవేశం ఉచితం,te,Entry free,en-IN,Telu,easy,eval,0,2026-08-18T10:00:00+05:30
+sgn_d033a9da,cty_5d572c8a,warning,media/signs/warning/049.jpg,ਖ਼ਤਰਾ – ਉੱਚ ਵੋਲਟੇਜ,pa,Danger – high voltage,en-IN,Guru,medium,train,1,2026-08-18T10:00:00+05:30
+sgn_965c1f43,cty_d4f5e3a5,warning,media/signs/warning/050.jpg,ਖ਼ਤਰਾ – ਉੱਚ ਵੋਲਟੇਜ,pa,Danger – high voltage,en-IN,Guru,easy,train,1,2026-08-18T10:00:00+05:30
+sgn_3dffd6c3,cty_621f4a84,transit_board,media/signs/transit_board/051.jpg,প্ল্যাটফর্ম ৩ – হাওড়া লোকাল,bn,Platform 3 – Howrah local,en-IN,Beng,medium,train,0,2026-08-18T10:00:00+05:30
+sgn_c799b807,cty_17b8ef2f,menu,media/signs/menu/052.jpg,"आलू पराठा - ₹80
+छोले भटूरे - ₹120",hi,"Aloo paratha - ₹80
+Chole bhature - ₹120",en-IN,Deva,easy,eval,0,2026-08-18T10:00:00+05:30
+sgn_f4aa39eb,cty_cf1c6ac5,street_sign,media/signs/street_sign/053.jpg,நுழைவு தடை,ta,No entry,en-IN,Taml,hard,train,0,2026-08-18T10:00:00+05:30
+sgn_63f7ca00,cty_aa759717,warning,media/signs/warning/054.jpg,ಎಚ್ಚರಿಕೆ – ಜಾರುವ ನೆಲ,kn,Caution – slippery floor,en-IN,Knda,medium,train,1,2026-08-18T10:00:00+05:30
+sgn_d0116315,cty_d401ef6b,street_sign,media/signs/street_sign/055.jpg,நுழைவு தடை,ta,No entry,en-IN,Taml,hard,train,0,2026-08-18T10:00:00+05:30
+sgn_7feeee1f,cty_9aa02925,street_sign,media/signs/street_sign/056.jpg,நுழைவு தடை,ta,No entry,en-IN,Taml,easy,eval,0,2026-08-18T10:00:00+05:30
+sgn_764550de,cty_79cbc59b,menu,media/signs/menu/057.jpg,"मिसळ पाव - ₹70
+साबुदाणा खिचडी - ₹90",mr,"Misal pav - ₹70
+Sabudana khichdi - ₹90",en-IN,Deva,easy,train,0,2026-08-18T10:00:00+05:30
+sgn_11c218ba,cty_aa759717,menu,media/signs/menu/058.jpg,"இட்லி - ₹40
+தோசை - ₹60
+பொங்கல் - ₹70",ta,"Idli - ₹40
+Dosa - ₹60
+Pongal - ₹70",en-IN,Taml,hard,train,0,2026-08-18T10:00:00+05:30
+sgn_b593d3c0,cty_718f03c7,warning,media/signs/warning/059.jpg,गहरा पानी – तैरना मना है,hi,Deep water – swimming prohibited,en-IN,Deva,hard,train,1,2026-08-18T10:00:00+05:30
+sgn_78405f44,cty_43d0a650,street_sign,media/signs/street_sign/060.jpg,ప్రవేశం ఉచితం,te,Entry free,en-IN,Telu,medium,eval,0,2026-08-18T10:00:00+05:30
+sgn_d28cbdf9,cty_32e8e65c,warning,media/signs/warning/061.jpg,ਖ਼ਤਰਾ – ਉੱਚ ਵੋਲਟੇਜ,pa,Danger – high voltage,en-IN,Guru,medium,train,1,2026-08-18T10:00:00+05:30
+sgn_9b239863,cty_95d040d8,menu,media/signs/menu/062.jpg,"आलू पराठा - ₹80
+छोले भटूरे - ₹120",hi,"Aloo paratha - ₹80
+Chole bhature - ₹120",en-IN,Deva,easy,train,0,2026-08-18T10:00:00+05:30
+sgn_ea7372b5,cty_67ee7f6f,transit_board,media/signs/transit_board/063.jpg,প্ল্যাটফর্ম ৩ – হাওড়া লোকাল,bn,Platform 3 – Howrah local,en-IN,Beng,medium,train,0,2026-08-18T10:00:00+05:30
+sgn_5e31e5f5,cty_9327d518,notice,media/signs/notice/064.jpg,ചെരുപ്പ് പുറത്ത് വയ്ക്കുക,ml,Please leave footwear outside,en-IN,Mlym,medium,eval,0,2026-08-18T10:00:00+05:30
+sgn_b59aa7d0,cty_34bbfdfe,street_sign,media/signs/street_sign/065.jpg,ప్రవేశం ఉచితం,te,Entry free,en-IN,Telu,hard,train,0,2026-08-18T10:00:00+05:30
+sgn_9cb48896,cty_95e7c8ca,notice,media/signs/notice/066.jpg,ചെരുപ്പ് പുറത്ത് വയ്ക്കുക,ml,Please leave footwear outside,en-IN,Mlym,easy,train,0,2026-08-18T10:00:00+05:30
+sgn_ba81b65f,cty_c43cfa94,menu,media/signs/menu/067.jpg,"आलू पराठा - ₹80
+छोले भटूरे - ₹120",hi,"Aloo paratha - ₹80
+Chole bhature - ₹120",en-IN,Deva,medium,train,0,2026-08-18T10:00:00+05:30
+sgn_d3010f5c,cty_aa759717,warning,media/signs/warning/068.jpg,ಎಚ್ಚರಿಕೆ – ಜಾರುವ ನೆಲ,kn,Caution – slippery floor,en-IN,Knda,medium,eval,1,2026-08-18T10:00:00+05:30
+sgn_40f1284f,cty_8b6b1652,street_sign,media/signs/street_sign/069.jpg,ప్రవేశం ఉచితం,te,Entry free,en-IN,Telu,medium,train,0,2026-08-18T10:00:00+05:30
+sgn_dd82f457,cty_6320eea9,notice,media/signs/notice/070.jpg,ചെരുപ്പ് പുറത്ത് വയ്ക്കുക,ml,Please leave footwear outside,en-IN,Mlym,easy,train,0,2026-08-18T10:00:00+05:30
+sgn_38746ba9,cty_51a149b7,warning,media/signs/warning/071.jpg,गहरा पानी – तैरना मना है,hi,Deep water – swimming prohibited,en-IN,Deva,hard,train,1,2026-08-18T10:00:00+05:30
+sgn_fdc80aea,cty_c0f2d9de,warning,media/signs/warning/072.jpg,ಎಚ್ಚರಿಕೆ – ಜಾರುವ ನೆಲ,kn,Caution – slippery floor,en-IN,Knda,medium,eval,1,2026-08-18T10:00:00+05:30
+sgn_308450fb,cty_79cbc59b,menu,media/signs/menu/073.jpg,"मिसळ पाव - ₹70
+साबुदाणा खिचडी - ₹90",mr,"Misal pav - ₹70
+Sabudana khichdi - ₹90",en-IN,Deva,easy,train,0,2026-08-18T10:00:00+05:30
+sgn_8a402660,cty_95d040d8,street_sign,media/signs/street_sign/074.jpg,ప్రవేశం ఉచితం,te,Entry free,en-IN,Telu,easy,train,0,2026-08-18T10:00:00+05:30
+sgn_08ef6902,cty_17b8ef2f,street_sign,media/signs/street_sign/075.jpg,ప్రవేశం ఉచితం,te,Entry free,en-IN,Telu,medium,train,0,2026-08-18T10:00:00+05:30
+sgn_cf8000ec,cty_0b92e2e7,transit_board,media/signs/transit_board/076.jpg,প্ল্যাটফর্ম ৩ – হাওড়া লোকাল,bn,Platform 3 – Howrah local,en-IN,Beng,medium,eval,0,2026-08-18T10:00:00+05:30
+sgn_7b2b4e79,cty_009c9fd2,notice,media/signs/notice/077.jpg,ചെരുപ്പ് പുറത്ത് വയ്ക്കുക,ml,Please leave footwear outside,en-IN,Mlym,hard,train,0,2026-08-18T10:00:00+05:30
+sgn_1040793a,cty_c97e6cd5,menu,media/signs/menu/078.jpg,"இட்லி - ₹40
+தோசை - ₹60
+பொங்கல் - ₹70",ta,"Idli - ₹40
+Dosa - ₹60
+Pongal - ₹70",en-IN,Taml,medium,train,0,2026-08-18T10:00:00+05:30
+sgn_d3287b2c,cty_aa759717,street_sign,media/signs/street_sign/079.jpg,நுழைவு தடை,ta,No entry,en-IN,Taml,hard,train,0,2026-08-18T10:00:00+05:30
+sgn_05a61255,cty_c9f34ba7,street_sign,media/signs/street_sign/080.jpg,நுழைவு தடை,ta,No entry,en-IN,Taml,easy,eval,0,2026-08-18T10:00:00+05:30
+sgn_17c05d2e,cty_aa759717,warning,media/signs/warning/081.jpg,ਖ਼ਤਰਾ – ਉੱਚ ਵੋਲਟੇਜ,pa,Danger – high voltage,en-IN,Guru,easy,train,1,2026-08-18T10:00:00+05:30
+sgn_7c0c4df6,cty_7be8559f,menu,media/signs/menu/082.jpg,"இட்லி - ₹40
+தோசை - ₹60
+பொங்கல் - ₹70",ta,"Idli - ₹40
+Dosa - ₹60
+Pongal - ₹70",en-IN,Taml,hard,train,0,2026-08-18T10:00:00+05:30
+sgn_136e2f10,cty_a5f16904,menu,media/signs/menu/083.jpg,"आलू पराठा - ₹80
+छोले भटूरे - ₹120",hi,"Aloo paratha - ₹80
+Chole bhature - ₹120",en-IN,Deva,easy,train,0,2026-08-18T10:00:00+05:30
+sgn_dfc89710,cty_95e7c8ca,street_sign,media/signs/street_sign/084.jpg,ప్రవేశం ఉచితం,te,Entry free,en-IN,Telu,medium,eval,0,2026-08-18T10:00:00+05:30
+sgn_6e324343,cty_621f4a84,transit_board,media/signs/transit_board/085.jpg,প্ল্যাটফর্ম ৩ – হাওড়া লোকাল,bn,Platform 3 – Howrah local,en-IN,Beng,medium,train,0,2026-08-18T10:00:00+05:30
+sgn_24cabd6e,cty_c9f34ba7,transit_board,media/signs/transit_board/086.jpg,প্ল্যাটফর্ম ৩ – হাওড়া লোকাল,bn,Platform 3 – Howrah local,en-IN,Beng,medium,train,0,2026-08-18T10:00:00+05:30
+sgn_ca37d8e2,cty_541018a9,transit_board,media/signs/transit_board/087.jpg,প্ল্যাটফর্ম ৩ – হাওড়া লোকাল,bn,Platform 3 – Howrah local,en-IN,Beng,medium,train,0,2026-08-18T10:00:00+05:30
+sgn_4adffd54,cty_6320eea9,transit_board,media/signs/transit_board/088.jpg,প্ল্যাটফর্ম ৩ – হাওড়া লোকাল,bn,Platform 3 – Howrah local,en-IN,Beng,easy,eval,0,2026-08-18T10:00:00+05:30
+sgn_eab3a43f,cty_1ced6ede,warning,media/signs/warning/089.jpg,ਖ਼ਤਰਾ – ਉੱਚ ਵੋਲਟੇਜ,pa,Danger – high voltage,en-IN,Guru,easy,train,1,2026-08-18T10:00:00+05:30
+sgn_21375c21,cty_7be8559f,warning,media/signs/warning/090.jpg,ਖ਼ਤਰਾ – ਉੱਚ ਵੋਲਟੇਜ,pa,Danger – high voltage,en-IN,Guru,medium,train,1,2026-08-18T10:00:00+05:30
+sgn_3c26748e,cty_828a7777,notice,media/signs/notice/091.jpg,ചെരുപ്പ് പുറത്ത് വയ്ക്കുക,ml,Please leave footwear outside,en-IN,Mlym,hard,train,0,2026-08-18T10:00:00+05:30
+sgn_1488a021,cty_aa759717,transit_board,media/signs/transit_board/092.jpg,প্ল্যাটফর্ম ৩ – হাওড়া লোকাল,bn,Platform 3 – Howrah local,en-IN,Beng,easy,eval,0,2026-08-18T10:00:00+05:30
+sgn_5fa04206,cty_f288c6a0,transit_board,media/signs/transit_board/093.jpg,প্ল্যাটফর্ম ৩ – হাওড়া লোকাল,bn,Platform 3 – Howrah local,en-IN,Beng,medium,train,0,2026-08-18T10:00:00+05:30
+sgn_bc22192e,cty_d35a9652,street_sign,media/signs/street_sign/094.jpg,நுழைவு தடை,ta,No entry,en-IN,Taml,hard,train,0,2026-08-18T10:00:00+05:30
+sgn_88914189,cty_67ee7f6f,warning,media/signs/warning/095.jpg,ಎಚ್ಚರಿಕೆ – ಜಾರುವ ನೆಲ,kn,Caution – slippery floor,en-IN,Knda,hard,train,1,2026-08-18T10:00:00+05:30
+sgn_f7f22e32,cty_f288c6a0,menu,media/signs/menu/096.jpg,"இட்லி - ₹40
+தோசை - ₹60
+பொங்கல் - ₹70",ta,"Idli - ₹40
+Dosa - ₹60
+Pongal - ₹70",en-IN,Taml,hard,eval,0,2026-08-18T10:00:00+05:30
+sgn_c2be581b,cty_718f03c7,warning,media/signs/warning/097.jpg,गहरा पानी – तैरना मना है,hi,Deep water – swimming prohibited,en-IN,Deva,hard,train,1,2026-08-18T10:00:00+05:30
+sgn_7bf5dfcb,cty_34bbfdfe,notice,media/signs/notice/098.jpg,ചെരുപ്പ് പുറത്ത് വയ്ക്കുക,ml,Please leave footwear outside,en-IN,Mlym,medium,train,0,2026-08-18T10:00:00+05:30
+sgn_d2756ff5,cty_009c9fd2,warning,media/signs/warning/099.jpg,ಎಚ್ಚರಿಕೆ – ಜಾರುವ ನೆಲ,kn,Caution – slippery floor,en-IN,Knda,medium,train,1,2026-08-18T10:00:00+05:30
+sgn_e33fad3f,cty_95d040d8,warning,media/signs/warning/100.jpg,ਖ਼ਤਰਾ – ਉੱਚ ਵੋਲਟੇਜ,pa,Danger – high voltage,en-IN,Guru,hard,eval,1,2026-08-18T10:00:00+05:30
+sgn_db3e770b,cty_828a7777,menu,media/signs/menu/101.jpg,"आलू पराठा - ₹80
+छोले भटूरे - ₹120",hi,"Aloo paratha - ₹80
+Chole bhature - ₹120",en-IN,Deva,medium,train,0,2026-08-18T10:00:00+05:30
+sgn_e4417dc0,cty_95d040d8,menu,media/signs/menu/102.jpg,"இட்லி - ₹40
+தோசை - ₹60
+பொங்கல் - ₹70",ta,"Idli - ₹40
+Dosa - ₹60
+Pongal - ₹70",en-IN,Taml,medium,train,0,2026-08-18T10:00:00+05:30
+sgn_5ddca799,cty_8fc1539e,menu,media/signs/menu/103.jpg,"இட்லி - ₹40
+தோசை - ₹60
+பொங்கல் - ₹70",ta,"Idli - ₹40
+Dosa - ₹60
+Pongal - ₹70",en-IN,Taml,easy,train,0,2026-08-18T10:00:00+05:30
+sgn_08a017aa,cty_17b8ef2f,street_sign,media/signs/street_sign/104.jpg,ప్రవేశం ఉచితం,te,Entry free,en-IN,Telu,hard,eval,0,2026-08-18T10:00:00+05:30
+sgn_42474564,cty_d401ef6b,menu,media/signs/menu/105.jpg,"मिसळ पाव - ₹70
+साबुदाणा खिचडी - ₹90",mr,"Misal pav - ₹70
+Sabudana khichdi - ₹90",en-IN,Deva,easy,train,0,2026-08-18T10:00:00+05:30
+sgn_d1993cce,cty_1ced6ede,menu,media/signs/menu/106.jpg,"இட்லி - ₹40
+தோசை - ₹60
+பொங்கல் - ₹70",ta,"Idli - ₹40
+Dosa - ₹60
+Pongal - ₹70",en-IN,Taml,medium,train,0,2026-08-18T10:00:00+05:30
+sgn_606d5cfc,cty_9aa02925,menu,media/signs/menu/107.jpg,"आलू पराठा - ₹80
+छोले भटूरे - ₹120",hi,"Aloo paratha - ₹80
+Chole bhature - ₹120",en-IN,Deva,hard,train,0,2026-08-18T10:00:00+05:30
+sgn_3ca6db0f,cty_36afaa5c,street_sign,media/signs/street_sign/108.jpg,ప్రవేశం ఉచితం,te,Entry free,en-IN,Telu,hard,eval,0,2026-08-18T10:00:00+05:30
+sgn_8bcea2d0,cty_3503e391,street_sign,media/signs/street_sign/109.jpg,நுழைவு தடை,ta,No entry,en-IN,Taml,hard,train,0,2026-08-18T10:00:00+05:30
+sgn_88182540,cty_a5f16904,street_sign,media/signs/street_sign/110.jpg,ప్రవేశం ఉచితం,te,Entry free,en-IN,Telu,medium,train,0,2026-08-18T10:00:00+05:30
+sgn_8d07d00e,cty_b6ccbb3b,street_sign,media/signs/street_sign/111.jpg,ప్రవేశం ఉచితం,te,Entry free,en-IN,Telu,easy,train,0,2026-08-18T10:00:00+05:30
+sgn_9cad92c5,cty_8fc1539e,street_sign,media/signs/street_sign/112.jpg,ప్రవేశం ఉచితం,te,Entry free,en-IN,Telu,easy,eval,0,2026-08-18T10:00:00+05:30
+sgn_a4e895e0,cty_7b89639e,street_sign,media/signs/street_sign/113.jpg,நுழைவு தடை,ta,No entry,en-IN,Taml,hard,train,0,2026-08-18T10:00:00+05:30
+sgn_bfb4e9fe,cty_9327d518,warning,media/signs/warning/114.jpg,ಎಚ್ಚರಿಕೆ – ಜಾರುವ ನೆಲ,kn,Caution – slippery floor,en-IN,Knda,easy,train,1,2026-08-18T10:00:00+05:30
+sgn_839bf77d,cty_d35a9652,menu,media/signs/menu/115.jpg,"இட்லி - ₹40
+தோசை - ₹60
+பொங்கல் - ₹70",ta,"Idli - ₹40
+Dosa - ₹60
+Pongal - ₹70",en-IN,Taml,medium,train,0,2026-08-18T10:00:00+05:30
+sgn_1b6060a9,cty_8b6b1652,menu,media/signs/menu/116.jpg,"मिसळ पाव - ₹70
+साबुदाणा खिचडी - ₹90",mr,"Misal pav - ₹70
+Sabudana khichdi - ₹90",en-IN,Deva,medium,eval,0,2026-08-18T10:00:00+05:30
+sgn_00720491,cty_828a7777,menu,media/signs/menu/117.jpg,"இட்லி - ₹40
+தோசை - ₹60
+பொங்கல் - ₹70",ta,"Idli - ₹40
+Dosa - ₹60
+Pongal - ₹70",en-IN,Taml,medium,train,0,2026-08-18T10:00:00+05:30
+sgn_fb970ba1,cty_36afaa5c,notice,media/signs/notice/118.jpg,ചെരുപ്പ് പുറത്ത് വയ്ക്കുക,ml,Please leave footwear outside,en-IN,Mlym,medium,train,0,2026-08-18T10:00:00+05:30
+sgn_3b83ec7f,cty_7b89639e,menu,media/signs/menu/119.jpg,"இட்லி - ₹40
+தோசை - ₹60
+பொங்கல் - ₹70",ta,"Idli - ₹40
+Dosa - ₹60
+Pongal - ₹70",en-IN,Taml,medium,train,0,2026-08-18T10:00:00+05:30
+sgn_552ea058,cty_7b89639e,menu,media/signs/menu/120.jpg,"இட்லி - ₹40
+தோசை - ₹60
+பொங்கல் - ₹70",ta,"Idli - ₹40
+Dosa - ₹60
+Pongal - ₹70",en-IN,Taml,medium,eval,0,2026-08-18T10:00:00+05:30
+sgn_df08896a,cty_9aa02925,menu,media/signs/menu/121.jpg,"मिसळ पाव - ₹70
+साबुदाणा खिचडी - ₹90",mr,"Misal pav - ₹70
+Sabudana khichdi - ₹90",en-IN,Deva,medium,train,0,2026-08-18T10:00:00+05:30
+sgn_97ab90d3,cty_10cbee86,menu,media/signs/menu/122.jpg,"இட்லி - ₹40
+தோசை - ₹60
+பொங்கல் - ₹70",ta,"Idli - ₹40
+Dosa - ₹60
+Pongal - ₹70",en-IN,Taml,hard,train,0,2026-08-18T10:00:00+05:30
+sgn_d6ffa5d1,cty_caf3c1ee,notice,media/signs/notice/123.jpg,ചെരുപ്പ് പുറത്ത് വയ്ക്കുക,ml,Please leave footwear outside,en-IN,Mlym,medium,train,0,2026-08-18T10:00:00+05:30
+sgn_16928a36,cty_bbb31d67,warning,media/signs/warning/124.jpg,ਖ਼ਤਰਾ – ਉੱਚ ਵੋਲਟੇਜ,pa,Danger – high voltage,en-IN,Guru,easy,eval,1,2026-08-18T10:00:00+05:30
+sgn_23496eab,cty_c0f2d9de,warning,media/signs/warning/125.jpg,ಎಚ್ಚರಿಕೆ – ಜಾರುವ ನೆಲ,kn,Caution – slippery floor,en-IN,Knda,medium,train,1,2026-08-18T10:00:00+05:30
+sgn_85abb8ac,cty_f288c6a0,transit_board,media/signs/transit_board/126.jpg,প্ল্যাটফর্ম ৩ – হাওড়া লোকাল,bn,Platform 3 – Howrah local,en-IN,Beng,easy,train,0,2026-08-18T10:00:00+05:30
+sgn_51eb7dc6,cty_7b89639e,warning,media/signs/warning/127.jpg,ਖ਼ਤਰਾ – ਉੱਚ ਵੋਲਟੇਜ,pa,Danger – high voltage,en-IN,Guru,easy,train,1,2026-08-18T10:00:00+05:30
+sgn_08022241,cty_590d4b7b,menu,media/signs/menu/128.jpg,"आलू पराठा - ₹80
+छोले भटूरे - ₹120",hi,"Aloo paratha - ₹80
+Chole bhature - ₹120",en-IN,Deva,medium,eval,0,2026-08-18T10:00:00+05:30
+sgn_ead44202,cty_17b8ef2f,street_sign,media/signs/street_sign/129.jpg,ప్రవేశం ఉచితం,te,Entry free,en-IN,Telu,medium,train,0,2026-08-18T10:00:00+05:30
+sgn_bf8331a0,cty_aa759717,warning,media/signs/warning/130.jpg,गहरा पानी – तैरना मना है,hi,Deep water – swimming prohibited,en-IN,Deva,easy,train,1,2026-08-18T10:00:00+05:30
+sgn_1f6f45ef,cty_828a7777,transit_board,media/signs/transit_board/131.jpg,প্ল্যাটফর্ম ৩ – হাওড়া লোকাল,bn,Platform 3 – Howrah local,en-IN,Beng,medium,train,0,2026-08-18T10:00:00+05:30
+sgn_2e228c7c,cty_aa759717,warning,media/signs/warning/132.jpg,ಎಚ್ಚರಿಕೆ – ಜಾರುವ ನೆಲ,kn,Caution – slippery floor,en-IN,Knda,medium,eval,1,2026-08-18T10:00:00+05:30
+sgn_6f91190c,cty_bbb31d67,street_sign,media/signs/street_sign/133.jpg,ప్రవేశం ఉచితం,te,Entry free,en-IN,Telu,easy,train,0,2026-08-18T10:00:00+05:30
+sgn_62c3acc0,cty_7f673457,street_sign,media/signs/street_sign/134.jpg,நுழைவு தடை,ta,No entry,en-IN,Taml,medium,train,0,2026-08-18T10:00:00+05:30
+sgn_66d4d65b,cty_009c9fd2,street_sign,media/signs/street_sign/135.jpg,ప్రవేశం ఉచితం,te,Entry free,en-IN,Telu,medium,train,0,2026-08-18T10:00:00+05:30
+sgn_0bc77469,cty_6320eea9,notice,media/signs/notice/136.jpg,ചെരുപ്പ് പുറത്ത് വയ്ക്കുക,ml,Please leave footwear outside,en-IN,Mlym,hard,eval,0,2026-08-18T10:00:00+05:30
+sgn_330243f7,cty_8fc1539e,warning,media/signs/warning/137.jpg,ಎಚ್ಚರಿಕೆ – ಜಾರುವ ನೆಲ,kn,Caution – slippery floor,en-IN,Knda,hard,train,1,2026-08-18T10:00:00+05:30
+sgn_abea818d,cty_9327d518,notice,media/signs/notice/138.jpg,ചെരുപ്പ് പുറത്ത് വയ്ക്കുക,ml,Please leave footwear outside,en-IN,Mlym,easy,train,0,2026-08-18T10:00:00+05:30
+sgn_544e8fbb,cty_0b92e2e7,notice,media/signs/notice/139.jpg,ചെരുപ്പ് പുറത്ത് വയ്ക്കുക,ml,Please leave footwear outside,en-IN,Mlym,hard,train,0,2026-08-18T10:00:00+05:30
+sgn_ff60cb40,cty_541018a9,menu,media/signs/menu/140.jpg,"இட்லி - ₹40
+தோசை - ₹60
+பொங்கல் - ₹70",ta,"Idli - ₹40
+Dosa - ₹60
+Pongal - ₹70",en-IN,Taml,hard,eval,0,2026-08-18T10:00:00+05:30
+sgn_e54f4934,cty_7be8559f,warning,media/signs/warning/141.jpg,ਖ਼ਤਰਾ – ਉੱਚ ਵੋਲਟੇਜ,pa,Danger – high voltage,en-IN,Guru,easy,train,1,2026-08-18T10:00:00+05:30
+sgn_6ddb50d6,cty_f29656ff,street_sign,media/signs/street_sign/142.jpg,நுழைவு தடை,ta,No entry,en-IN,Taml,medium,train,0,2026-08-18T10:00:00+05:30
+sgn_71f9eb93,cty_590d4b7b,street_sign,media/signs/street_sign/143.jpg,ప్రవేశం ఉచితం,te,Entry free,en-IN,Telu,hard,train,0,2026-08-18T10:00:00+05:30
+sgn_12b68aeb,cty_c43cfa94,menu,media/signs/menu/144.jpg,"मिसळ पाव - ₹70
+साबुदाणा खिचडी - ₹90",mr,"Misal pav - ₹70
+Sabudana khichdi - ₹90",en-IN,Deva,medium,eval,0,2026-08-18T10:00:00+05:30
+sgn_8a5f5a55,cty_34bbfdfe,street_sign,media/signs/street_sign/145.jpg,ప్రవేశం ఉచితం,te,Entry free,en-IN,Telu,hard,train,0,2026-08-18T10:00:00+05:30
+sgn_1f7a65fe,cty_f29656ff,transit_board,media/signs/transit_board/146.jpg,প্ল্যাটফর্ম ৩ – হাওড়া লোকাল,bn,Platform 3 – Howrah local,en-IN,Beng,medium,train,0,2026-08-18T10:00:00+05:30
+sgn_c18253c0,cty_10cbee86,transit_board,media/signs/transit_board/147.jpg,প্ল্যাটফর্ম ৩ – হাওড়া লোকাল,bn,Platform 3 – Howrah local,en-IN,Beng,medium,train,0,2026-08-18T10:00:00+05:30
+sgn_58cd1864,cty_5698a7ab,warning,media/signs/warning/148.jpg,ਖ਼ਤਰਾ – ਉੱਚ ਵੋਲਟੇਜ,pa,Danger – high voltage,en-IN,Guru,medium,eval,1,2026-08-18T10:00:00+05:30
+sgn_dc4c0df3,cty_43d0a650,menu,media/signs/menu/149.jpg,"मिसळ पाव - ₹70
+साबुदाणा खिचडी - ₹90",mr,"Misal pav - ₹70
+Sabudana khichdi - ₹90",en-IN,Deva,hard,train,0,2026-08-18T10:00:00+05:30
+sgn_70667c1f,cty_79cbc59b,street_sign,media/signs/street_sign/150.jpg,ప్రవేశం ఉచితం,te,Entry free,en-IN,Telu,easy,train,0,2026-08-18T10:00:00+05:30
+sgn_e559af91,cty_7b89639e,warning,media/signs/warning/151.jpg,ਖ਼ਤਰਾ – ਉੱਚ ਵੋਲਟੇਜ,pa,Danger – high voltage,en-IN,Guru,easy,train,1,2026-08-18T10:00:00+05:30
+sgn_e475a695,cty_ab50efee,menu,media/signs/menu/152.jpg,"मिसळ पाव - ₹70
+साबुदाणा खिचडी - ₹90",mr,"Misal pav - ₹70
+Sabudana khichdi - ₹90",en-IN,Deva,easy,eval,0,2026-08-18T10:00:00+05:30
+sgn_bcc9acf1,cty_7b89639e,transit_board,media/signs/transit_board/153.jpg,প্ল্যাটফর্ম ৩ – হাওড়া লোকাল,bn,Platform 3 – Howrah local,en-IN,Beng,medium,train,0,2026-08-18T10:00:00+05:30
+sgn_bf99d5c6,cty_c0f2d9de,transit_board,media/signs/transit_board/154.jpg,প্ল্যাটফর্ম ৩ – হাওড়া লোকাল,bn,Platform 3 – Howrah local,en-IN,Beng,easy,train,0,2026-08-18T10:00:00+05:30
+sgn_b400ab41,cty_caf3c1ee,street_sign,media/signs/street_sign/155.jpg,நுழைவு தடை,ta,No entry,en-IN,Taml,medium,train,0,2026-08-18T10:00:00+05:30
+sgn_3981d7de,cty_076e8e86,warning,media/signs/warning/156.jpg,गहरा पानी – तैरना मना है,hi,Deep water – swimming prohibited,en-IN,Deva,easy,eval,1,2026-08-18T10:00:00+05:30
+sgn_21aad6b5,cty_8fc1539e,warning,media/signs/warning/157.jpg,गहरा पानी – तैरना मना है,hi,Deep water – swimming prohibited,en-IN,Deva,medium,train,1,2026-08-18T10:00:00+05:30
+sgn_d2947bc9,cty_bbb31d67,notice,media/signs/notice/158.jpg,ചെരുപ്പ് പുറത്ത് വയ്ക്കുക,ml,Please leave footwear outside,en-IN,Mlym,easy,train,0,2026-08-18T10:00:00+05:30
+sgn_42942aea,cty_b6ccbb3b,warning,media/signs/warning/159.jpg,ਖ਼ਤਰਾ – ਉੱਚ ਵੋਲਟੇਜ,pa,Danger – high voltage,en-IN,Guru,easy,train,1,2026-08-18T10:00:00+05:30
+sgn_a5784cfa,cty_67ee7f6f,transit_board,media/signs/transit_board/160.jpg,প্ল্যাটফর্ম ৩ – হাওড়া লোকাল,bn,Platform 3 – Howrah local,en-IN,Beng,easy,eval,0,2026-08-18T10:00:00+05:30
+sgn_098c8a8a,cty_b43cdd57,street_sign,media/signs/street_sign/161.jpg,நுழைவு தடை,ta,No entry,en-IN,Taml,easy,train,0,2026-08-18T10:00:00+05:30
+sgn_17bda3f9,cty_a50bc5dd,street_sign,media/signs/street_sign/162.jpg,நுழைவு தடை,ta,No entry,en-IN,Taml,hard,train,0,2026-08-18T10:00:00+05:30
+sgn_be6f8bb2,cty_621f4a84,menu,media/signs/menu/163.jpg,"आलू पराठा - ₹80
+छोले भटूरे - ₹120",hi,"Aloo paratha - ₹80
+Chole bhature - ₹120",en-IN,Deva,hard,train,0,2026-08-18T10:00:00+05:30
+sgn_b5d1afef,cty_43d0a650,warning,media/signs/warning/164.jpg,ਖ਼ਤਰਾ – ਉੱਚ ਵੋਲਟੇਜ,pa,Danger – high voltage,en-IN,Guru,easy,eval,1,2026-08-18T10:00:00+05:30
+sgn_4952de1b,cty_95e7c8ca,warning,media/signs/warning/165.jpg,गहरा पानी – तैरना मना है,hi,Deep water – swimming prohibited,en-IN,Deva,easy,train,1,2026-08-18T10:00:00+05:30
+sgn_a344eb49,cty_95e7c8ca,street_sign,media/signs/street_sign/166.jpg,ప్రవేశం ఉచితం,te,Entry free,en-IN,Telu,easy,train,0,2026-08-18T10:00:00+05:30
+sgn_2f38b7e0,cty_7fc82336,menu,media/signs/menu/167.jpg,"आलू पराठा - ₹80
+छोले भटूरे - ₹120",hi,"Aloo paratha - ₹80
+Chole bhature - ₹120",en-IN,Deva,medium,train,0,2026-08-18T10:00:00+05:30
+sgn_6c4fb3d1,cty_8b6b1652,street_sign,media/signs/street_sign/168.jpg,ప్రవేశం ఉచితం,te,Entry free,en-IN,Telu,easy,eval,0,2026-08-18T10:00:00+05:30
+sgn_899d3c2e,cty_17b8ef2f,street_sign,media/signs/street_sign/169.jpg,நுழைவு தடை,ta,No entry,en-IN,Taml,medium,train,0,2026-08-18T10:00:00+05:30
+sgn_35d31ed5,cty_541018a9,menu,media/signs/menu/170.jpg,"இட்லி - ₹40
+தோசை - ₹60
+பொங்கல் - ₹70",ta,"Idli - ₹40
+Dosa - ₹60
+Pongal - ₹70",en-IN,Taml,medium,train,0,2026-08-18T10:00:00+05:30
+sgn_4fd9ad33,cty_ccb4fb74,menu,media/signs/menu/171.jpg,"मिसळ पाव - ₹70
+साबुदाणा खिचडी - ₹90",mr,"Misal pav - ₹70
+Sabudana khichdi - ₹90",en-IN,Deva,easy,train,0,2026-08-18T10:00:00+05:30
+sgn_ef62eb5b,cty_718f03c7,menu,media/signs/menu/172.jpg,"मिसळ पाव - ₹70
+साबुदाणा खिचडी - ₹90",mr,"Misal pav - ₹70
+Sabudana khichdi - ₹90",en-IN,Deva,hard,eval,0,2026-08-18T10:00:00+05:30
+sgn_61c53b67,cty_c0f2d9de,menu,media/signs/menu/173.jpg,"मिसळ पाव - ₹70
+साबुदाणा खिचडी - ₹90",mr,"Misal pav - ₹70
+Sabudana khichdi - ₹90",en-IN,Deva,easy,train,0,2026-08-18T10:00:00+05:30
+sgn_9696a7ec,cty_a5f16904,warning,media/signs/warning/174.jpg,गहरा पानी – तैरना मना है,hi,Deep water – swimming prohibited,en-IN,Deva,medium,train,1,2026-08-18T10:00:00+05:30
+sgn_08f8ce4c,cty_67ee7f6f,notice,media/signs/notice/175.jpg,ചെരുപ്പ് പുറത്ത് വയ്ക്കുക,ml,Please leave footwear outside,en-IN,Mlym,hard,train,0,2026-08-18T10:00:00+05:30
+sgn_c02949d2,cty_aa759717,transit_board,media/signs/transit_board/176.jpg,প্ল্যাটফর্ম ৩ – হাওড়া লোকাল,bn,Platform 3 – Howrah local,en-IN,Beng,medium,eval,0,2026-08-18T10:00:00+05:30
+sgn_f9137be5,cty_718f03c7,street_sign,media/signs/street_sign/177.jpg,ప్రవేశం ఉచితం,te,Entry free,en-IN,Telu,easy,train,0,2026-08-18T10:00:00+05:30
+sgn_b37ff497,cty_8fc1539e,menu,media/signs/menu/178.jpg,"आलू पराठा - ₹80
+छोले भटूरे - ₹120",hi,"Aloo paratha - ₹80
+Chole bhature - ₹120",en-IN,Deva,easy,train,0,2026-08-18T10:00:00+05:30
+sgn_c6b8f222,cty_ab50efee,warning,media/signs/warning/179.jpg,ಎಚ್ಚರಿಕೆ – ಜಾರುವ ನೆಲ,kn,Caution – slippery floor,en-IN,Knda,medium,train,1,2026-08-18T10:00:00+05:30
+sgn_5c378602,cty_0d9ab6ff,transit_board,media/signs/transit_board/180.jpg,প্ল্যাটফর্ম ৩ – হাওড়া লোকাল,bn,Platform 3 – Howrah local,en-IN,Beng,medium,eval,0,2026-08-18T10:00:00+05:30
+sgn_e9213ea9,cty_f288c6a0,warning,media/signs/warning/181.jpg,ಎಚ್ಚರಿಕೆ – ಜಾರುವ ನೆಲ,kn,Caution – slippery floor,en-IN,Knda,easy,train,1,2026-08-18T10:00:00+05:30
+sgn_029cbf1f,cty_cfec17b6,menu,media/signs/menu/182.jpg,"मिसळ पाव - ₹70
+साबुदाणा खिचडी - ₹90",mr,"Misal pav - ₹70
+Sabudana khichdi - ₹90",en-IN,Deva,easy,train,0,2026-08-18T10:00:00+05:30
+sgn_eaea0257,cty_10cbee86,street_sign,media/signs/street_sign/183.jpg,ప్రవేశం ఉచితం,te,Entry free,en-IN,Telu,easy,train,0,2026-08-18T10:00:00+05:30
+sgn_742df4e7,cty_f288c6a0,warning,media/signs/warning/184.jpg,गहरा पानी – तैरना मना है,hi,Deep water – swimming prohibited,en-IN,Deva,medium,eval,1,2026-08-18T10:00:00+05:30
+sgn_1b1cd20e,cty_17b8ef2f,menu,media/signs/menu/185.jpg,"இட்லி - ₹40
+தோசை - ₹60
+பொங்கல் - ₹70",ta,"Idli - ₹40
+Dosa - ₹60
+Pongal - ₹70",en-IN,Taml,easy,train,0,2026-08-18T10:00:00+05:30
+sgn_2f8225d3,cty_541018a9,street_sign,media/signs/street_sign/186.jpg,நுழைவு தடை,ta,No entry,en-IN,Taml,hard,train,0,2026-08-18T10:00:00+05:30
+sgn_156bb0ca,cty_718f03c7,menu,media/signs/menu/187.jpg,"आलू पराठा - ₹80
+छोले भटूरे - ₹120",hi,"Aloo paratha - ₹80
+Chole bhature - ₹120",en-IN,Deva,medium,train,0,2026-08-18T10:00:00+05:30
+sgn_c3e0be18,cty_caf3c1ee,menu,media/signs/menu/188.jpg,"இட்லி - ₹40
+தோசை - ₹60
+பொங்கல் - ₹70",ta,"Idli - ₹40
+Dosa - ₹60
+Pongal - ₹70",en-IN,Taml,easy,eval,0,2026-08-18T10:00:00+05:30
+sgn_dc5eb842,cty_b43cdd57,notice,media/signs/notice/189.jpg,ചെരുപ്പ് പുറത്ത് വയ്ക്കുക,ml,Please leave footwear outside,en-IN,Mlym,medium,train,0,2026-08-18T10:00:00+05:30
+sgn_ef709a09,cty_67ee7f6f,warning,media/signs/warning/190.jpg,गहरा पानी – तैरना मना है,hi,Deep water – swimming prohibited,en-IN,Deva,easy,train,1,2026-08-18T10:00:00+05:30
+sgn_5b587a55,cty_828a7777,transit_board,media/signs/transit_board/191.jpg,প্ল্যাটফর্ম ৩ – হাওড়া লোকাল,bn,Platform 3 – Howrah local,en-IN,Beng,medium,train,0,2026-08-18T10:00:00+05:30
+sgn_89d62351,cty_d4f5e3a5,street_sign,media/signs/street_sign/192.jpg,நுழைவு தடை,ta,No entry,en-IN,Taml,easy,eval,0,2026-08-18T10:00:00+05:30
+sgn_1b570f3f,cty_8b6b1652,menu,media/signs/menu/193.jpg,"இட்லி - ₹40
+தோசை - ₹60
+பொங்கல் - ₹70",ta,"Idli - ₹40
+Dosa - ₹60
+Pongal - ₹70",en-IN,Taml,easy,train,0,2026-08-18T10:00:00+05:30
+sgn_15beb111,cty_076e8e86,street_sign,media/signs/street_sign/194.jpg,நுழைவு தடை,ta,No entry,en-IN,Taml,medium,train,0,2026-08-18T10:00:00+05:30
+sgn_5dcdd311,cty_f8b75f8e,warning,media/signs/warning/195.jpg,गहरा पानी – तैरना मना है,hi,Deep water – swimming prohibited,en-IN,Deva,easy,train,1,2026-08-18T10:00:00+05:30
+sgn_34b5aecc,cty_67ee7f6f,notice,media/signs/notice/196.jpg,ചെരുപ്പ് പുറത്ത് വയ്ക്കുക,ml,Please leave footwear outside,en-IN,Mlym,easy,eval,0,2026-08-18T10:00:00+05:30
+sgn_2ae966b5,cty_95e7c8ca,street_sign,media/signs/street_sign/197.jpg,நுழைவு தடை,ta,No entry,en-IN,Taml,easy,train,0,2026-08-18T10:00:00+05:30
+sgn_910e7e6d,cty_a97c33ad,transit_board,media/signs/transit_board/198.jpg,প্ল্যাটফর্ম ৩ – হাওড়া লোকাল,bn,Platform 3 – Howrah local,en-IN,Beng,easy,train,0,2026-08-18T10:00:00+05:30
+sgn_b06e7b80,cty_9aa02925,menu,media/signs/menu/199.jpg,"இட்லி - ₹40
+தோசை - ₹60
+பொங்கல் - ₹70",ta,"Idli - ₹40
+Dosa - ₹60
+Pongal - ₹70",en-IN,Taml,easy,train,0,2026-08-18T10:00:00+05:30

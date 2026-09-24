@@ -1,167 +1,203 @@
-# LensGuide — Visual Search & AR Travel Companion
-# Kognivera Hackathon 2026 · PS-06 · Team Reboot Rebels · data model v1.1.0-rc2
+# Team Reboot Rebels — KogniVera Hackathon 2026
 
-Point your camera at a landmark, dish, or foreign-language sign. Get a grounded
-info card, nearby places, a sign translation, and a snap-to-book action.
+**Problem Statement:** LensGuide — Visual Search & AR Travel Companion (PS-06)  
+**College:** Cambridge Institute of Technology
 
-## Quick start
+---
+
+## What We Built (MVP Checklist)
+
+- ✅ **Snap → Identify**: Camera/upload → landmark/dish/sign recognition with location-aware matching
+- ✅ **Visual Search**: Local vision model (Qwen3.5 4B via LM Studio) identifies places from photos
+- ✅ **Location-Aware Results**: Device GPS + catalogue → nearest POI (≤2km) or visual fallback (>2km)
+- ✅ **Nearby Landmarks**: Haversine distance from actual device location (not catalogue centroid)
+- ✅ **Translate (3 languages)**: English (en-IN), Kannada (kn-IN), Telugu (te-IN) with script validation
+- ✅ **Grounded Info Cards**: POI facts from `poi_facts_kb`, knowledge from `place_kb`
+- ✅ **Snap-to-Book**: Hours, cost (currency-exponent-aware), accessibility
+- ✅ **Offline Demo Mode**: POI picker works without AI keys
+- ✅ **Local-First AI**: LM Studio (Qwen3.5 4B) runs entirely on-device; no paid APIs required
+
+---
+
+## Architecture
+
+```
+┌─────────────┐     ┌─────────────┐     ┌─────────────┐
+│  Frontend   │────►│  Backend    │────►│   AI/LLM    │
+│  (Web/Expo) │     │  (Flask)    │     │  (Local)    │
+└─────────────┘     └──────┬──────┘     └──────┬──────┘
+                           │                   │
+                    ┌──────┴──────┐    ┌───────┴───────┐
+                    ▼             ▼    ▼               ▼
+             ┌───────────┐ ┌───────────┐ ┌─────────────────┐
+             │ Read-only │ │ File Cache │ │ LM Studio       │
+             │  PS-06.db │ │ (.cache/)  │ │ Qwen3.5 4B      │
+             └───────────┘ └───────────┘ └─────────────────┘
+```
+
+**Data Flow — Snap → Identify:**
+1. User opens Snap → browser requests GPS
+2. Snap photo → POST `/api/identify` with `image`, `lat`, `lng`
+3. Backend: vision-LLM → nearest catalogue POI (≤2km = location_match)
+4. If >2km → LLM visual ID (`in_catalogue: false`) + nearby from **device GPS**
+4. Frontend renders identified place + nearby landmarks (click → Browse)
+
+---
+
+## Data Model
+
+### Canonical Tables Used (D1–D9)
+
+| ID | Table | Purpose |
+|----|-------|---------|
+| D1 | `categories` | POI categories |
+| D2 | `currencies` | ISO-4217 with `minor_unit_exponent` |
+| D3 | `languages` | BCP-47 tags (en-IN, kn-IN, te-IN) |
+| D4 | `countries` | ISO-3166 |
+| D5 | `cities` | Cities + primary_language FK |
+| D6 | `menu_sign_images` | OCR reference + translations |
+| D7 | `xr_scenes` | AR/WebXR metadata |
+| D8 | `activities_poi` | Main POI catalogue |
+| D9 | `landmark_image_set` | Landmark images |
+
+### Extensions (PS-06)
+
+| Table | FK | Purpose |
+|-------|----|---------|
+| `poi_facts_kb` | `activities_poi.poi_id` | Grounded facts (confidence: high/medium/low) |
+| `place_kb` | `activities_poi.poi_id` | Knowledge chunks (title + body) |
+| `poi_travel_matrix` | `from_poi_id`, `to_poi_id` | Precomputed walk/auto/taxi travel |
+| `poi_media` | `activities_poi.poi_id` | Media assets |
+
+**Schema**: `data-model/schema.sql` | **Seeds**: `data-model/seed/*.csv` | **Mapping**: `data-model/DATA_MODEL.md`
+
+---
+
+## AI Features
+
+| Feature | Model | Mechanism | Grounding |
+|---------|-------|-----------|-----------|
+| **Identify (vision)** | Qwen3.5 4B (LM Studio) | JSON-only prompt + `enable_thinking=false` | Returns only structured JSON; no free text |
+| **Translate** | Qwen3.5 4B / Gemini | English pivot for kn-IN/te-IN | Script validation (Kannada/Telugu Unicode blocks) |
+| **Cache** | In-memory + JSON file | SHA-256 of messages | Shared across HTTPS/HTTP servers |
+
+**Prompts**: `ai/prompts/identify.md`, `ai/prompts/translate.md`  
+**Pipeline**: `ai/pipeline/llm.py` (provider chain, caching, script validation)
+
+---
+
+## Run Locally
 
 ```bash
+# 1. Python env
 python3 -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt
-cp .env.example .env        # add a Gemini or OpenAI key for live recognition
-python run.py
-# open http://localhost:8000
-```
+pip install -r backend/requirements.txt
 
-Works in the browser on Android Chrome (camera via `getUserMedia`).
+# 2. Local AI (LM Studio) — one-time setup
+#   Install LM Studio ≥0.4.25
+#   Download qwen/qwen3.5-4b
+#   lms load qwen/qwen3.5-4b --context-length=8192 --identifier qwen/qwen3.5-4b:fast -y
+#   lms server start --port 1234
 
-## Offline demo mode
+# 3. Env
+cp .env.example .env
+# Edit .env for your setup (see .env.example)
 
-Open the app, toggle **Offline mode** in the toolbar. Recognition is replaced by
-a POI picker; the catalogue is served by the local Flask process from
-`data/PS-06.db` with no external AI or internet calls. The local backend must
-still be running. This is the bulletproof venue fallback (design risk #1).
-
-## AI provider fallback
-
-The live Identify and Translate routes use the provider selected by
-`LLM_PROVIDER`. To survive a quota or transient outage, configure a second
-OpenAI-compatible provider in `.env`:
-
-```env
-LLM_PROVIDER=gemini
-LLM_FALLBACK_PROVIDER=openai
-GEMINI_API_KEY=...
-# Optional second Gemini model using the same key:
-GEMINI_FALLBACK_MODEL=gemini-3.5-flash
-OPENAI_API_KEY=...
-OPENAI_BASE_URL=https://api.openai.com/v1
-OPENAI_MODEL=gpt-4o-mini
-```
-
-The backend tries the fallback when the primary provider returns a rate limit,
-provider error, or invalid response. If no fallback succeeds, the API returns
-HTTP `429` with `quota_exhausted: true` and the provider's retry hint. Set
-`LLM_429_RETRIES=0` (the default) to avoid wasting time retrying an exhausted
-quota; `LLM_TIMEOUT_SECONDS` controls the provider request timeout.
-
-The web Translate tab exposes exactly three target languages: English (`en-IN`), Kannada (`kn-IN`), and Telugu (`te-IN`). The API rejects other target tags so the UI and model stay aligned.
-
-A health check reports configured providers without spending quota:
-
-```bash
-curl http://localhost:8000/api/health
-```
-
-## Zero-cost local AI (LM Studio)
-
-For a fully local demo with no API costs, run an OpenAI-compatible server via
-LM Studio. The recommended model is **Qwen3.5 4B** (vision-capable, ~3.2 GB):
-
-1. Install LM Studio ≥0.4.25
-2. Download `qwen/qwen3.5-4b` (or `qwen/qwen2.5-vl-3b`)
-3. Load with 8192 context: `lms load qwen/qwen3.5-4b --context-length=8192 --identifier qwen/qwen3.5-4b:fast -y`
-4. Start server: `lms server start --port 1234`
-5. Configure `.env`:
-
-```env
-LLM_PROVIDER=openai
-LLM_FALLBACK_PROVIDER=
-OPENAI_BASE_URL=http://127.0.0.1:1234/v1
-OPENAI_API_KEY=lm-studio
-OPENAI_MODEL=qwen/qwen3.5-4b:fast
-OPENAI_RESPONSE_FORMAT=text
-OPENAI_DISABLE_THINKING=true
-OPENAI_MAX_TOKENS=512
-```
-
-**Critical flags:**
-- `OPENAI_DISABLE_THINKING=true` — disables Qwen3.5's long reasoning pass, reducing local translation time from minutes to seconds
-- `OPENAI_RESPONSE_FORMAT=text` — LM Studio requires `text` (not `json_object`) for chat completions
-- `OPENAI_MAX_TOKENS=512` — keeps responses fast; identify uses 1024 internally
-
-After reboot, restart everything:
-
-```bash
+# 4. Start everything
 ./scripts/start_local_ai.sh   # loads model + starts LM Studio server
-./serve.sh                    # starts HTTPS (8000) + HTTP (8004) Flask servers
+./serve.sh                    # starts HTTPS :8000 + HTTP :8004
+
+# 5. Open
+# Web:  https://localhost:8000  (or https://<LAN-IP>:8000)
+# App:  http://localhost:8004   (Expo/React Native)
 ```
 
-## Snap → Identify: Location-aware landmark detection
+**`.env.example`** contains all required vars with dummy values.
 
-Open the **Snap** tab, tap **Start camera** (or upload), then **Identify**:
+---
 
-| Scenario | What happens |
-|----------|--------------|
-| **At a known POI (≤2 km from catalogue)** | Exact catalogue match → grounded info card + nearby from that POI |
-| **Near a landmark but >2 km from catalogue** | Local vision model identifies it visually → shows name + `in_catalogue: false` + nearby computed from **your actual GPS** |
-| **Anywhere else (signs, menus, unknown)** | OCR + visual identification → shows what the model sees + nearby from **your GPS** |
-| **No GPS permission** | Falls back to OCR/sign recognition only |
+## Demo Path (Terminal MVP Outcome)
 
-**Priority order:** device location → visual model → OCR → candidates/refusal.
+1. **Open** https://localhost:8000 (or LAN IP) in Chrome/Android
+2. **Tap "Snap" tab** → "Start camera" (or Upload photo)
+3. **Allow location** when prompted (for nearby landmarks)
+4. **Point at landmark/sign/menu** → tap **Snap** → **Identify**
+5. **See**: Identified place card + **Nearby Landmarks** (real GPS distance)
+6. **Tap nearby** → opens in **Browse** with full info card (facts, knowledge, book)
+7. **Switch to "Translate" tab** → upload same image → select **Kannada / Telugu / English**
+8. **Verify**: Proper native script output (ಕನ್ನಡ / తెలుగు)
 
-**API response includes:**
-- `identified_place` — {name, poi_category, distance_km, in_catalogue, confidence}
-- `matched` — catalogue POI if matched, else `null`
-- `nearby` — top 10 landmarks from your device location (or identified place)
-- `location` — your device coordinates (if provided)
+---
 
-## Translation (exactly 3 languages)
-
-| Target | Method | Script |
-|--------|--------|--------|
-| `en-IN` | Direct | Latin |
-| `kn-IN` | English pivot | Kannada (ಕನ್ನಡ) |
-| `te-IN` | English pivot | Telugu (తెలుగు) |
-
-English pivot ensures script accuracy. Pivot responses marked `"translation_basis": "english_pivot"`.
-
-Exact dataset matches return `"translation_basis": "dataset_reference"`.
-
-## API
-
-| Method | Path | Purpose |
-|---|---|---|
-| POST | `/api/identify` | Vision-LLM: image (+ optional `lat`/`lng`) → `{identified_place, matched, nearby, ocr_text, ...}` |
-| GET | `/api/poi/<poi_id>` | Grounded info card: POI + facts + knowledge chunks |
-| GET | `/api/poi/<poi_id>/nearby?mode=walk` | Nearby from precomputed travel matrix |
-| POST | `/api/translate` | `{text}` or `{image}` → OCR + translate (3 languages) |
-| GET | `/api/poi/<poi_id>/book` | Snap-to-book: hours, cost, accessibility |
-| GET | `/api/pois` | Catalogue for offline picker |
-| GET | `/api/nearby?lat=...&lng=...` | Nearby POIs from any coordinates |
-| GET | `/api/health` | Provider status, cache stats, local AI flag |
-
-## Grounding rules honoured
-
-- Facts come **only** from `poi_facts_kb` / `place_kb`; the LLM never writes facts (design anti-hallucination).
-- Money stays a string + ISO-4217; display via `currencies.minor_unit_exponent` (R3).
-- Language is BCP-47 (R6), IDs opaque (R2), DB read-only (R1). `PS-06.db` is never mutated.
-- Response caching (`.cache/llm_cache.json`) reduces repeated local inference.
-
-## Conformance
+## Tests / Proof
 
 ```bash
-python3 tools/validate_conformance.py data/PS-06.db   # upstream tool, expect PASS
+# Backend tests (provider fallback, cache, rate-limit contracts)
+cd /path/to/repo
+source .venv/bin/activate
+python -m pytest tests/test_llm_fallback.py -v
+
+# Expected: 11 tests covering:
+# - primary rate-limit → fallback
+# - quota exhaustion → 429 with quota_exhausted:true
+# - transport error → structured LLMError
+# - cache prevents repeated calls
+# - only 3 target languages accepted
+# - dataset reference fallback on quota fail
+
+# Data model conformance
+python3 PS-06_LensGuide/tools/validate_conformance.py data/PS-06.db
+# Expected: PASS (canonical D1-D9 + extensions)
+
+# Manual verification
+# - Open Snap → Identify with GPS → nearby distances match haversine
+# - Translate Kannada→Telugu → output in Telugu script (not Kannada)
 ```
 
-## Key files
+---
+
+## Repository Structure
 
 ```
-lensguide/
-  app.py           # Flask routes: identify, translate, nearby, book, health
-  llm.py           # Provider chain, caching, local OpenAI (LM Studio), script validation
-  db.py            # Read-only SQLite access to PS-06.db
-  static/
-    app.js         # Snap, Identify, Translate, Nearby, Browse UI
-    index.html     # Web entry
-    style.css      # Theme & components
-expo-app/          # React Native (Android) – same API, offline mode
-scripts/
-  start_local_ai.sh   # Load Qwen3.5 4B + start LM Studio server
-  serve.sh            # Start HTTPS (8000) + HTTP (8004) servers
-tests/
-  test_llm_fallback.py  # 11 backend/provider/cache/fallback tests
-data/
-  PS-06.db            # Read-only catalogue + translations + facts + KB
+kv-hack2026-reboot-rebels/
+├── README.md                    # This file
+├── frontend/
+│   └── src/
+│       ├── app.js               # Snap, Browse, Translate, Nearby, AR
+│       ├── index.html
+│       └── style.css
+├── backend/
+│   └── src/
+│       ├── app.py               # Flask routes
+│       ├── llm.py               # Provider chain, cache, prompts
+│       └── db.py                # Read-only SQLite
+│   └── requirements.txt
+├── data-model/
+│   ├── schema.sql               # Canonical D1-D9 + extensions DDL
+│   ├── seed/                    # 13 CSVs (D1-D9 + extensions)
+│   └── DATA_MODEL.md            # Mapping + constraints
+├── ai/
+│   ├── prompts/
+│   │   ├── identify.md
+│   │   └── translate.md
+│   └── pipeline/
+│       └── llm.py
+├── docs/
+│   └── ARCHITECTURE.md
+├── tests/
+│   └── test_llm_fallback.py
+├── scripts/
+│   ├── start_local_ai.sh        # Load model + start LM Studio server
+│   └── serve.sh                 # Start HTTPS (8000) + HTTP (8004)
+├── data/
+│   └── PS-06.db                 # Read-only catalogue (gitignored, download)
+├── .env.example
+└── .gitignore
 ```
+
+---
+
+## Team
+
+**Reboot Rebels** — Cambridge Institute of Technology  
+KogniVera Hackathon 2026 · PS-06

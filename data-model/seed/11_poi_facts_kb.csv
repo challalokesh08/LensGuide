@@ -1,0 +1,901 @@
+fact_id,poi_id,fact_type,fact_text,language,confidence,display_priority,embedding_ref,updated_at
+fct_d1a071cd,poi_7f6561ec,practical,Allow 75 minutes at Jaipur Bazaar. It is busiest between 10:00 and 13:00.,en-IN,medium,1,emb_fact_7f6561ec,2026-08-18T10:00:00+05:30
+fct_010dda31,poi_afcb7beb,history,Chhatri Complex was substantially rebuilt in the 17th century; the earlier structure survives only in the foundations.,en-IN,low,4,emb_fact_afcb7beb,2026-08-18T10:00:00+05:30
+fct_81caf4fa,poi_bf6716e9,trivia,"Zipline Point appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,1,emb_fact_bf6716e9,2026-08-18T10:00:00+05:30
+fct_f81317fe,poi_e68abae6,etiquette,Footwear is removed before entering the inner area of Jaipur Bazaar; socks are advisable in summer.,en-IN,medium,2,emb_fact_e68abae6,2026-08-18T10:00:00+05:30
+fct_d1d0d3f8,poi_fe8a867b,trivia,"Jaipur Fort appears on the city's earliest surviving tourist map, misspelled.",en-IN,medium,4,emb_fact_fe8a867b,2026-08-18T10:00:00+05:30
+fct_58dc39cb,poi_c192ae9d,architecture,"The inscription at Handloom Cooperative is the detail most guides point out, and the only part not restored.",en-IN,high,2,emb_fact_c192ae9d,2026-08-18T10:00:00+05:30
+fct_2face537,poi_cd4eb948,history,Night Food Bazaar was substantially rebuilt in the 17th century; the earlier structure survives only in the foundations.,en-IN,high,4,emb_fact_cd4eb948,2026-08-18T10:00:00+05:30
+fct_5c3f20fe,poi_443a14c5,trivia,"Coffee Roastery Tour appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,3,emb_fact_443a14c5,2026-08-18T10:00:00+05:30
+fct_6b4bb6d4,poi_364cac5a,etiquette,Footwear is removed before entering the inner area of Jaipur Bazaar; socks are advisable in summer.,en-IN,high,1,emb_fact_364cac5a,2026-08-18T10:00:00+05:30
+fct_5df4ea22,poi_5252b3dc,practical,Allow 45 minutes at Coffee Roastery Tour. It is busiest between 10:00 and 13:00.,en-IN,high,2,emb_fact_5252b3dc,2026-08-18T10:00:00+05:30
+fct_59f9970f,poi_01f1e4a6,trivia,"Museum of Coins appears on the city's earliest surviving tourist map, misspelled.",en-IN,low,3,emb_fact_01f1e4a6,2026-08-18T10:00:00+05:30
+fct_ddce8f97,poi_43837046,history,Riverside Lounge was substantially rebuilt in the 18th century; the earlier structure survives only in the foundations.,en-IN,high,2,emb_fact_43837046,2026-08-18T10:00:00+05:30
+fct_2f1440b7,poi_58124e0f,etiquette,Footwear is removed before entering the inner area of Textile Museum; socks are advisable in summer.,en-IN,high,5,emb_fact_58124e0f,2026-08-18T10:00:00+05:30
+fct_b285b187,poi_0b3e375a,etiquette,Footwear is removed before entering the inner area of Hot Springs; socks are advisable in summer.,en-IN,medium,2,emb_fact_0b3e375a,2026-08-18T10:00:00+05:30
+fct_c13789fc,poi_18f08d29,practical,Allow 120 minutes at Royal Cenotaphs. It is busiest between 10:00 and 13:00.,en-IN,medium,4,emb_fact_18f08d29,2026-08-18T10:00:00+05:30
+fct_9ad50776,poi_39c95ec6,architecture,"The lattice screen at Blue Pottery Workshop is the detail most guides point out, and the only part not restored.",en-IN,medium,4,emb_fact_39c95ec6,2026-08-18T10:00:00+05:30
+fct_8cadef56,poi_c0128d7d,etiquette,Footwear is removed before entering the inner area of Udaipur Street Food Lane; socks are advisable in summer.,en-IN,medium,1,emb_fact_c0128d7d,2026-08-18T10:00:00+05:30
+fct_14238677,poi_78eecc44,practical,Allow 75 minutes at Coffee Roastery Tour. It is busiest between 10:00 and 13:00.,en-IN,high,3,emb_fact_78eecc44,2026-08-18T10:00:00+05:30
+fct_1cb14f36,poi_6949e353,etiquette,Footwear is removed before entering the inner area of Great Mosque of Udaipur; socks are advisable in summer.,en-IN,high,2,emb_fact_6949e353,2026-08-18T10:00:00+05:30
+fct_05d2841a,poi_9e725958,trivia,"Udaipur Street Food Lane appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,5,emb_fact_9e725958,2026-08-18T10:00:00+05:30
+fct_d38ffae1,poi_7d81053b,architecture,"The fresco panel at Maritime Museum is the detail most guides point out, and the only part not restored.",en-IN,high,1,emb_fact_7d81053b,2026-08-18T10:00:00+05:30
+fct_0110aeea,poi_3ca0d3de,practical,Allow 60 minutes at Maritime Museum. It is busiest between 10:00 and 13:00.,en-IN,high,3,emb_fact_3ca0d3de,2026-08-18T10:00:00+05:30
+fct_1a52a76f,poi_d052fde5,practical,Allow 240 minutes at Botanical Gardens. It is busiest between 10:00 and 13:00.,en-IN,high,1,emb_fact_d052fde5,2026-08-18T10:00:00+05:30
+fct_69d1bd9a,poi_1559dff8,architecture,"The fresco panel at Riverside Lounge is the detail most guides point out, and the only part not restored.",en-IN,high,2,emb_fact_1559dff8,2026-08-18T10:00:00+05:30
+fct_83acae88,poi_6b45f5d8,trivia,"Rock Garden appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,5,emb_fact_6b45f5d8,2026-08-18T10:00:00+05:30
+fct_a840ca31,poi_87f14af2,practical,Allow 45 minutes at Backwater Channel. It is busiest between 10:00 and 13:00.,en-IN,low,3,emb_fact_87f14af2,2026-08-18T10:00:00+05:30
+fct_0fc7c6c8,poi_c9ad2e61,trivia,"Coffee Roastery Tour appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,5,emb_fact_c9ad2e61,2026-08-18T10:00:00+05:30
+fct_9ae872f1,poi_455fd66d,etiquette,Footwear is removed before entering the inner area of Riverside Ghats; socks are advisable in summer.,en-IN,medium,5,emb_fact_455fd66d,2026-08-18T10:00:00+05:30
+fct_f194314e,poi_3514f780,architecture,"The fresco panel at Jazz Cellar, Udaipur is the detail most guides point out, and the only part not restored.",en-IN,high,1,emb_fact_3514f780,2026-08-18T10:00:00+05:30
+fct_d9cb3087,poi_690e8c3f,etiquette,"Footwear is removed before entering the inner area of Gallery of Modern Art, Udaipur; socks are advisable in summer.",en-IN,high,5,emb_fact_690e8c3f,2026-08-18T10:00:00+05:30
+fct_323d5673,poi_a6e080dd,history,Night Food Bazaar was substantially rebuilt in the 18th century; the earlier structure survives only in the foundations.,en-IN,high,3,emb_fact_a6e080dd,2026-08-18T10:00:00+05:30
+fct_26567110,poi_7b4e4d8d,etiquette,Footwear is removed before entering the inner area of Jodhpur Bird Sanctuary; socks are advisable in summer.,en-IN,high,5,emb_fact_7b4e4d8d,2026-08-18T10:00:00+05:30
+fct_b1fe1a94,poi_d607a9e8,history,Yoga Shala was substantially rebuilt in the 16th century; the earlier structure survives only in the foundations.,en-IN,medium,2,emb_fact_d607a9e8,2026-08-18T10:00:00+05:30
+fct_86a08dc6,poi_3383cc81,architecture,"The fresco panel at Jazz Cellar, Jodhpur is the detail most guides point out, and the only part not restored.",en-IN,high,4,emb_fact_3383cc81,2026-08-18T10:00:00+05:30
+fct_c21f6b87,poi_84c56970,history,Spice Market Walk was substantially rebuilt in the 16th century; the earlier structure survives only in the foundations.,en-IN,high,2,emb_fact_84c56970,2026-08-18T10:00:00+05:30
+fct_372d5fd8,poi_f5507243,history,Riverside Lounge was substantially rebuilt in the 16th century; the earlier structure survives only in the foundations.,en-IN,high,2,emb_fact_f5507243,2026-08-18T10:00:00+05:30
+fct_b1a9c12e,poi_8c370a2f,practical,Allow 180 minutes at Rock Garden. It is busiest between 10:00 and 13:00.,en-IN,medium,5,emb_fact_8c370a2f,2026-08-18T10:00:00+05:30
+fct_750bfc69,poi_423f2b73,architecture,"The inscription at Hot Springs is the detail most guides point out, and the only part not restored.",en-IN,low,4,emb_fact_423f2b73,2026-08-18T10:00:00+05:30
+fct_4b7ec1f4,poi_529792ec,history,Yoga Shala was substantially rebuilt in the 17th century; the earlier structure survives only in the foundations.,en-IN,high,4,emb_fact_529792ec,2026-08-18T10:00:00+05:30
+fct_00f03d8f,poi_4ae9c459,etiquette,Footwear is removed before entering the inner area of Handloom Cooperative; socks are advisable in summer.,en-IN,medium,5,emb_fact_4ae9c459,2026-08-18T10:00:00+05:30
+fct_160e8215,poi_da092f1e,history,Yoga Shala was substantially rebuilt in the 16th century; the earlier structure survives only in the foundations.,en-IN,medium,1,emb_fact_da092f1e,2026-08-18T10:00:00+05:30
+fct_6f6bc08a,poi_efb828ad,history,Jodhpur Viewpoint was substantially rebuilt in the 18th century; the earlier structure survives only in the foundations.,en-IN,high,1,emb_fact_efb828ad,2026-08-18T10:00:00+05:30
+fct_d17d4d8c,poi_04f0ba08,trivia,"Rock Garden appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,3,emb_fact_04f0ba08,2026-08-18T10:00:00+05:30
+fct_a5cd75dd,poi_e4abebbd,etiquette,"Footwear is removed before entering the inner area of Jazz Cellar, Jodhpur; socks are advisable in summer.",en-IN,high,3,emb_fact_e4abebbd,2026-08-18T10:00:00+05:30
+fct_8e7e877c,poi_ea18f6ef,etiquette,Footwear is removed before entering the inner area of Hot Springs; socks are advisable in summer.,en-IN,medium,1,emb_fact_ea18f6ef,2026-08-18T10:00:00+05:30
+fct_47043d3c,poi_4ea03993,trivia,"Jaisalmer Bird Sanctuary appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,2,emb_fact_4ea03993,2026-08-18T10:00:00+05:30
+fct_858188d7,poi_5f6b0929,practical,Allow 240 minutes at Jaisalmer Temple. It is busiest between 10:00 and 13:00.,en-IN,high,3,emb_fact_5f6b0929,2026-08-18T10:00:00+05:30
+fct_598d16b5,poi_55aa9e6a,trivia,"Rock Climbing Wall appears on the city's earliest surviving tourist map, misspelled.",en-IN,medium,2,emb_fact_55aa9e6a,2026-08-18T10:00:00+05:30
+fct_3e082df9,poi_51183123,practical,Allow 75 minutes at Jaisalmer City Museum. It is busiest between 10:00 and 13:00.,en-IN,medium,3,emb_fact_51183123,2026-08-18T10:00:00+05:30
+fct_9343009e,poi_a81484fe,trivia,"Fishermen's Cove appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,2,emb_fact_a81484fe,2026-08-18T10:00:00+05:30
+fct_2555d3ab,poi_047adfc6,practical,Allow 150 minutes at Kayaking at Jaisalmer. It is busiest between 10:00 and 13:00.,en-IN,high,4,emb_fact_047adfc6,2026-08-18T10:00:00+05:30
+fct_17b62d81,poi_fb32afcd,history,Puppet Museum was substantially rebuilt in the 18th century; the earlier structure survives only in the foundations.,en-IN,high,1,emb_fact_fb32afcd,2026-08-18T10:00:00+05:30
+fct_eca0ceec,poi_40f22ba7,architecture,"The step-well geometry at Gallery of Modern Art, Jaisalmer is the detail most guides point out, and the only part not restored.",en-IN,low,2,emb_fact_40f22ba7,2026-08-18T10:00:00+05:30
+fct_732cad66,poi_6e34d5eb,trivia,"Chhatri Complex appears on the city's earliest surviving tourist map, misspelled.",en-IN,low,1,emb_fact_6e34d5eb,2026-08-18T10:00:00+05:30
+fct_23210dd2,poi_51f80251,architecture,"The inscription at Ayurveda Centre is the detail most guides point out, and the only part not restored.",en-IN,high,4,emb_fact_51f80251,2026-08-18T10:00:00+05:30
+fct_39173702,poi_e29c4169,etiquette,Footwear is removed before entering the inner area of Jain Temple Complex; socks are advisable in summer.,en-IN,high,3,emb_fact_e29c4169,2026-08-18T10:00:00+05:30
+fct_15139805,poi_d80fc6c2,practical,Allow 150 minutes at Jaisalmer Observatory. It is busiest between 10:00 and 13:00.,en-IN,high,5,emb_fact_d80fc6c2,2026-08-18T10:00:00+05:30
+fct_43c2b33a,poi_4f63e9d4,practical,Allow 90 minutes at Yoga Shala. It is busiest between 10:00 and 13:00.,en-IN,high,1,emb_fact_4f63e9d4,2026-08-18T10:00:00+05:30
+fct_f86449c4,poi_a24ebe04,practical,Allow 120 minutes at Butterfly Reserve. It is busiest between 10:00 and 13:00.,en-IN,high,4,emb_fact_a24ebe04,2026-08-18T10:00:00+05:30
+fct_0de3ba5c,poi_82b1e711,trivia,"Jaisalmer Temple appears on the city's earliest surviving tourist map, misspelled.",en-IN,medium,3,emb_fact_82b1e711,2026-08-18T10:00:00+05:30
+fct_792f67ec,poi_99eeb49d,practical,Allow 150 minutes at Riverside Lounge. It is busiest between 10:00 and 13:00.,en-IN,low,4,emb_fact_99eeb49d,2026-08-18T10:00:00+05:30
+fct_a0d34e00,poi_2918d9a5,history,Cooking Class at Old Town was substantially rebuilt in the 19th century; the earlier structure survives only in the foundations.,en-IN,medium,4,emb_fact_2918d9a5,2026-08-18T10:00:00+05:30
+fct_01a638b4,poi_a9e46e7f,trivia,"Night Food Bazaar appears on the city's earliest surviving tourist map, misspelled.",en-IN,low,1,emb_fact_a9e46e7f,2026-08-18T10:00:00+05:30
+fct_817d340f,poi_1153b6f1,architecture,"The carved lintel at Ayurveda Centre is the detail most guides point out, and the only part not restored.",en-IN,medium,4,emb_fact_1153b6f1,2026-08-18T10:00:00+05:30
+fct_33e363f0,poi_e698d1f2,trivia,"North Beach appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,4,emb_fact_e698d1f2,2026-08-18T10:00:00+05:30
+fct_d719eb73,poi_cc30bc8d,architecture,"The fresco panel at Quiet Bay is the detail most guides point out, and the only part not restored.",en-IN,high,1,emb_fact_cc30bc8d,2026-08-18T10:00:00+05:30
+fct_c02fa408,poi_d94e1880,trivia,"Backwater Channel appears on the city's earliest surviving tourist map, misspelled.",en-IN,medium,3,emb_fact_d94e1880,2026-08-18T10:00:00+05:30
+fct_7f4232b4,poi_4733b6f0,history,Yoga Shala was substantially rebuilt in the 19th century; the earlier structure survives only in the foundations.,en-IN,medium,1,emb_fact_4733b6f0,2026-08-18T10:00:00+05:30
+fct_9608cc45,poi_de929193,trivia,"Rock Garden appears on the city's earliest surviving tourist map, misspelled.",en-IN,low,5,emb_fact_de929193,2026-08-18T10:00:00+05:30
+fct_56876b0e,poi_ecc44f4e,trivia,"Quiet Bay appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,3,emb_fact_ecc44f4e,2026-08-18T10:00:00+05:30
+fct_10e64c6b,poi_23e1e6ef,history,Riverside Ghats was substantially rebuilt in the 16th century; the earlier structure survives only in the foundations.,en-IN,medium,4,emb_fact_23e1e6ef,2026-08-18T10:00:00+05:30
+fct_753bb33f,poi_25a10096,etiquette,Footwear is removed before entering the inner area of Agra Street Food Lane; socks are advisable in summer.,en-IN,medium,5,emb_fact_25a10096,2026-08-18T10:00:00+05:30
+fct_971d5aad,poi_6779b6e6,practical,Allow 60 minutes at Coffee Roastery Tour. It is busiest between 10:00 and 13:00.,en-IN,high,2,emb_fact_6779b6e6,2026-08-18T10:00:00+05:30
+fct_57a01f77,poi_fb163a6d,history,Fishermen's Cove was substantially rebuilt in the 18th century; the earlier structure survives only in the foundations.,en-IN,low,3,emb_fact_fb163a6d,2026-08-18T10:00:00+05:30
+fct_8a6c5edc,poi_d537f687,practical,Allow 150 minutes at Lighthouse Beach. It is busiest between 10:00 and 13:00.,en-IN,high,2,emb_fact_d537f687,2026-08-18T10:00:00+05:30
+fct_b4364d7e,poi_1f6b3fea,trivia,"Varanasi Viewpoint appears on the city's earliest surviving tourist map, misspelled.",en-IN,medium,1,emb_fact_1f6b3fea,2026-08-18T10:00:00+05:30
+fct_8f0cf31e,poi_4b6fd669,etiquette,Footwear is removed before entering the inner area of Fishermen's Cove; socks are advisable in summer.,en-IN,high,4,emb_fact_4b6fd669,2026-08-18T10:00:00+05:30
+fct_30df8210,poi_6cf96802,etiquette,Footwear is removed before entering the inner area of Riverside Lounge; socks are advisable in summer.,en-IN,high,5,emb_fact_6cf96802,2026-08-18T10:00:00+05:30
+fct_ac0bedec,poi_ac798552,history,Quiet Bay was substantially rebuilt in the 16th century; the earlier structure survives only in the foundations.,en-IN,high,4,emb_fact_ac798552,2026-08-18T10:00:00+05:30
+fct_467fda5e,poi_b342c8f0,etiquette,Footwear is removed before entering the inner area of Varanasi Street Food Lane; socks are advisable in summer.,en-IN,medium,1,emb_fact_b342c8f0,2026-08-18T10:00:00+05:30
+fct_bddb00bb,poi_ce379b2f,history,Varanasi Viewpoint was substantially rebuilt in the 17th century; the earlier structure survives only in the foundations.,en-IN,high,2,emb_fact_ce379b2f,2026-08-18T10:00:00+05:30
+fct_5f8ae8fd,poi_3c0c89be,history,Sunset Point was substantially rebuilt in the 17th century; the earlier structure survives only in the foundations.,en-IN,medium,2,emb_fact_3c0c89be,2026-08-18T10:00:00+05:30
+fct_61531cae,poi_3f6b3047,architecture,"The mirror work at Coffee Roastery Tour is the detail most guides point out, and the only part not restored.",en-IN,high,2,emb_fact_3f6b3047,2026-08-18T10:00:00+05:30
+fct_93b14516,poi_5d60f7d3,practical,Allow 180 minutes at Varanasi Street Food Lane. It is busiest between 10:00 and 13:00.,en-IN,high,3,emb_fact_5d60f7d3,2026-08-18T10:00:00+05:30
+fct_507c84f7,poi_14133aa5,history,Rock Garden was substantially rebuilt in the 17th century; the earlier structure survives only in the foundations.,en-IN,high,1,emb_fact_14133aa5,2026-08-18T10:00:00+05:30
+fct_804b51d6,poi_892c58e8,architecture,"The tile mosaic at Handloom Cooperative is the detail most guides point out, and the only part not restored.",en-IN,medium,5,emb_fact_892c58e8,2026-08-18T10:00:00+05:30
+fct_976f42d4,poi_6714a2b7,history,North Beach was substantially rebuilt in the 16th century; the earlier structure survives only in the foundations.,en-IN,high,2,emb_fact_6714a2b7,2026-08-18T10:00:00+05:30
+fct_463945b1,poi_0fd767d1,etiquette,Footwear is removed before entering the inner area of Varanasi Street Food Lane; socks are advisable in summer.,en-IN,high,5,emb_fact_0fd767d1,2026-08-18T10:00:00+05:30
+fct_20707715,poi_ff07508e,practical,Allow 150 minutes at Handloom Cooperative. It is busiest between 10:00 and 13:00.,en-IN,low,4,emb_fact_ff07508e,2026-08-18T10:00:00+05:30
+fct_2cae7d62,poi_9a818832,architecture,"The inscription at Ridge Lookout is the detail most guides point out, and the only part not restored.",en-IN,high,5,emb_fact_9a818832,2026-08-18T10:00:00+05:30
+fct_03d0ae69,poi_45ad255e,architecture,"The fresco panel at Riverside Ghats is the detail most guides point out, and the only part not restored.",en-IN,high,3,emb_fact_45ad255e,2026-08-18T10:00:00+05:30
+fct_ec101e68,poi_19ef3aca,etiquette,Footwear is removed before entering the inner area of Great Mosque of Lucknow; socks are advisable in summer.,en-IN,medium,3,emb_fact_19ef3aca,2026-08-18T10:00:00+05:30
+fct_03cc9dff,poi_654970ad,trivia,"Hot Springs appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,5,emb_fact_654970ad,2026-08-18T10:00:00+05:30
+fct_a9904000,poi_cfe191ae,etiquette,Footwear is removed before entering the inner area of Royal Cenotaphs; socks are advisable in summer.,en-IN,medium,4,emb_fact_cfe191ae,2026-08-18T10:00:00+05:30
+fct_0fb3e552,poi_1b1c636a,trivia,"Lucknow Stepwell appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,1,emb_fact_1b1c636a,2026-08-18T10:00:00+05:30
+fct_8b5e3b83,poi_6d2179fc,etiquette,Footwear is removed before entering the inner area of Lucknow Bird Sanctuary; socks are advisable in summer.,en-IN,high,1,emb_fact_6d2179fc,2026-08-18T10:00:00+05:30
+fct_99b06fb7,poi_3657db09,architecture,"The fresco panel at Lucknow Stepwell is the detail most guides point out, and the only part not restored.",en-IN,high,2,emb_fact_3657db09,2026-08-18T10:00:00+05:30
+fct_f299b170,poi_617e6210,etiquette,Footwear is removed before entering the inner area of Butterfly Reserve; socks are advisable in summer.,en-IN,high,1,emb_fact_617e6210,2026-08-18T10:00:00+05:30
+fct_689443f5,poi_537e1423,architecture,"The step-well geometry at Hot Springs is the detail most guides point out, and the only part not restored.",en-IN,medium,1,emb_fact_537e1423,2026-08-18T10:00:00+05:30
+fct_5166eede,poi_4014708e,architecture,"The brass door at Yoga Shala is the detail most guides point out, and the only part not restored.",en-IN,high,5,emb_fact_4014708e,2026-08-18T10:00:00+05:30
+fct_e4ddd68b,poi_11e2b165,etiquette,Footwear is removed before entering the inner area of Hot Springs; socks are advisable in summer.,en-IN,medium,3,emb_fact_11e2b165,2026-08-18T10:00:00+05:30
+fct_122bbfb9,poi_65449925,history,Rock Climbing Wall was substantially rebuilt in the 16th century; the earlier structure survives only in the foundations.,en-IN,medium,2,emb_fact_65449925,2026-08-18T10:00:00+05:30
+fct_a3fc2b17,poi_13219d0d,architecture,"The carved lintel at North Beach is the detail most guides point out, and the only part not restored.",en-IN,high,1,emb_fact_13219d0d,2026-08-18T10:00:00+05:30
+fct_97bd05b2,poi_29010ad1,trivia,"Great Mosque of Lucknow appears on the city's earliest surviving tourist map, misspelled.",en-IN,medium,5,emb_fact_29010ad1,2026-08-18T10:00:00+05:30
+fct_0bb206ae,poi_60c9ded0,etiquette,Footwear is removed before entering the inner area of Lucknow Bird Sanctuary; socks are advisable in summer.,en-IN,medium,3,emb_fact_60c9ded0,2026-08-18T10:00:00+05:30
+fct_47693870,poi_6dce5a76,practical,Allow 240 minutes at Ayurveda Centre. It is busiest between 10:00 and 13:00.,en-IN,high,1,emb_fact_6dce5a76,2026-08-18T10:00:00+05:30
+fct_5569cd57,poi_356fc49a,etiquette,Footwear is removed before entering the inner area of Jain Temple Complex; socks are advisable in summer.,en-IN,high,1,emb_fact_356fc49a,2026-08-18T10:00:00+05:30
+fct_bdaa847a,poi_d3737db1,architecture,"The lattice screen at Yoga Shala is the detail most guides point out, and the only part not restored.",en-IN,low,5,emb_fact_d3737db1,2026-08-18T10:00:00+05:30
+fct_83da702e,poi_453bdf21,architecture,"The inscription at Yoga Shala is the detail most guides point out, and the only part not restored.",en-IN,high,1,emb_fact_453bdf21,2026-08-18T10:00:00+05:30
+fct_5418eeed,poi_0f2aad38,trivia,"Elephant Camp appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,1,emb_fact_0f2aad38,2026-08-18T10:00:00+05:30
+fct_6879be6e,poi_04a93c99,trivia,"Butterfly Reserve appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,2,emb_fact_04a93c99,2026-08-18T10:00:00+05:30
+fct_ad6401b5,poi_854510d3,architecture,"The lattice screen at Rock Garden is the detail most guides point out, and the only part not restored.",en-IN,high,3,emb_fact_854510d3,2026-08-18T10:00:00+05:30
+fct_ab6cc66a,poi_b678840e,history,Night Food Bazaar was substantially rebuilt in the 16th century; the earlier structure survives only in the foundations.,en-IN,high,1,emb_fact_b678840e,2026-08-18T10:00:00+05:30
+fct_732e7456,poi_59a49b81,architecture,"The fresco panel at New Delhi Temple is the detail most guides point out, and the only part not restored.",en-IN,low,4,emb_fact_59a49b81,2026-08-18T10:00:00+05:30
+fct_4d1c1d51,poi_69af3525,architecture,"The fresco panel at Great Mosque of New Delhi is the detail most guides point out, and the only part not restored.",en-IN,medium,1,emb_fact_69af3525,2026-08-18T10:00:00+05:30
+fct_4178316a,poi_ec504151,history,Jain Temple Complex was substantially rebuilt in the 16th century; the earlier structure survives only in the foundations.,en-IN,medium,5,emb_fact_ec504151,2026-08-18T10:00:00+05:30
+fct_0cb3a57c,poi_ee3f6b58,practical,Allow 45 minutes at Botanical Gardens. It is busiest between 10:00 and 13:00.,en-IN,medium,5,emb_fact_ee3f6b58,2026-08-18T10:00:00+05:30
+fct_dd2f0fa7,poi_a8ca10a8,architecture,"The carved lintel at Rock Climbing Wall is the detail most guides point out, and the only part not restored.",en-IN,medium,2,emb_fact_a8ca10a8,2026-08-18T10:00:00+05:30
+fct_6dfeaafa,poi_0e9efeae,etiquette,Footwear is removed before entering the inner area of Riverside Lounge; socks are advisable in summer.,en-IN,medium,1,emb_fact_0e9efeae,2026-08-18T10:00:00+05:30
+fct_c2045f6f,poi_428db857,etiquette,Footwear is removed before entering the inner area of Ayurveda Centre; socks are advisable in summer.,en-IN,high,5,emb_fact_428db857,2026-08-18T10:00:00+05:30
+fct_4a51a4d8,poi_66c3e7d9,architecture,"The lattice screen at Riverside Lounge is the detail most guides point out, and the only part not restored.",en-IN,high,2,emb_fact_66c3e7d9,2026-08-18T10:00:00+05:30
+fct_9df8cb7d,poi_c8a30b2b,architecture,"The carved lintel at Riverside Ghats is the detail most guides point out, and the only part not restored.",en-IN,high,2,emb_fact_c8a30b2b,2026-08-18T10:00:00+05:30
+fct_f79ef98e,poi_814c5981,practical,Allow 180 minutes at Kayaking at Amritsar. It is busiest between 10:00 and 13:00.,en-IN,high,5,emb_fact_814c5981,2026-08-18T10:00:00+05:30
+fct_7325681d,poi_da4f49cf,trivia,"Hot Springs appears on the city's earliest surviving tourist map, misspelled.",en-IN,medium,3,emb_fact_da4f49cf,2026-08-18T10:00:00+05:30
+fct_aedc54ff,poi_f069d484,practical,Allow 150 minutes at Rooftop Live Music. It is busiest between 10:00 and 13:00.,en-IN,high,5,emb_fact_f069d484,2026-08-18T10:00:00+05:30
+fct_54146ea1,poi_a2b2ebb4,etiquette,"Footwear is removed before entering the inner area of Jazz Cellar, Amritsar; socks are advisable in summer.",en-IN,high,3,emb_fact_a2b2ebb4,2026-08-18T10:00:00+05:30
+fct_93d6b7dc,poi_2b68f8e3,history,Kayaking at Amritsar was substantially rebuilt in the 17th century; the earlier structure survives only in the foundations.,en-IN,high,3,emb_fact_2b68f8e3,2026-08-18T10:00:00+05:30
+fct_3b6eb151,poi_e6da4930,etiquette,Footwear is removed before entering the inner area of Hot Air Balloon Field; socks are advisable in summer.,en-IN,medium,5,emb_fact_e6da4930,2026-08-18T10:00:00+05:30
+fct_d8dd4e92,poi_16a57a9d,etiquette,Footwear is removed before entering the inner area of Blue Pottery Workshop; socks are advisable in summer.,en-IN,high,2,emb_fact_16a57a9d,2026-08-18T10:00:00+05:30
+fct_e85dc17c,poi_65054389,etiquette,Footwear is removed before entering the inner area of Lighthouse Beach; socks are advisable in summer.,en-IN,low,1,emb_fact_65054389,2026-08-18T10:00:00+05:30
+fct_ce8e723d,poi_4a4c1328,history,Yoga Shala was substantially rebuilt in the 17th century; the earlier structure survives only in the foundations.,en-IN,high,5,emb_fact_4a4c1328,2026-08-18T10:00:00+05:30
+fct_c587038d,poi_757a53e0,etiquette,Footwear is removed before entering the inner area of Riverside Lounge; socks are advisable in summer.,en-IN,medium,2,emb_fact_757a53e0,2026-08-18T10:00:00+05:30
+fct_75b251a3,poi_baa25090,practical,Allow 150 minutes at Water Palace. It is busiest between 10:00 and 13:00.,en-IN,high,4,emb_fact_baa25090,2026-08-18T10:00:00+05:30
+fct_0ef6b4af,poi_89d38def,trivia,"Cycling Loop appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,3,emb_fact_89d38def,2026-08-18T10:00:00+05:30
+fct_d669e57a,poi_bfc63913,architecture,"The mirror work at Handloom Cooperative is the detail most guides point out, and the only part not restored.",en-IN,high,5,emb_fact_bfc63913,2026-08-18T10:00:00+05:30
+fct_6424750a,poi_7213a07d,etiquette,Footwear is removed before entering the inner area of Quiet Bay; socks are advisable in summer.,en-IN,medium,3,emb_fact_7213a07d,2026-08-18T10:00:00+05:30
+fct_0796cf04,poi_09155f8c,trivia,"Quiet Bay appears on the city's earliest surviving tourist map, misspelled.",en-IN,medium,5,emb_fact_09155f8c,2026-08-18T10:00:00+05:30
+fct_6d885351,poi_35d011e8,history,Botanical Gardens was substantially rebuilt in the 18th century; the earlier structure survives only in the foundations.,en-IN,medium,2,emb_fact_35d011e8,2026-08-18T10:00:00+05:30
+fct_85197618,poi_eccc86ce,etiquette,Footwear is removed before entering the inner area of Maritime Museum; socks are advisable in summer.,en-IN,high,2,emb_fact_eccc86ce,2026-08-18T10:00:00+05:30
+fct_ac5adb04,poi_05550f9c,history,Night Food Bazaar was substantially rebuilt in the 16th century; the earlier structure survives only in the foundations.,en-IN,high,3,emb_fact_05550f9c,2026-08-18T10:00:00+05:30
+fct_36191a50,poi_e337e6d3,architecture,"The fresco panel at Textile Museum is the detail most guides point out, and the only part not restored.",en-IN,high,4,emb_fact_e337e6d3,2026-08-18T10:00:00+05:30
+fct_37b02c39,poi_6431c980,practical,Allow 120 minutes at Cooking Class at Old Town. It is busiest between 10:00 and 13:00.,en-IN,high,3,emb_fact_6431c980,2026-08-18T10:00:00+05:30
+fct_6267a455,poi_5a5793a8,practical,Allow 120 minutes at Watchtower Terrace. It is busiest between 10:00 and 13:00.,en-IN,high,3,emb_fact_5a5793a8,2026-08-18T10:00:00+05:30
+fct_cf590999,poi_4c87ddee,architecture,"The mirror work at Antique Lane is the detail most guides point out, and the only part not restored.",en-IN,high,1,emb_fact_4c87ddee,2026-08-18T10:00:00+05:30
+fct_56c75216,poi_660b0d33,architecture,"The inscription at Rock Garden is the detail most guides point out, and the only part not restored.",en-IN,high,2,emb_fact_660b0d33,2026-08-18T10:00:00+05:30
+fct_cb2f75fc,poi_b35717f6,etiquette,Footwear is removed before entering the inner area of Lighthouse Beach; socks are advisable in summer.,en-IN,low,1,emb_fact_b35717f6,2026-08-18T10:00:00+05:30
+fct_e19364b4,poi_1cdce06b,history,Shimla Viewpoint was substantially rebuilt in the 17th century; the earlier structure survives only in the foundations.,en-IN,high,5,emb_fact_1cdce06b,2026-08-18T10:00:00+05:30
+fct_f006ca53,poi_e5100a66,history,Coffee Roastery Tour was substantially rebuilt in the 17th century; the earlier structure survives only in the foundations.,en-IN,high,2,emb_fact_e5100a66,2026-08-18T10:00:00+05:30
+fct_dd7f4b34,poi_fec61450,history,Jain Temple Complex was substantially rebuilt in the 19th century; the earlier structure survives only in the foundations.,en-IN,high,1,emb_fact_fec61450,2026-08-18T10:00:00+05:30
+fct_e0e19f6e,poi_3a3efeb8,trivia,"Jain Temple Complex appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,3,emb_fact_3a3efeb8,2026-08-18T10:00:00+05:30
+fct_6eb838db,poi_080ec099,history,Hilltop Shrine was substantially rebuilt in the 19th century; the earlier structure survives only in the foundations.,en-IN,high,2,emb_fact_080ec099,2026-08-18T10:00:00+05:30
+fct_35dc8697,poi_56eec1f7,architecture,"The tile mosaic at Riverside Lounge is the detail most guides point out, and the only part not restored.",en-IN,high,3,emb_fact_56eec1f7,2026-08-18T10:00:00+05:30
+fct_bcb9edf2,poi_27e69b68,architecture,"The fresco panel at Zipline Point is the detail most guides point out, and the only part not restored.",en-IN,medium,2,emb_fact_27e69b68,2026-08-18T10:00:00+05:30
+fct_947ed216,poi_a42d04ae,architecture,"The tile mosaic at Riverside Lounge is the detail most guides point out, and the only part not restored.",en-IN,low,2,emb_fact_a42d04ae,2026-08-18T10:00:00+05:30
+fct_6b679d6b,poi_3cd58d03,architecture,"The carved lintel at Botanical Gardens is the detail most guides point out, and the only part not restored.",en-IN,medium,3,emb_fact_3cd58d03,2026-08-18T10:00:00+05:30
+fct_44ef9836,poi_d19e8a0d,etiquette,Footwear is removed before entering the inner area of Butterfly Reserve; socks are advisable in summer.,en-IN,high,2,emb_fact_d19e8a0d,2026-08-18T10:00:00+05:30
+fct_70321a93,poi_858d379c,architecture,"The lattice screen at Puppet Museum is the detail most guides point out, and the only part not restored.",en-IN,medium,5,emb_fact_858d379c,2026-08-18T10:00:00+05:30
+fct_ffb80c86,poi_9de9c403,architecture,"The tile mosaic at Great Mosque of Manali is the detail most guides point out, and the only part not restored.",en-IN,high,4,emb_fact_9de9c403,2026-08-18T10:00:00+05:30
+fct_6e76ddc4,poi_b6329778,practical,Allow 90 minutes at Hilltop Shrine. It is busiest between 10:00 and 13:00.,en-IN,medium,2,emb_fact_b6329778,2026-08-18T10:00:00+05:30
+fct_0708e49c,poi_981e6149,history,Coffee Roastery Tour was substantially rebuilt in the 19th century; the earlier structure survives only in the foundations.,en-IN,high,5,emb_fact_981e6149,2026-08-18T10:00:00+05:30
+fct_62d4a5ef,poi_6580da95,history,Rock Climbing Wall was substantially rebuilt in the 17th century; the earlier structure survives only in the foundations.,en-IN,high,1,emb_fact_6580da95,2026-08-18T10:00:00+05:30
+fct_f0e6b411,poi_d0aa4cac,etiquette,Footwear is removed before entering the inner area of Watchtower Terrace; socks are advisable in summer.,en-IN,medium,3,emb_fact_d0aa4cac,2026-08-18T10:00:00+05:30
+fct_986e80a2,poi_7a4468c4,practical,Allow 90 minutes at Watchtower Terrace. It is busiest between 10:00 and 13:00.,en-IN,high,4,emb_fact_7a4468c4,2026-08-18T10:00:00+05:30
+fct_9fecea27,poi_d668c5ae,history,Cycling Loop was substantially rebuilt in the 17th century; the earlier structure survives only in the foundations.,en-IN,high,5,emb_fact_d668c5ae,2026-08-18T10:00:00+05:30
+fct_0506dcb1,poi_9e696660,trivia,"Botanical Gardens appears on the city's earliest surviving tourist map, misspelled.",en-IN,medium,3,emb_fact_9e696660,2026-08-18T10:00:00+05:30
+fct_50f06552,poi_55efa344,etiquette,Footwear is removed before entering the inner area of Rishikesh Bazaar; socks are advisable in summer.,en-IN,high,2,emb_fact_55efa344,2026-08-18T10:00:00+05:30
+fct_babdfe7b,poi_7bd45bdd,architecture,"The brass door at Fishermen's Cove is the detail most guides point out, and the only part not restored.",en-IN,high,2,emb_fact_7bd45bdd,2026-08-18T10:00:00+05:30
+fct_a2dc517a,poi_bbd7ce43,etiquette,Footwear is removed before entering the inner area of Rishikesh Bazaar; socks are advisable in summer.,en-IN,medium,3,emb_fact_bbd7ce43,2026-08-18T10:00:00+05:30
+fct_ba9df9a1,poi_6da0c869,architecture,"The step-well geometry at Blue Pottery Workshop is the detail most guides point out, and the only part not restored.",en-IN,medium,4,emb_fact_6da0c869,2026-08-18T10:00:00+05:30
+fct_589dac7b,poi_f9f12b4d,etiquette,Footwear is removed before entering the inner area of Yoga Shala; socks are advisable in summer.,en-IN,high,3,emb_fact_f9f12b4d,2026-08-18T10:00:00+05:30
+fct_97c84d02,poi_090cc669,practical,Allow 45 minutes at Butterfly Reserve. It is busiest between 10:00 and 13:00.,en-IN,high,1,emb_fact_090cc669,2026-08-18T10:00:00+05:30
+fct_c704cfdc,poi_0e7b7fc0,etiquette,Footwear is removed before entering the inner area of Yoga Shala; socks are advisable in summer.,en-IN,medium,3,emb_fact_0e7b7fc0,2026-08-18T10:00:00+05:30
+fct_99cedc44,poi_e78bfaee,architecture,"The mirror work at Fishermen's Cove is the detail most guides point out, and the only part not restored.",en-IN,high,1,emb_fact_e78bfaee,2026-08-18T10:00:00+05:30
+fct_a8b21ca8,poi_c74c12ed,etiquette,Footwear is removed before entering the inner area of Hot Springs; socks are advisable in summer.,en-IN,high,5,emb_fact_c74c12ed,2026-08-18T10:00:00+05:30
+fct_e4a75d17,poi_889f4e87,practical,Allow 240 minutes at Puppet Museum. It is busiest between 10:00 and 13:00.,en-IN,high,2,emb_fact_889f4e87,2026-08-18T10:00:00+05:30
+fct_669bb7e5,poi_1461e306,etiquette,Footwear is removed before entering the inner area of Riverside Ghats; socks are advisable in summer.,en-IN,high,5,emb_fact_1461e306,2026-08-18T10:00:00+05:30
+fct_b93a209e,poi_475d7338,trivia,"Maritime Museum appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,3,emb_fact_475d7338,2026-08-18T10:00:00+05:30
+fct_381ef8d3,poi_21a4922d,practical,Allow 45 minutes at Quiet Bay. It is busiest between 10:00 and 13:00.,en-IN,high,4,emb_fact_21a4922d,2026-08-18T10:00:00+05:30
+fct_fb2bc5dd,poi_41810a53,etiquette,Footwear is removed before entering the inner area of Hilltop Shrine; socks are advisable in summer.,en-IN,high,5,emb_fact_41810a53,2026-08-18T10:00:00+05:30
+fct_673c20e0,poi_96add6ac,practical,Allow 180 minutes at Fishermen's Cove. It is busiest between 10:00 and 13:00.,en-IN,medium,3,emb_fact_96add6ac,2026-08-18T10:00:00+05:30
+fct_738b1ee3,poi_7cd2e8cd,etiquette,Footwear is removed before entering the inner area of Museum of Coins; socks are advisable in summer.,en-IN,high,5,emb_fact_7cd2e8cd,2026-08-18T10:00:00+05:30
+fct_0b0dc521,poi_3dd6c5b0,trivia,"Puppet Museum appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,1,emb_fact_3dd6c5b0,2026-08-18T10:00:00+05:30
+fct_84c72dc3,poi_d9ef734e,trivia,"Rooftop Live Music appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,2,emb_fact_d9ef734e,2026-08-18T10:00:00+05:30
+fct_109d8adb,poi_5e69bc20,trivia,"Handloom Cooperative appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,4,emb_fact_5e69bc20,2026-08-18T10:00:00+05:30
+fct_4a486de0,poi_c21309f4,trivia,"Sunset Point appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,3,emb_fact_c21309f4,2026-08-18T10:00:00+05:30
+fct_735bed2e,poi_a79ecb61,etiquette,Footwear is removed before entering the inner area of Backwater Channel; socks are advisable in summer.,en-IN,medium,3,emb_fact_a79ecb61,2026-08-18T10:00:00+05:30
+fct_d39fab06,poi_6d8ec0be,etiquette,Footwear is removed before entering the inner area of Ayurveda Centre; socks are advisable in summer.,en-IN,medium,3,emb_fact_6d8ec0be,2026-08-18T10:00:00+05:30
+fct_7d8b8f3e,poi_0c84f287,etiquette,Footwear is removed before entering the inner area of Nainital Bazaar; socks are advisable in summer.,en-IN,high,2,emb_fact_0c84f287,2026-08-18T10:00:00+05:30
+fct_24ff2726,poi_a1e5f2e6,trivia,"Yoga Shala appears on the city's earliest surviving tourist map, misspelled.",en-IN,low,3,emb_fact_a1e5f2e6,2026-08-18T10:00:00+05:30
+fct_f4ef16ea,poi_d5409022,trivia,"St Mary's Church, Nainital appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,3,emb_fact_d5409022,2026-08-18T10:00:00+05:30
+fct_87557980,poi_584276b6,etiquette,Footwear is removed before entering the inner area of Nainital Temple; socks are advisable in summer.,en-IN,high,2,emb_fact_584276b6,2026-08-18T10:00:00+05:30
+fct_35cb0984,poi_d8ffbfe8,architecture,"The inscription at Antique Lane is the detail most guides point out, and the only part not restored.",en-IN,high,5,emb_fact_d8ffbfe8,2026-08-18T10:00:00+05:30
+fct_02c58b56,poi_38e1ec96,history,Textile Museum was substantially rebuilt in the 17th century; the earlier structure survives only in the foundations.,en-IN,high,3,emb_fact_38e1ec96,2026-08-18T10:00:00+05:30
+fct_3aed20d0,poi_1b0630d5,trivia,"Nainital Temple appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,3,emb_fact_1b0630d5,2026-08-18T10:00:00+05:30
+fct_56ad5eb6,poi_93980121,practical,Allow 240 minutes at Puppet Museum. It is busiest between 10:00 and 13:00.,en-IN,high,1,emb_fact_93980121,2026-08-18T10:00:00+05:30
+fct_fed56abc,poi_789930fb,architecture,"The carved lintel at Leh City Museum is the detail most guides point out, and the only part not restored.",en-IN,high,1,emb_fact_789930fb,2026-08-18T10:00:00+05:30
+fct_ca01567e,poi_6b17511e,history,Night Food Bazaar was substantially rebuilt in the 19th century; the earlier structure survives only in the foundations.,en-IN,high,3,emb_fact_6b17511e,2026-08-18T10:00:00+05:30
+fct_78337c20,poi_43e21947,architecture,"The lattice screen at Jazz Cellar, Leh is the detail most guides point out, and the only part not restored.",en-IN,high,3,emb_fact_43e21947,2026-08-18T10:00:00+05:30
+fct_c42cb44c,poi_7b08d755,trivia,"Elephant Camp appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,4,emb_fact_7b08d755,2026-08-18T10:00:00+05:30
+fct_a12d2f01,poi_f2a26f1f,etiquette,Footwear is removed before entering the inner area of Leh Lake; socks are advisable in summer.,en-IN,low,4,emb_fact_f2a26f1f,2026-08-18T10:00:00+05:30
+fct_a4cbd11e,poi_bd12d26b,architecture,"The brass door at Textile Museum is the detail most guides point out, and the only part not restored.",en-IN,high,4,emb_fact_bd12d26b,2026-08-18T10:00:00+05:30
+fct_870f9679,poi_2b00dd1d,etiquette,Footwear is removed before entering the inner area of Textile Museum; socks are advisable in summer.,en-IN,high,5,emb_fact_2b00dd1d,2026-08-18T10:00:00+05:30
+fct_552b64d4,poi_eef7f325,history,Rooftop Live Music was substantially rebuilt in the 18th century; the earlier structure survives only in the foundations.,en-IN,high,3,emb_fact_eef7f325,2026-08-18T10:00:00+05:30
+fct_e87e9217,poi_d158bf55,history,Leh Bird Sanctuary was substantially rebuilt in the 19th century; the earlier structure survives only in the foundations.,en-IN,low,5,emb_fact_d158bf55,2026-08-18T10:00:00+05:30
+fct_cc6fef69,poi_03e96e6b,trivia,"Backwater Channel appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,5,emb_fact_03e96e6b,2026-08-18T10:00:00+05:30
+fct_db83fdca,poi_b2db71d0,history,Cliff Walk was substantially rebuilt in the 17th century; the earlier structure survives only in the foundations.,en-IN,medium,4,emb_fact_b2db71d0,2026-08-18T10:00:00+05:30
+fct_873c90f1,poi_4dd2861e,trivia,"Elephant Camp appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,2,emb_fact_4dd2861e,2026-08-18T10:00:00+05:30
+fct_0c3dde75,poi_5438f7a0,architecture,"The fresco panel at Crocodile Park is the detail most guides point out, and the only part not restored.",en-IN,high,1,emb_fact_5438f7a0,2026-08-18T10:00:00+05:30
+fct_f2caaf46,poi_26b74a30,trivia,"Elephant Camp appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,4,emb_fact_26b74a30,2026-08-18T10:00:00+05:30
+fct_e9b5d604,poi_58be1c10,trivia,"Ridge Lookout appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,5,emb_fact_58be1c10,2026-08-18T10:00:00+05:30
+fct_7ce7364b,poi_72885c51,etiquette,Footwear is removed before entering the inner area of Butterfly Reserve; socks are advisable in summer.,en-IN,low,2,emb_fact_72885c51,2026-08-18T10:00:00+05:30
+fct_bf6d4bc4,poi_091fe344,architecture,"The lattice screen at Srinagar Lake is the detail most guides point out, and the only part not restored.",en-IN,high,5,emb_fact_091fe344,2026-08-18T10:00:00+05:30
+fct_8d7063f5,poi_a8a1121e,history,Cycling Loop was substantially rebuilt in the 19th century; the earlier structure survives only in the foundations.,en-IN,high,5,emb_fact_a8a1121e,2026-08-18T10:00:00+05:30
+fct_86bcc3cc,poi_53ac6972,practical,Allow 90 minutes at Watchtower Terrace. It is busiest between 10:00 and 13:00.,en-IN,high,1,emb_fact_53ac6972,2026-08-18T10:00:00+05:30
+fct_00e24186,poi_7bf0ffd4,trivia,"Watchtower Terrace appears on the city's earliest surviving tourist map, misspelled.",en-IN,medium,5,emb_fact_7bf0ffd4,2026-08-18T10:00:00+05:30
+fct_4b6e9a5d,poi_a9a7d6f1,history,Elephant Camp was substantially rebuilt in the 18th century; the earlier structure survives only in the foundations.,en-IN,high,2,emb_fact_a9a7d6f1,2026-08-18T10:00:00+05:30
+fct_4fe52db4,poi_1b2395ad,etiquette,Footwear is removed before entering the inner area of Riverside Lounge; socks are advisable in summer.,en-IN,medium,3,emb_fact_1b2395ad,2026-08-18T10:00:00+05:30
+fct_b2a7e5bc,poi_88b5a018,history,Watchtower Terrace was substantially rebuilt in the 19th century; the earlier structure survives only in the foundations.,en-IN,high,4,emb_fact_88b5a018,2026-08-18T10:00:00+05:30
+fct_a8e91ea0,poi_c806ff41,architecture,"The carved lintel at Chhatri Complex is the detail most guides point out, and the only part not restored.",en-IN,high,2,emb_fact_c806ff41,2026-08-18T10:00:00+05:30
+fct_f4324560,poi_3d47122c,practical,Allow 60 minutes at Srinagar Observatory. It is busiest between 10:00 and 13:00.,en-IN,high,2,emb_fact_3d47122c,2026-08-18T10:00:00+05:30
+fct_6c378d16,poi_02d64e75,practical,"Allow 180 minutes at Jazz Cellar, Srinagar. It is busiest between 10:00 and 13:00.",en-IN,low,1,emb_fact_02d64e75,2026-08-18T10:00:00+05:30
+fct_6d3b32da,poi_ec061425,history,Crocodile Park was substantially rebuilt in the 16th century; the earlier structure survives only in the foundations.,en-IN,medium,2,emb_fact_ec061425,2026-08-18T10:00:00+05:30
+fct_93fcbff1,poi_6c6cefc3,etiquette,Footwear is removed before entering the inner area of Rock Garden; socks are advisable in summer.,en-IN,medium,1,emb_fact_6c6cefc3,2026-08-18T10:00:00+05:30
+fct_5019eda6,poi_d1f05b2f,trivia,"Zipline Point appears on the city's earliest surviving tourist map, misspelled.",en-IN,low,2,emb_fact_d1f05b2f,2026-08-18T10:00:00+05:30
+fct_0c2791f5,poi_70fc506d,history,Rock Climbing Wall was substantially rebuilt in the 16th century; the earlier structure survives only in the foundations.,en-IN,high,4,emb_fact_70fc506d,2026-08-18T10:00:00+05:30
+fct_ddff65fc,poi_bebe0046,etiquette,Footwear is removed before entering the inner area of Quiet Bay; socks are advisable in summer.,en-IN,medium,5,emb_fact_bebe0046,2026-08-18T10:00:00+05:30
+fct_466df552,poi_a89bd0b6,history,Riverside Lounge was substantially rebuilt in the 17th century; the earlier structure survives only in the foundations.,en-IN,high,4,emb_fact_a89bd0b6,2026-08-18T10:00:00+05:30
+fct_4aef413f,poi_a1b45daa,practical,Allow 90 minutes at Cliff Walk. It is busiest between 10:00 and 13:00.,en-IN,high,3,emb_fact_a1b45daa,2026-08-18T10:00:00+05:30
+fct_21c3862a,poi_7d154e6e,history,"Gallery of Modern Art, Mumbai was substantially rebuilt in the 16th century; the earlier structure survives only in the foundations.",en-IN,low,5,emb_fact_7d154e6e,2026-08-18T10:00:00+05:30
+fct_7e239c80,poi_26a8c93c,practical,Allow 240 minutes at Hot Air Balloon Field. It is busiest between 10:00 and 13:00.,en-IN,high,2,emb_fact_26a8c93c,2026-08-18T10:00:00+05:30
+fct_6f6f482d,poi_22445cd1,etiquette,Footwear is removed before entering the inner area of Blue Pottery Workshop; socks are advisable in summer.,en-IN,low,5,emb_fact_22445cd1,2026-08-18T10:00:00+05:30
+fct_245690f5,poi_65c1c671,trivia,"Handloom Cooperative appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,5,emb_fact_65c1c671,2026-08-18T10:00:00+05:30
+fct_a76951a2,poi_cbe67aeb,etiquette,Footwear is removed before entering the inner area of Mumbai Bazaar; socks are advisable in summer.,en-IN,high,5,emb_fact_cbe67aeb,2026-08-18T10:00:00+05:30
+fct_ba434444,poi_41745331,practical,Allow 150 minutes at Mumbai Temple. It is busiest between 10:00 and 13:00.,en-IN,medium,4,emb_fact_41745331,2026-08-18T10:00:00+05:30
+fct_8dd4d39c,poi_df880d73,history,Mumbai City Museum was substantially rebuilt in the 18th century; the earlier structure survives only in the foundations.,en-IN,low,1,emb_fact_df880d73,2026-08-18T10:00:00+05:30
+fct_0a5f4a3c,poi_538228aa,history,Jain Temple Complex was substantially rebuilt in the 18th century; the earlier structure survives only in the foundations.,en-IN,medium,2,emb_fact_538228aa,2026-08-18T10:00:00+05:30
+fct_d4f3b886,poi_9668f820,etiquette,"Footwear is removed before entering the inner area of Jazz Cellar, Mumbai; socks are advisable in summer.",en-IN,medium,5,emb_fact_9668f820,2026-08-18T10:00:00+05:30
+fct_36df7e82,poi_ee4038b4,architecture,"The step-well geometry at Mumbai Bazaar is the detail most guides point out, and the only part not restored.",en-IN,high,3,emb_fact_ee4038b4,2026-08-18T10:00:00+05:30
+fct_77b634b0,poi_6db4edc9,architecture,"The mirror work at Blue Pottery Workshop is the detail most guides point out, and the only part not restored.",en-IN,high,3,emb_fact_6db4edc9,2026-08-18T10:00:00+05:30
+fct_4b6e601e,poi_8016ef2b,architecture,"The carved lintel at Cycling Loop is the detail most guides point out, and the only part not restored.",en-IN,low,2,emb_fact_8016ef2b,2026-08-18T10:00:00+05:30
+fct_c0a51b08,poi_87d0f44c,history,North Beach was substantially rebuilt in the 16th century; the earlier structure survives only in the foundations.,en-IN,medium,1,emb_fact_87d0f44c,2026-08-18T10:00:00+05:30
+fct_f8a539e7,poi_f6726145,practical,Allow 60 minutes at Pune Observatory. It is busiest between 10:00 and 13:00.,en-IN,high,2,emb_fact_f6726145,2026-08-18T10:00:00+05:30
+fct_f9e326a0,poi_794abca9,trivia,"Yoga Shala appears on the city's earliest surviving tourist map, misspelled.",en-IN,medium,1,emb_fact_794abca9,2026-08-18T10:00:00+05:30
+fct_060c4874,poi_a9aa5e47,history,Lighthouse Beach was substantially rebuilt in the 18th century; the earlier structure survives only in the foundations.,en-IN,high,1,emb_fact_a9aa5e47,2026-08-18T10:00:00+05:30
+fct_95bfa9a2,poi_6ac0c798,architecture,"The tile mosaic at Watchtower Terrace is the detail most guides point out, and the only part not restored.",en-IN,low,2,emb_fact_6ac0c798,2026-08-18T10:00:00+05:30
+fct_682938d7,poi_7defc6e9,architecture,"The fresco panel at Ridge Lookout is the detail most guides point out, and the only part not restored.",en-IN,medium,4,emb_fact_7defc6e9,2026-08-18T10:00:00+05:30
+fct_967f980b,poi_ba424444,architecture,"The carved lintel at Royal Cenotaphs is the detail most guides point out, and the only part not restored.",en-IN,high,4,emb_fact_ba424444,2026-08-18T10:00:00+05:30
+fct_3e3561e5,poi_b5219b13,etiquette,Footwear is removed before entering the inner area of Paragliding Launch; socks are advisable in summer.,en-IN,high,4,emb_fact_b5219b13,2026-08-18T10:00:00+05:30
+fct_f9d92ca4,poi_ade17493,etiquette,Footwear is removed before entering the inner area of Kayaking at Pune; socks are advisable in summer.,en-IN,high,2,emb_fact_ade17493,2026-08-18T10:00:00+05:30
+fct_92874b83,poi_5d059c71,etiquette,Footwear is removed before entering the inner area of Rock Garden; socks are advisable in summer.,en-IN,high,5,emb_fact_5d059c71,2026-08-18T10:00:00+05:30
+fct_f996a174,poi_9147fba7,history,Pune Street Food Lane was substantially rebuilt in the 18th century; the earlier structure survives only in the foundations.,en-IN,high,3,emb_fact_9147fba7,2026-08-18T10:00:00+05:30
+fct_acbab095,poi_72bc15f6,etiquette,Footwear is removed before entering the inner area of Water Palace; socks are advisable in summer.,en-IN,high,4,emb_fact_72bc15f6,2026-08-18T10:00:00+05:30
+fct_9e25451a,poi_ca1e63bc,architecture,"The carved lintel at Sunset Point is the detail most guides point out, and the only part not restored.",en-IN,high,4,emb_fact_ca1e63bc,2026-08-18T10:00:00+05:30
+fct_eeffe5de,poi_cc9446c4,trivia,"Paragliding Launch appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,5,emb_fact_cc9446c4,2026-08-18T10:00:00+05:30
+fct_55d7ed42,poi_0856e669,history,Fishermen's Cove was substantially rebuilt in the 18th century; the earlier structure survives only in the foundations.,en-IN,high,3,emb_fact_0856e669,2026-08-18T10:00:00+05:30
+fct_d99f09c5,poi_671bd504,trivia,"Kayaking at Aurangabad appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,3,emb_fact_671bd504,2026-08-18T10:00:00+05:30
+fct_f10d577a,poi_3611521b,practical,Allow 120 minutes at Zipline Point. It is busiest between 10:00 and 13:00.,en-IN,high,2,emb_fact_3611521b,2026-08-18T10:00:00+05:30
+fct_463e721c,poi_79477167,etiquette,Footwear is removed before entering the inner area of Riverside Ghats; socks are advisable in summer.,en-IN,high,2,emb_fact_79477167,2026-08-18T10:00:00+05:30
+fct_5ccab8dd,poi_4392116d,trivia,"Rock Climbing Wall appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,5,emb_fact_4392116d,2026-08-18T10:00:00+05:30
+fct_c9446ad3,poi_a9d48230,history,Riverside Lounge was substantially rebuilt in the 19th century; the earlier structure survives only in the foundations.,en-IN,high,1,emb_fact_a9d48230,2026-08-18T10:00:00+05:30
+fct_112947ac,poi_de5aff84,trivia,"Fishermen's Cove appears on the city's earliest surviving tourist map, misspelled.",en-IN,medium,2,emb_fact_de5aff84,2026-08-18T10:00:00+05:30
+fct_1c0a952d,poi_1e04227a,etiquette,"Footwear is removed before entering the inner area of Jazz Cellar, Aurangabad; socks are advisable in summer.",en-IN,high,1,emb_fact_1e04227a,2026-08-18T10:00:00+05:30
+fct_81bd3254,poi_a9b62025,practical,Allow 180 minutes at Aurangabad Bird Sanctuary. It is busiest between 10:00 and 13:00.,en-IN,high,2,emb_fact_a9b62025,2026-08-18T10:00:00+05:30
+fct_c2668967,poi_fb5f89ab,etiquette,Footwear is removed before entering the inner area of Watchtower Terrace; socks are advisable in summer.,en-IN,high,2,emb_fact_fb5f89ab,2026-08-18T10:00:00+05:30
+fct_c96b867b,poi_5fab4a4a,etiquette,Footwear is removed before entering the inner area of Kayaking at Aurangabad; socks are advisable in summer.,en-IN,medium,5,emb_fact_5fab4a4a,2026-08-18T10:00:00+05:30
+fct_108dd2ff,poi_2a817bf0,practical,Allow 120 minutes at Museum of Coins. It is busiest between 10:00 and 13:00.,en-IN,high,5,emb_fact_2a817bf0,2026-08-18T10:00:00+05:30
+fct_b21f4402,poi_02a01ef8,trivia,"Paragliding Launch appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,4,emb_fact_02a01ef8,2026-08-18T10:00:00+05:30
+fct_dedf0416,poi_b961944a,practical,Allow 240 minutes at Quiet Bay. It is busiest between 10:00 and 13:00.,en-IN,high,5,emb_fact_b961944a,2026-08-18T10:00:00+05:30
+fct_c743fbab,poi_f404c1ef,architecture,"The fresco panel at Crocodile Park is the detail most guides point out, and the only part not restored.",en-IN,medium,1,emb_fact_f404c1ef,2026-08-18T10:00:00+05:30
+fct_735cd9ac,poi_56fd62aa,history,Aurangabad Lake was substantially rebuilt in the 17th century; the earlier structure survives only in the foundations.,en-IN,high,1,emb_fact_56fd62aa,2026-08-18T10:00:00+05:30
+fct_88e589a5,poi_16fd3ba6,practical,Allow 240 minutes at Riverside Lounge. It is busiest between 10:00 and 13:00.,en-IN,high,3,emb_fact_16fd3ba6,2026-08-18T10:00:00+05:30
+fct_1d344873,poi_822c8d40,history,Riverside Lounge was substantially rebuilt in the 17th century; the earlier structure survives only in the foundations.,en-IN,high,1,emb_fact_822c8d40,2026-08-18T10:00:00+05:30
+fct_d19749dc,poi_611ff2e6,practical,"Allow 120 minutes at St Mary's Church, Ahmedabad. It is busiest between 10:00 and 13:00.",en-IN,high,4,emb_fact_611ff2e6,2026-08-18T10:00:00+05:30
+fct_746327e9,poi_f2c367a7,trivia,"Cliff Walk appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,2,emb_fact_f2c367a7,2026-08-18T10:00:00+05:30
+fct_a6bed6e3,poi_b9b35115,trivia,"Paragliding Launch appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,1,emb_fact_b9b35115,2026-08-18T10:00:00+05:30
+fct_72a79cad,poi_f70648bb,practical,"Allow 60 minutes at Jazz Cellar, Ahmedabad. It is busiest between 10:00 and 13:00.",en-IN,medium,3,emb_fact_f70648bb,2026-08-18T10:00:00+05:30
+fct_8815183d,poi_25b7eba8,etiquette,Footwear is removed before entering the inner area of Ahmedabad Temple; socks are advisable in summer.,en-IN,medium,2,emb_fact_25b7eba8,2026-08-18T10:00:00+05:30
+fct_5661e260,poi_cbc7b76a,etiquette,Footwear is removed before entering the inner area of Hot Springs; socks are advisable in summer.,en-IN,high,3,emb_fact_cbc7b76a,2026-08-18T10:00:00+05:30
+fct_c3912243,poi_49e06159,etiquette,Footwear is removed before entering the inner area of Ahmedabad Viewpoint; socks are advisable in summer.,en-IN,high,2,emb_fact_49e06159,2026-08-18T10:00:00+05:30
+fct_add21126,poi_f52fb17d,architecture,"The brass door at North Beach is the detail most guides point out, and the only part not restored.",en-IN,high,5,emb_fact_f52fb17d,2026-08-18T10:00:00+05:30
+fct_dba5aaef,poi_be136c8b,etiquette,Footwear is removed before entering the inner area of Ahmedabad Viewpoint; socks are advisable in summer.,en-IN,high,5,emb_fact_be136c8b,2026-08-18T10:00:00+05:30
+fct_d0d0fe94,poi_72043b54,history,City Walls Walk was substantially rebuilt in the 19th century; the earlier structure survives only in the foundations.,en-IN,high,1,emb_fact_72043b54,2026-08-18T10:00:00+05:30
+fct_fa63cea3,poi_36527647,etiquette,Footwear is removed before entering the inner area of Rooftop Live Music; socks are advisable in summer.,en-IN,high,1,emb_fact_36527647,2026-08-18T10:00:00+05:30
+fct_948d5f26,poi_57267cd9,architecture,"The fresco panel at Hilltop Shrine is the detail most guides point out, and the only part not restored.",en-IN,high,4,emb_fact_57267cd9,2026-08-18T10:00:00+05:30
+fct_b620370f,poi_eafd4622,practical,Allow 150 minutes at Ayurveda Centre. It is busiest between 10:00 and 13:00.,en-IN,high,3,emb_fact_eafd4622,2026-08-18T10:00:00+05:30
+fct_583eee3e,poi_886b5e19,architecture,"The tile mosaic at Chhatri Complex is the detail most guides point out, and the only part not restored.",en-IN,medium,4,emb_fact_886b5e19,2026-08-18T10:00:00+05:30
+fct_8222e390,poi_5a3495e1,trivia,"Kayaking at Bhuj appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,3,emb_fact_5a3495e1,2026-08-18T10:00:00+05:30
+fct_a14cc65b,poi_a7c6fce8,etiquette,Footwear is removed before entering the inner area of Hot Springs; socks are advisable in summer.,en-IN,high,1,emb_fact_a7c6fce8,2026-08-18T10:00:00+05:30
+fct_a9814a9f,poi_29945418,trivia,"Cycling Loop appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,1,emb_fact_29945418,2026-08-18T10:00:00+05:30
+fct_d0f30589,poi_9cf7145d,history,Night Food Bazaar was substantially rebuilt in the 17th century; the earlier structure survives only in the foundations.,en-IN,high,2,emb_fact_9cf7145d,2026-08-18T10:00:00+05:30
+fct_d7f3df23,poi_c3285efc,trivia,"Butterfly Reserve appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,2,emb_fact_c3285efc,2026-08-18T10:00:00+05:30
+fct_ba7b7f49,poi_a00d6c5b,etiquette,Footwear is removed before entering the inner area of Elephant Camp; socks are advisable in summer.,en-IN,high,3,emb_fact_a00d6c5b,2026-08-18T10:00:00+05:30
+fct_e27c28aa,poi_ff4e53c7,history,Coffee Roastery Tour was substantially rebuilt in the 17th century; the earlier structure survives only in the foundations.,en-IN,high,5,emb_fact_ff4e53c7,2026-08-18T10:00:00+05:30
+fct_cc17244f,poi_6a0f0d6b,etiquette,Footwear is removed before entering the inner area of Ridge Lookout; socks are advisable in summer.,en-IN,medium,5,emb_fact_6a0f0d6b,2026-08-18T10:00:00+05:30
+fct_2b21b3b1,poi_90858ce4,history,Water Palace was substantially rebuilt in the 19th century; the earlier structure survives only in the foundations.,en-IN,high,2,emb_fact_90858ce4,2026-08-18T10:00:00+05:30
+fct_ef479bfc,poi_048bc3b8,practical,Allow 75 minutes at Great Mosque of Bhuj. It is busiest between 10:00 and 13:00.,en-IN,high,4,emb_fact_048bc3b8,2026-08-18T10:00:00+05:30
+fct_79d71925,poi_9c194b8c,trivia,"Bhuj Fort appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,4,emb_fact_9c194b8c,2026-08-18T10:00:00+05:30
+fct_a447c471,poi_651c469a,etiquette,Footwear is removed before entering the inner area of Bhuj Street Food Lane; socks are advisable in summer.,en-IN,high,4,emb_fact_651c469a,2026-08-18T10:00:00+05:30
+fct_627e015c,poi_e7c57ffd,history,Paragliding Launch was substantially rebuilt in the 18th century; the earlier structure survives only in the foundations.,en-IN,high,5,emb_fact_e7c57ffd,2026-08-18T10:00:00+05:30
+fct_b7af0808,poi_855d488a,etiquette,Footwear is removed before entering the inner area of Great Mosque of Bhuj; socks are advisable in summer.,en-IN,low,3,emb_fact_855d488a,2026-08-18T10:00:00+05:30
+fct_83fdb730,poi_78cfd33b,architecture,"The step-well geometry at Spice Market Walk is the detail most guides point out, and the only part not restored.",en-IN,high,4,emb_fact_78cfd33b,2026-08-18T10:00:00+05:30
+fct_6419edab,poi_e4f4e3ee,history,City Walls Walk was substantially rebuilt in the 17th century; the earlier structure survives only in the foundations.,en-IN,low,4,emb_fact_e4f4e3ee,2026-08-18T10:00:00+05:30
+fct_be17c8e7,poi_e98d21dd,trivia,"Elephant Camp appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,1,emb_fact_e98d21dd,2026-08-18T10:00:00+05:30
+fct_3ba8b8ef,poi_96764ccb,practical,Allow 120 minutes at Ayurveda Centre. It is busiest between 10:00 and 13:00.,en-IN,high,4,emb_fact_96764ccb,2026-08-18T10:00:00+05:30
+fct_e50216ea,poi_2bbb64cc,history,Cooking Class at Old Town was substantially rebuilt in the 17th century; the earlier structure survives only in the foundations.,en-IN,high,2,emb_fact_2bbb64cc,2026-08-18T10:00:00+05:30
+fct_c46f4cd8,poi_ee7caee8,history,Spice Market Walk was substantially rebuilt in the 17th century; the earlier structure survives only in the foundations.,en-IN,high,4,emb_fact_ee7caee8,2026-08-18T10:00:00+05:30
+fct_3c012263,poi_28daaace,architecture,"The carved lintel at Night Food Bazaar is the detail most guides point out, and the only part not restored.",en-IN,low,2,emb_fact_28daaace,2026-08-18T10:00:00+05:30
+fct_0961e331,poi_654d876f,history,Cycling Loop was substantially rebuilt in the 18th century; the earlier structure survives only in the foundations.,en-IN,medium,2,emb_fact_654d876f,2026-08-18T10:00:00+05:30
+fct_f255aff6,poi_8c65234d,architecture,"The lattice screen at Riverside Lounge is the detail most guides point out, and the only part not restored.",en-IN,high,3,emb_fact_8c65234d,2026-08-18T10:00:00+05:30
+fct_3070151b,poi_36905b4d,history,Maritime Museum was substantially rebuilt in the 19th century; the earlier structure survives only in the foundations.,en-IN,high,4,emb_fact_36905b4d,2026-08-18T10:00:00+05:30
+fct_4f694052,poi_aa397bd7,history,"Jazz Cellar, Panaji was substantially rebuilt in the 19th century; the earlier structure survives only in the foundations.",en-IN,high,3,emb_fact_aa397bd7,2026-08-18T10:00:00+05:30
+fct_3e7ed174,poi_cf73dddb,trivia,"Hilltop Shrine appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,3,emb_fact_cf73dddb,2026-08-18T10:00:00+05:30
+fct_414b3261,poi_f79642d1,architecture,"The inscription at Rock Climbing Wall is the detail most guides point out, and the only part not restored.",en-IN,high,5,emb_fact_f79642d1,2026-08-18T10:00:00+05:30
+fct_90a2293a,poi_5afd21b6,practical,Allow 60 minutes at Panaji City Museum. It is busiest between 10:00 and 13:00.,en-IN,high,2,emb_fact_5afd21b6,2026-08-18T10:00:00+05:30
+fct_f2a95ba0,poi_9bd455da,history,Yoga Shala was substantially rebuilt in the 16th century; the earlier structure survives only in the foundations.,en-IN,high,5,emb_fact_9bd455da,2026-08-18T10:00:00+05:30
+fct_248b4a5d,poi_97a3672d,etiquette,Footwear is removed before entering the inner area of Bengaluru Bazaar; socks are advisable in summer.,en-IN,low,5,emb_fact_97a3672d,2026-08-18T10:00:00+05:30
+fct_22841a79,poi_31a91abe,etiquette,Footwear is removed before entering the inner area of Tea Estate Trail; socks are advisable in summer.,en-IN,medium,3,emb_fact_31a91abe,2026-08-18T10:00:00+05:30
+fct_a87c83e0,poi_aef75f2a,trivia,"Rooftop Live Music appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,4,emb_fact_aef75f2a,2026-08-18T10:00:00+05:30
+fct_d6417a94,poi_a2cbcb8a,trivia,"Cycling Loop appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,2,emb_fact_a2cbcb8a,2026-08-18T10:00:00+05:30
+fct_ce6a4b2c,poi_c07155aa,etiquette,Footwear is removed before entering the inner area of Bengaluru Bird Sanctuary; socks are advisable in summer.,en-IN,high,3,emb_fact_c07155aa,2026-08-18T10:00:00+05:30
+fct_e1bb5533,poi_41d6dac1,etiquette,"Footwear is removed before entering the inner area of Jazz Cellar, Bengaluru; socks are advisable in summer.",en-IN,high,5,emb_fact_41d6dac1,2026-08-18T10:00:00+05:30
+fct_22c47175,poi_6f0e4bb1,etiquette,Footwear is removed before entering the inner area of Bengaluru Viewpoint; socks are advisable in summer.,en-IN,high,1,emb_fact_6f0e4bb1,2026-08-18T10:00:00+05:30
+fct_9a5f9ab7,poi_e70a02d6,etiquette,"Footwear is removed before entering the inner area of Gallery of Modern Art, Bengaluru; socks are advisable in summer.",en-IN,high,2,emb_fact_e70a02d6,2026-08-18T10:00:00+05:30
+fct_bb91dbc0,poi_3bab74a1,trivia,"Lighthouse Beach appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,2,emb_fact_3bab74a1,2026-08-18T10:00:00+05:30
+fct_c9473816,poi_65bb95f4,history,Riverside Lounge was substantially rebuilt in the 17th century; the earlier structure survives only in the foundations.,en-IN,high,1,emb_fact_65bb95f4,2026-08-18T10:00:00+05:30
+fct_de2155c3,poi_e5aee907,architecture,"The carved lintel at Ridge Lookout is the detail most guides point out, and the only part not restored.",en-IN,high,1,emb_fact_e5aee907,2026-08-18T10:00:00+05:30
+fct_2969bdc0,poi_11738258,etiquette,Footwear is removed before entering the inner area of Bengaluru Lake; socks are advisable in summer.,en-IN,high,1,emb_fact_11738258,2026-08-18T10:00:00+05:30
+fct_d8188d68,poi_c409f08b,etiquette,Footwear is removed before entering the inner area of Butterfly Reserve; socks are advisable in summer.,en-IN,medium,5,emb_fact_c409f08b,2026-08-18T10:00:00+05:30
+fct_70935bcb,poi_5a548df2,history,Antique Lane was substantially rebuilt in the 19th century; the earlier structure survives only in the foundations.,en-IN,medium,3,emb_fact_5a548df2,2026-08-18T10:00:00+05:30
+fct_6af6eada,poi_30fe338a,history,Quiet Bay was substantially rebuilt in the 18th century; the earlier structure survives only in the foundations.,en-IN,high,5,emb_fact_30fe338a,2026-08-18T10:00:00+05:30
+fct_37768d5b,poi_8df3456f,history,Crocodile Park was substantially rebuilt in the 19th century; the earlier structure survives only in the foundations.,en-IN,medium,3,emb_fact_8df3456f,2026-08-18T10:00:00+05:30
+fct_c97ef2b8,poi_55ce6c84,trivia,"Chhatri Complex appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,1,emb_fact_55ce6c84,2026-08-18T10:00:00+05:30
+fct_55db5ab0,poi_9a0ae1b1,history,Yoga Shala was substantially rebuilt in the 16th century; the earlier structure survives only in the foundations.,en-IN,high,5,emb_fact_9a0ae1b1,2026-08-18T10:00:00+05:30
+fct_86ebd331,poi_c66c8fbc,history,Sunset Point was substantially rebuilt in the 16th century; the earlier structure survives only in the foundations.,en-IN,medium,3,emb_fact_c66c8fbc,2026-08-18T10:00:00+05:30
+fct_b8865121,poi_666004ed,etiquette,Footwear is removed before entering the inner area of Rock Climbing Wall; socks are advisable in summer.,en-IN,medium,1,emb_fact_666004ed,2026-08-18T10:00:00+05:30
+fct_1f8141a0,poi_b95f08bb,architecture,"The brass door at Mysuru Stepwell is the detail most guides point out, and the only part not restored.",en-IN,high,2,emb_fact_b95f08bb,2026-08-18T10:00:00+05:30
+fct_daa01273,poi_231377ba,history,Rock Garden was substantially rebuilt in the 16th century; the earlier structure survives only in the foundations.,en-IN,high,3,emb_fact_231377ba,2026-08-18T10:00:00+05:30
+fct_c8524010,poi_3ca459f1,architecture,"The lattice screen at Fishermen's Cove is the detail most guides point out, and the only part not restored.",en-IN,high,5,emb_fact_3ca459f1,2026-08-18T10:00:00+05:30
+fct_13fd2fcf,poi_9737e8e9,trivia,"Fishermen's Cove appears on the city's earliest surviving tourist map, misspelled.",en-IN,low,3,emb_fact_9737e8e9,2026-08-18T10:00:00+05:30
+fct_10b831f6,poi_5c5a5450,architecture,"The fresco panel at Hot Springs is the detail most guides point out, and the only part not restored.",en-IN,low,5,emb_fact_5c5a5450,2026-08-18T10:00:00+05:30
+fct_ae2f1c03,poi_57db80c0,history,Mysuru Lake was substantially rebuilt in the 19th century; the earlier structure survives only in the foundations.,en-IN,high,2,emb_fact_57db80c0,2026-08-18T10:00:00+05:30
+fct_462650a4,poi_9a7e2384,trivia,"Hot Springs appears on the city's earliest surviving tourist map, misspelled.",en-IN,medium,1,emb_fact_9a7e2384,2026-08-18T10:00:00+05:30
+fct_e948fef6,poi_c295f116,practical,Allow 75 minutes at Zipline Point. It is busiest between 10:00 and 13:00.,en-IN,high,3,emb_fact_c295f116,2026-08-18T10:00:00+05:30
+fct_c7b43556,poi_44db3209,architecture,"The fresco panel at Mysuru Observatory is the detail most guides point out, and the only part not restored.",en-IN,low,2,emb_fact_44db3209,2026-08-18T10:00:00+05:30
+fct_b1eed0e5,poi_8f578694,etiquette,Footwear is removed before entering the inner area of Mysuru Stepwell; socks are advisable in summer.,en-IN,high,4,emb_fact_8f578694,2026-08-18T10:00:00+05:30
+fct_2fb29d7c,poi_aaf09068,etiquette,Footwear is removed before entering the inner area of Rooftop Live Music; socks are advisable in summer.,en-IN,medium,3,emb_fact_aaf09068,2026-08-18T10:00:00+05:30
+fct_cdf40b1d,poi_fe46427e,architecture,"The fresco panel at Puppet Museum is the detail most guides point out, and the only part not restored.",en-IN,low,4,emb_fact_fe46427e,2026-08-18T10:00:00+05:30
+fct_6cc0a75f,poi_d9d0c25c,history,Hampi Lake was substantially rebuilt in the 18th century; the earlier structure survives only in the foundations.,en-IN,medium,1,emb_fact_d9d0c25c,2026-08-18T10:00:00+05:30
+fct_dbb27645,poi_e66efa5a,trivia,"Rooftop Live Music appears on the city's earliest surviving tourist map, misspelled.",en-IN,medium,1,emb_fact_e66efa5a,2026-08-18T10:00:00+05:30
+fct_2b60168b,poi_78369b26,history,Fishermen's Cove was substantially rebuilt in the 17th century; the earlier structure survives only in the foundations.,en-IN,high,1,emb_fact_78369b26,2026-08-18T10:00:00+05:30
+fct_21807bd0,poi_cca907ed,etiquette,Footwear is removed before entering the inner area of North Beach; socks are advisable in summer.,en-IN,medium,5,emb_fact_cca907ed,2026-08-18T10:00:00+05:30
+fct_9a5b2351,poi_14a52384,architecture,"The carved lintel at Hampi Bazaar is the detail most guides point out, and the only part not restored.",en-IN,medium,3,emb_fact_14a52384,2026-08-18T10:00:00+05:30
+fct_48b04f84,poi_650bd47a,history,Jain Temple Complex was substantially rebuilt in the 17th century; the earlier structure survives only in the foundations.,en-IN,high,2,emb_fact_650bd47a,2026-08-18T10:00:00+05:30
+fct_331a5633,poi_0181afcd,architecture,"The lattice screen at Gallery of Modern Art, Hampi is the detail most guides point out, and the only part not restored.",en-IN,high,3,emb_fact_0181afcd,2026-08-18T10:00:00+05:30
+fct_536f2e86,poi_ec746686,history,Hampi Stepwell was substantially rebuilt in the 17th century; the earlier structure survives only in the foundations.,en-IN,high,5,emb_fact_ec746686,2026-08-18T10:00:00+05:30
+fct_b1c1647c,poi_6931cf3c,trivia,"Handloom Cooperative appears on the city's earliest surviving tourist map, misspelled.",en-IN,medium,4,emb_fact_6931cf3c,2026-08-18T10:00:00+05:30
+fct_e4effdee,poi_bf53b848,trivia,"Hilltop Shrine appears on the city's earliest surviving tourist map, misspelled.",en-IN,medium,2,emb_fact_bf53b848,2026-08-18T10:00:00+05:30
+fct_aea8765c,poi_faf99e79,trivia,"North Beach appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,1,emb_fact_faf99e79,2026-08-18T10:00:00+05:30
+fct_455ca815,poi_4354eb74,history,Backwater Channel was substantially rebuilt in the 19th century; the earlier structure survives only in the foundations.,en-IN,high,4,emb_fact_4354eb74,2026-08-18T10:00:00+05:30
+fct_0e4d0e56,poi_b8364e1b,history,Chhatri Complex was substantially rebuilt in the 16th century; the earlier structure survives only in the foundations.,en-IN,high,4,emb_fact_b8364e1b,2026-08-18T10:00:00+05:30
+fct_c992b990,poi_f08b4e0f,practical,Allow 90 minutes at Rooftop Live Music. It is busiest between 10:00 and 13:00.,en-IN,high,4,emb_fact_f08b4e0f,2026-08-18T10:00:00+05:30
+fct_386f9e19,poi_465030ce,etiquette,Footwear is removed before entering the inner area of Backwater Channel; socks are advisable in summer.,en-IN,low,1,emb_fact_465030ce,2026-08-18T10:00:00+05:30
+fct_ebffb025,poi_2da4d492,history,Gokarna Lake was substantially rebuilt in the 17th century; the earlier structure survives only in the foundations.,en-IN,low,5,emb_fact_2da4d492,2026-08-18T10:00:00+05:30
+fct_e010a2f5,poi_82ff3dc4,practical,Allow 150 minutes at Watchtower Terrace. It is busiest between 10:00 and 13:00.,en-IN,high,5,emb_fact_82ff3dc4,2026-08-18T10:00:00+05:30
+fct_dd47a35b,poi_f6421157,architecture,"The step-well geometry at Gokarna Viewpoint is the detail most guides point out, and the only part not restored.",en-IN,high,5,emb_fact_f6421157,2026-08-18T10:00:00+05:30
+fct_bad3a558,poi_d10153d7,history,Hot Springs was substantially rebuilt in the 17th century; the earlier structure survives only in the foundations.,en-IN,high,3,emb_fact_d10153d7,2026-08-18T10:00:00+05:30
+fct_8fd63332,poi_f9454648,practical,Allow 180 minutes at Ayurveda Centre. It is busiest between 10:00 and 13:00.,en-IN,medium,5,emb_fact_f9454648,2026-08-18T10:00:00+05:30
+fct_4db0892d,poi_98ccdcef,trivia,"Kayaking at Gokarna appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,2,emb_fact_98ccdcef,2026-08-18T10:00:00+05:30
+fct_9ced53b5,poi_01e251e5,etiquette,Footwear is removed before entering the inner area of Hot Springs; socks are advisable in summer.,en-IN,medium,3,emb_fact_01e251e5,2026-08-18T10:00:00+05:30
+fct_efba655d,poi_9418fe97,practical,Allow 60 minutes at Gokarna Bird Sanctuary. It is busiest between 10:00 and 13:00.,en-IN,low,4,emb_fact_9418fe97,2026-08-18T10:00:00+05:30
+fct_cffd4985,poi_def88fc1,history,Ridge Lookout was substantially rebuilt in the 17th century; the earlier structure survives only in the foundations.,en-IN,medium,2,emb_fact_def88fc1,2026-08-18T10:00:00+05:30
+fct_81ad9d45,poi_9f4c8d7a,etiquette,Footwear is removed before entering the inner area of Textile Museum; socks are advisable in summer.,en-IN,high,3,emb_fact_9f4c8d7a,2026-08-18T10:00:00+05:30
+fct_e52bd895,poi_73a4c36d,architecture,"The inscription at Yoga Shala is the detail most guides point out, and the only part not restored.",en-IN,high,3,emb_fact_73a4c36d,2026-08-18T10:00:00+05:30
+fct_e2fc0467,poi_7b530fba,trivia,"Hot Air Balloon Field appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,5,emb_fact_7b530fba,2026-08-18T10:00:00+05:30
+fct_1f6da18c,poi_3bc08018,history,Yoga Shala was substantially rebuilt in the 18th century; the earlier structure survives only in the foundations.,en-IN,high,2,emb_fact_3bc08018,2026-08-18T10:00:00+05:30
+fct_173e8412,poi_66e3b067,history,"Gallery of Modern Art, Chennai was substantially rebuilt in the 16th century; the earlier structure survives only in the foundations.",en-IN,medium,5,emb_fact_66e3b067,2026-08-18T10:00:00+05:30
+fct_3b1c051a,poi_52747f81,architecture,"The brass door at Royal Cenotaphs is the detail most guides point out, and the only part not restored.",en-IN,high,4,emb_fact_52747f81,2026-08-18T10:00:00+05:30
+fct_086d91a3,poi_63cd6ccb,etiquette,Footwear is removed before entering the inner area of Ayurveda Centre; socks are advisable in summer.,en-IN,medium,1,emb_fact_63cd6ccb,2026-08-18T10:00:00+05:30
+fct_66d6039b,poi_b919a3c1,architecture,"The inscription at Cycling Loop is the detail most guides point out, and the only part not restored.",en-IN,medium,1,emb_fact_b919a3c1,2026-08-18T10:00:00+05:30
+fct_42d7161c,poi_987e5208,trivia,"Cliff Walk appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,4,emb_fact_987e5208,2026-08-18T10:00:00+05:30
+fct_9e877887,poi_ca7308ec,architecture,"The lattice screen at Cycling Loop is the detail most guides point out, and the only part not restored.",en-IN,high,1,emb_fact_ca7308ec,2026-08-18T10:00:00+05:30
+fct_899144e3,poi_8778cdc9,etiquette,Footwear is removed before entering the inner area of North Beach; socks are advisable in summer.,en-IN,high,4,emb_fact_8778cdc9,2026-08-18T10:00:00+05:30
+fct_580b3404,poi_9ecd8f5a,trivia,"Watchtower Terrace appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,3,emb_fact_9ecd8f5a,2026-08-18T10:00:00+05:30
+fct_cddcf7ac,poi_294cdf8b,practical,Allow 150 minutes at Ayurveda Centre. It is busiest between 10:00 and 13:00.,en-IN,medium,1,emb_fact_294cdf8b,2026-08-18T10:00:00+05:30
+fct_09196f01,poi_30da8634,history,Chennai Fort was substantially rebuilt in the 19th century; the earlier structure survives only in the foundations.,en-IN,medium,2,emb_fact_30da8634,2026-08-18T10:00:00+05:30
+fct_a00fe0f3,poi_98e87396,architecture,"The step-well geometry at Chennai Stepwell is the detail most guides point out, and the only part not restored.",en-IN,high,5,emb_fact_98e87396,2026-08-18T10:00:00+05:30
+fct_8744f469,poi_ea362bca,practical,Allow 150 minutes at Chennai Lake. It is busiest between 10:00 and 13:00.,en-IN,high,1,emb_fact_ea362bca,2026-08-18T10:00:00+05:30
+fct_ffb2516c,poi_9c64b1e6,etiquette,Footwear is removed before entering the inner area of Cliff Walk; socks are advisable in summer.,en-IN,high,1,emb_fact_9c64b1e6,2026-08-18T10:00:00+05:30
+fct_a5ec50f7,poi_7b6f84f7,practical,Allow 180 minutes at Riverside Lounge. It is busiest between 10:00 and 13:00.,en-IN,high,5,emb_fact_7b6f84f7,2026-08-18T10:00:00+05:30
+fct_375998c7,poi_838093bd,architecture,"The brass door at Yoga Shala is the detail most guides point out, and the only part not restored.",en-IN,low,3,emb_fact_838093bd,2026-08-18T10:00:00+05:30
+fct_1377121f,poi_7487db98,trivia,"Rooftop Live Music appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,5,emb_fact_7487db98,2026-08-18T10:00:00+05:30
+fct_3a438104,poi_5aecab7a,practical,Allow 240 minutes at Maritime Museum. It is busiest between 10:00 and 13:00.,en-IN,medium,4,emb_fact_5aecab7a,2026-08-18T10:00:00+05:30
+fct_7b2e8eab,poi_4eae57a0,history,Handloom Cooperative was substantially rebuilt in the 18th century; the earlier structure survives only in the foundations.,en-IN,high,5,emb_fact_4eae57a0,2026-08-18T10:00:00+05:30
+fct_571bf90e,poi_dc06d66e,architecture,"The tile mosaic at Handloom Cooperative is the detail most guides point out, and the only part not restored.",en-IN,high,5,emb_fact_dc06d66e,2026-08-18T10:00:00+05:30
+fct_da64cc9d,poi_bff432a9,practical,Allow 90 minutes at Hot Air Balloon Field. It is busiest between 10:00 and 13:00.,en-IN,high,4,emb_fact_bff432a9,2026-08-18T10:00:00+05:30
+fct_232041ab,poi_5f60fb6e,practical,Allow 45 minutes at Madurai Viewpoint. It is busiest between 10:00 and 13:00.,en-IN,high,2,emb_fact_5f60fb6e,2026-08-18T10:00:00+05:30
+fct_09f7d287,poi_3ce3c3f2,practical,Allow 180 minutes at Antique Lane. It is busiest between 10:00 and 13:00.,en-IN,high,3,emb_fact_3ce3c3f2,2026-08-18T10:00:00+05:30
+fct_8dfad1a0,poi_b72516ce,architecture,"The lattice screen at Blue Pottery Workshop is the detail most guides point out, and the only part not restored.",en-IN,high,4,emb_fact_b72516ce,2026-08-18T10:00:00+05:30
+fct_84a20617,poi_cc47d60b,trivia,"Handloom Cooperative appears on the city's earliest surviving tourist map, misspelled.",en-IN,medium,5,emb_fact_cc47d60b,2026-08-18T10:00:00+05:30
+fct_afd9be80,poi_0c725142,etiquette,Footwear is removed before entering the inner area of Kayaking at Madurai; socks are advisable in summer.,en-IN,medium,3,emb_fact_0c725142,2026-08-18T10:00:00+05:30
+fct_8ad2ce6b,poi_216c247f,history,Cycling Loop was substantially rebuilt in the 16th century; the earlier structure survives only in the foundations.,en-IN,medium,1,emb_fact_216c247f,2026-08-18T10:00:00+05:30
+fct_d521a34b,poi_8c2e2ce7,etiquette,Footwear is removed before entering the inner area of Museum of Coins; socks are advisable in summer.,en-IN,high,1,emb_fact_8c2e2ce7,2026-08-18T10:00:00+05:30
+fct_54c3b525,poi_ce24410a,practical,Allow 75 minutes at Paragliding Launch. It is busiest between 10:00 and 13:00.,en-IN,medium,2,emb_fact_ce24410a,2026-08-18T10:00:00+05:30
+fct_3e1d1db5,poi_127d23a8,practical,Allow 240 minutes at Fishermen's Cove. It is busiest between 10:00 and 13:00.,en-IN,low,3,emb_fact_127d23a8,2026-08-18T10:00:00+05:30
+fct_eb78b758,poi_710b6716,history,Ridge Lookout was substantially rebuilt in the 18th century; the earlier structure survives only in the foundations.,en-IN,high,4,emb_fact_710b6716,2026-08-18T10:00:00+05:30
+fct_cf42bc49,poi_2b595469,trivia,"Maritime Museum appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,5,emb_fact_2b595469,2026-08-18T10:00:00+05:30
+fct_d4fff248,poi_101f364b,etiquette,Footwear is removed before entering the inner area of Night Food Bazaar; socks are advisable in summer.,en-IN,high,5,emb_fact_101f364b,2026-08-18T10:00:00+05:30
+fct_740550a0,poi_aa78ea49,history,North Beach was substantially rebuilt in the 19th century; the earlier structure survives only in the foundations.,en-IN,medium,2,emb_fact_aa78ea49,2026-08-18T10:00:00+05:30
+fct_5a6b6ae1,poi_c102d66f,trivia,"Lighthouse Beach appears on the city's earliest surviving tourist map, misspelled.",en-IN,medium,1,emb_fact_c102d66f,2026-08-18T10:00:00+05:30
+fct_69afbbb9,poi_7dcd447d,practical,Allow 180 minutes at Yoga Shala. It is busiest between 10:00 and 13:00.,en-IN,medium,3,emb_fact_7dcd447d,2026-08-18T10:00:00+05:30
+fct_978ab76c,poi_c00a070e,practical,Allow 45 minutes at Ridge Lookout. It is busiest between 10:00 and 13:00.,en-IN,high,1,emb_fact_c00a070e,2026-08-18T10:00:00+05:30
+fct_0d111bad,poi_003678b5,history,Spice Market Walk was substantially rebuilt in the 17th century; the earlier structure survives only in the foundations.,en-IN,medium,1,emb_fact_003678b5,2026-08-18T10:00:00+05:30
+fct_36926002,poi_28dc076c,history,Coffee Roastery Tour was substantially rebuilt in the 18th century; the earlier structure survives only in the foundations.,en-IN,high,4,emb_fact_28dc076c,2026-08-18T10:00:00+05:30
+fct_3fb24db6,poi_a94aa23b,practical,Allow 120 minutes at Quiet Bay. It is busiest between 10:00 and 13:00.,en-IN,medium,2,emb_fact_a94aa23b,2026-08-18T10:00:00+05:30
+fct_7d91796c,poi_0ca3ad9b,practical,"Allow 75 minutes at Jazz Cellar, Ooty. It is busiest between 10:00 and 13:00.",en-IN,high,2,emb_fact_0ca3ad9b,2026-08-18T10:00:00+05:30
+fct_27e9d967,poi_4518419b,history,Quiet Bay was substantially rebuilt in the 19th century; the earlier structure survives only in the foundations.,en-IN,low,2,emb_fact_4518419b,2026-08-18T10:00:00+05:30
+fct_26450b5f,poi_0e534643,history,Ridge Lookout was substantially rebuilt in the 18th century; the earlier structure survives only in the foundations.,en-IN,medium,4,emb_fact_0e534643,2026-08-18T10:00:00+05:30
+fct_f9147f67,poi_3413f625,practical,Allow 60 minutes at Ridge Lookout. It is busiest between 10:00 and 13:00.,en-IN,low,4,emb_fact_3413f625,2026-08-18T10:00:00+05:30
+fct_c2a2722b,poi_1b25272a,etiquette,Footwear is removed before entering the inner area of Cycling Loop; socks are advisable in summer.,en-IN,high,4,emb_fact_1b25272a,2026-08-18T10:00:00+05:30
+fct_76b4c953,poi_856c354e,practical,Allow 60 minutes at North Beach. It is busiest between 10:00 and 13:00.,en-IN,high,2,emb_fact_856c354e,2026-08-18T10:00:00+05:30
+fct_385697c7,poi_fac2a28d,history,Cliff Walk was substantially rebuilt in the 17th century; the earlier structure survives only in the foundations.,en-IN,high,2,emb_fact_fac2a28d,2026-08-18T10:00:00+05:30
+fct_9a9a2b24,poi_4020e2ba,trivia,"Yoga Shala appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,4,emb_fact_4020e2ba,2026-08-18T10:00:00+05:30
+fct_660df728,poi_9380220d,practical,Allow 90 minutes at Riverside Lounge. It is busiest between 10:00 and 13:00.,en-IN,high,5,emb_fact_9380220d,2026-08-18T10:00:00+05:30
+fct_df85de93,poi_a3563f3f,trivia,"Ridge Lookout appears on the city's earliest surviving tourist map, misspelled.",en-IN,medium,3,emb_fact_a3563f3f,2026-08-18T10:00:00+05:30
+fct_7c9a1bd4,poi_93c2898a,etiquette,Footwear is removed before entering the inner area of Night Food Bazaar; socks are advisable in summer.,en-IN,high,4,emb_fact_93c2898a,2026-08-18T10:00:00+05:30
+fct_5740abe2,poi_9ffc7df5,architecture,"The lattice screen at Hot Springs is the detail most guides point out, and the only part not restored.",en-IN,high,5,emb_fact_9ffc7df5,2026-08-18T10:00:00+05:30
+fct_6301bd46,poi_bb9e4ca5,practical,Allow 60 minutes at Cooking Class at Old Town. It is busiest between 10:00 and 13:00.,en-IN,high,2,emb_fact_bb9e4ca5,2026-08-18T10:00:00+05:30
+fct_f8a36d14,poi_7a6df998,etiquette,Footwear is removed before entering the inner area of Pondicherry Lake; socks are advisable in summer.,en-IN,high,3,emb_fact_7a6df998,2026-08-18T10:00:00+05:30
+fct_dcd1aa4a,poi_140f82f9,history,Ayurveda Centre was substantially rebuilt in the 18th century; the earlier structure survives only in the foundations.,en-IN,high,4,emb_fact_140f82f9,2026-08-18T10:00:00+05:30
+fct_b3835bd7,poi_9f8da737,history,Hot Springs was substantially rebuilt in the 19th century; the earlier structure survives only in the foundations.,en-IN,high,5,emb_fact_9f8da737,2026-08-18T10:00:00+05:30
+fct_848c3602,poi_5f6dfb06,architecture,"The carved lintel at Blue Pottery Workshop is the detail most guides point out, and the only part not restored.",en-IN,high,3,emb_fact_5f6dfb06,2026-08-18T10:00:00+05:30
+fct_5248b84b,poi_2ddbef11,architecture,"The mirror work at Tea Estate Trail is the detail most guides point out, and the only part not restored.",en-IN,high,1,emb_fact_2ddbef11,2026-08-18T10:00:00+05:30
+fct_67a16fa6,poi_4490728b,practical,Allow 240 minutes at Night Food Bazaar. It is busiest between 10:00 and 13:00.,en-IN,medium,2,emb_fact_4490728b,2026-08-18T10:00:00+05:30
+fct_74cbf978,poi_64a35db3,practical,Allow 240 minutes at North Beach. It is busiest between 10:00 and 13:00.,en-IN,high,5,emb_fact_64a35db3,2026-08-18T10:00:00+05:30
+fct_e15af67e,poi_d68e7f7a,architecture,"The lattice screen at Quiet Bay is the detail most guides point out, and the only part not restored.",en-IN,high,5,emb_fact_d68e7f7a,2026-08-18T10:00:00+05:30
+fct_44f581f2,poi_d1bcb16e,etiquette,Footwear is removed before entering the inner area of Riverside Ghats; socks are advisable in summer.,en-IN,high,1,emb_fact_d1bcb16e,2026-08-18T10:00:00+05:30
+fct_b15a9513,poi_ec6f466f,trivia,"Riverside Lounge appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,1,emb_fact_ec6f466f,2026-08-18T10:00:00+05:30
+fct_4b31ce79,poi_1095ead0,practical,Allow 180 minutes at Thanjavur Viewpoint. It is busiest between 10:00 and 13:00.,en-IN,high,4,emb_fact_1095ead0,2026-08-18T10:00:00+05:30
+fct_4ebfa3c0,poi_882527c5,trivia,"Antique Lane appears on the city's earliest surviving tourist map, misspelled.",en-IN,medium,5,emb_fact_882527c5,2026-08-18T10:00:00+05:30
+fct_3c8f3c42,poi_b6b1ef8b,history,Antique Lane was substantially rebuilt in the 18th century; the earlier structure survives only in the foundations.,en-IN,medium,5,emb_fact_b6b1ef8b,2026-08-18T10:00:00+05:30
+fct_2596eef1,poi_e435c16e,architecture,"The brass door at Hot Springs is the detail most guides point out, and the only part not restored.",en-IN,medium,5,emb_fact_e435c16e,2026-08-18T10:00:00+05:30
+fct_50515385,poi_dde08770,history,Riverside Lounge was substantially rebuilt in the 18th century; the earlier structure survives only in the foundations.,en-IN,high,1,emb_fact_dde08770,2026-08-18T10:00:00+05:30
+fct_5f71cf54,poi_fca6aef8,architecture,"The lattice screen at Puppet Museum is the detail most guides point out, and the only part not restored.",en-IN,low,4,emb_fact_fca6aef8,2026-08-18T10:00:00+05:30
+fct_b9367615,poi_d87edd8a,practical,Allow 75 minutes at Riverside Lounge. It is busiest between 10:00 and 13:00.,en-IN,high,3,emb_fact_d87edd8a,2026-08-18T10:00:00+05:30
+fct_c57e222e,poi_6e8951e7,etiquette,Footwear is removed before entering the inner area of Textile Museum; socks are advisable in summer.,en-IN,high,2,emb_fact_6e8951e7,2026-08-18T10:00:00+05:30
+fct_d1231338,poi_0fa49039,history,Hot Springs was substantially rebuilt in the 16th century; the earlier structure survives only in the foundations.,en-IN,high,2,emb_fact_0fa49039,2026-08-18T10:00:00+05:30
+fct_86e151da,poi_f5f4cb80,trivia,"Hilltop Shrine appears on the city's earliest surviving tourist map, misspelled.",en-IN,medium,2,emb_fact_f5f4cb80,2026-08-18T10:00:00+05:30
+fct_cb757c57,poi_90420dc8,architecture,"The lattice screen at Hot Springs is the detail most guides point out, and the only part not restored.",en-IN,medium,4,emb_fact_90420dc8,2026-08-18T10:00:00+05:30
+fct_47c9741b,poi_fc2fe936,practical,Allow 75 minutes at Hilltop Shrine. It is busiest between 10:00 and 13:00.,en-IN,high,2,emb_fact_fc2fe936,2026-08-18T10:00:00+05:30
+fct_fa86273d,poi_8ea44859,trivia,"Hot Springs appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,2,emb_fact_8ea44859,2026-08-18T10:00:00+05:30
+fct_c5be7605,poi_5bfdc682,practical,Allow 180 minutes at Kochi Lake. It is busiest between 10:00 and 13:00.,en-IN,high,5,emb_fact_5bfdc682,2026-08-18T10:00:00+05:30
+fct_cd1463eb,poi_77bff953,practical,Allow 90 minutes at Night Food Bazaar. It is busiest between 10:00 and 13:00.,en-IN,high,5,emb_fact_77bff953,2026-08-18T10:00:00+05:30
+fct_fed40990,poi_ee4e06ed,history,Kochi Street Food Lane was substantially rebuilt in the 16th century; the earlier structure survives only in the foundations.,en-IN,low,4,emb_fact_ee4e06ed,2026-08-18T10:00:00+05:30
+fct_928d41cb,poi_9f3533a8,practical,Allow 90 minutes at Puppet Museum. It is busiest between 10:00 and 13:00.,en-IN,medium,5,emb_fact_9f3533a8,2026-08-18T10:00:00+05:30
+fct_87353530,poi_f2cb7eae,architecture,"The brass door at Puppet Museum is the detail most guides point out, and the only part not restored.",en-IN,high,5,emb_fact_f2cb7eae,2026-08-18T10:00:00+05:30
+fct_d4b5fed4,poi_9daf754e,etiquette,Footwear is removed before entering the inner area of Night Food Bazaar; socks are advisable in summer.,en-IN,medium,2,emb_fact_9daf754e,2026-08-18T10:00:00+05:30
+fct_1754dda5,poi_45d26bf8,trivia,"Tea Estate Trail appears on the city's earliest surviving tourist map, misspelled.",en-IN,low,4,emb_fact_45d26bf8,2026-08-18T10:00:00+05:30
+fct_2ebc3de1,poi_fc3e3e6b,etiquette,Footwear is removed before entering the inner area of Quiet Bay; socks are advisable in summer.,en-IN,high,1,emb_fact_fc3e3e6b,2026-08-18T10:00:00+05:30
+fct_1a7fe951,poi_4df9bc6d,architecture,"The tile mosaic at Cooking Class at Old Town is the detail most guides point out, and the only part not restored.",en-IN,high,3,emb_fact_4df9bc6d,2026-08-18T10:00:00+05:30
+fct_db30cd76,poi_5d8f9902,etiquette,Footwear is removed before entering the inner area of Fishermen's Cove; socks are advisable in summer.,en-IN,high,3,emb_fact_5d8f9902,2026-08-18T10:00:00+05:30
+fct_814d10ed,poi_9f8cf411,trivia,"Blue Pottery Workshop appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,2,emb_fact_9f8cf411,2026-08-18T10:00:00+05:30
+fct_c7dd4cbb,poi_f180e07b,history,Tea Estate Trail was substantially rebuilt in the 16th century; the earlier structure survives only in the foundations.,en-IN,high,2,emb_fact_f180e07b,2026-08-18T10:00:00+05:30
+fct_aeaf943d,poi_49b7b32e,history,Kayaking at Kochi was substantially rebuilt in the 18th century; the earlier structure survives only in the foundations.,en-IN,high,2,emb_fact_49b7b32e,2026-08-18T10:00:00+05:30
+fct_f3bd34c6,poi_ac50e745,trivia,"Blue Pottery Workshop appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,2,emb_fact_ac50e745,2026-08-18T10:00:00+05:30
+fct_75bb7d99,poi_73ee7f50,trivia,"St Mary's Church, Kochi appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,2,emb_fact_73ee7f50,2026-08-18T10:00:00+05:30
+fct_b321455a,poi_f0480ca4,history,Tea Estate Trail was substantially rebuilt in the 16th century; the earlier structure survives only in the foundations.,en-IN,medium,1,emb_fact_f0480ca4,2026-08-18T10:00:00+05:30
+fct_2cdee167,poi_e0c06ade,history,Alleppey Lake was substantially rebuilt in the 17th century; the earlier structure survives only in the foundations.,en-IN,high,1,emb_fact_e0c06ade,2026-08-18T10:00:00+05:30
+fct_daaa230e,poi_fb2bcabe,history,Sunset Point was substantially rebuilt in the 16th century; the earlier structure survives only in the foundations.,en-IN,high,2,emb_fact_fb2bcabe,2026-08-18T10:00:00+05:30
+fct_4f60077e,poi_d668af53,trivia,"Cycling Loop appears on the city's earliest surviving tourist map, misspelled.",en-IN,medium,1,emb_fact_d668af53,2026-08-18T10:00:00+05:30
+fct_d146ec3a,poi_7266e8b1,trivia,"Watchtower Terrace appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,1,emb_fact_7266e8b1,2026-08-18T10:00:00+05:30
+fct_d77e634d,poi_5b490311,trivia,"Alleppey Bazaar appears on the city's earliest surviving tourist map, misspelled.",en-IN,low,4,emb_fact_5b490311,2026-08-18T10:00:00+05:30
+fct_95b267b3,poi_c860207e,history,Alleppey Viewpoint was substantially rebuilt in the 18th century; the earlier structure survives only in the foundations.,en-IN,high,3,emb_fact_c860207e,2026-08-18T10:00:00+05:30
+fct_ebcab214,poi_48807df0,trivia,"Alleppey Stepwell appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,3,emb_fact_48807df0,2026-08-18T10:00:00+05:30
+fct_80c164c4,poi_a666cab4,trivia,"Alleppey Bazaar appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,2,emb_fact_a666cab4,2026-08-18T10:00:00+05:30
+fct_bc7de40d,poi_a34a401d,history,Sunset Point was substantially rebuilt in the 17th century; the earlier structure survives only in the foundations.,en-IN,high,5,emb_fact_a34a401d,2026-08-18T10:00:00+05:30
+fct_4da327f4,poi_ddafcd82,practical,Allow 150 minutes at Hilltop Shrine. It is busiest between 10:00 and 13:00.,en-IN,high,4,emb_fact_ddafcd82,2026-08-18T10:00:00+05:30
+fct_45fc4786,poi_b87834c8,practical,Allow 75 minutes at Alleppey Bazaar. It is busiest between 10:00 and 13:00.,en-IN,medium,5,emb_fact_b87834c8,2026-08-18T10:00:00+05:30
+fct_7d87de80,poi_6b9d7461,trivia,"Backwater Channel appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,2,emb_fact_6b9d7461,2026-08-18T10:00:00+05:30
+fct_894ffe2c,poi_ebc96348,etiquette,Footwear is removed before entering the inner area of Zipline Point; socks are advisable in summer.,en-IN,high,1,emb_fact_ebc96348,2026-08-18T10:00:00+05:30
+fct_de3d3263,poi_ef77702c,trivia,"Alleppey Bazaar appears on the city's earliest surviving tourist map, misspelled.",en-IN,medium,2,emb_fact_ef77702c,2026-08-18T10:00:00+05:30
+fct_8b957c36,poi_a03d90a4,history,Quiet Bay was substantially rebuilt in the 18th century; the earlier structure survives only in the foundations.,en-IN,high,1,emb_fact_a03d90a4,2026-08-18T10:00:00+05:30
+fct_b7542ec8,poi_39331eca,etiquette,Footwear is removed before entering the inner area of Quiet Bay; socks are advisable in summer.,en-IN,high,5,emb_fact_39331eca,2026-08-18T10:00:00+05:30
+fct_0108a5b6,poi_8d8ccc5b,practical,Allow 45 minutes at Backwater Channel. It is busiest between 10:00 and 13:00.,en-IN,high,5,emb_fact_8d8ccc5b,2026-08-18T10:00:00+05:30
+fct_ce93de2e,poi_1c1c550c,practical,Allow 45 minutes at Fishermen's Cove. It is busiest between 10:00 and 13:00.,en-IN,high,3,emb_fact_1c1c550c,2026-08-18T10:00:00+05:30
+fct_2e45242c,poi_dd78baa6,history,Watchtower Terrace was substantially rebuilt in the 17th century; the earlier structure survives only in the foundations.,en-IN,medium,1,emb_fact_dd78baa6,2026-08-18T10:00:00+05:30
+fct_35154c58,poi_c9a12a62,trivia,"Hot Springs appears on the city's earliest surviving tourist map, misspelled.",en-IN,medium,1,emb_fact_c9a12a62,2026-08-18T10:00:00+05:30
+fct_d43ed3c8,poi_6f608f35,architecture,"The step-well geometry at Rock Garden is the detail most guides point out, and the only part not restored.",en-IN,high,2,emb_fact_6f608f35,2026-08-18T10:00:00+05:30
+fct_422bed2b,poi_c8da2549,history,Hot Springs was substantially rebuilt in the 17th century; the earlier structure survives only in the foundations.,en-IN,high,4,emb_fact_c8da2549,2026-08-18T10:00:00+05:30
+fct_c7164084,poi_eb938fe9,architecture,"The brass door at Lighthouse Beach is the detail most guides point out, and the only part not restored.",en-IN,high,5,emb_fact_eb938fe9,2026-08-18T10:00:00+05:30
+fct_ce04547c,poi_d8cb0fe2,history,Quiet Bay was substantially rebuilt in the 19th century; the earlier structure survives only in the foundations.,en-IN,high,5,emb_fact_d8cb0fe2,2026-08-18T10:00:00+05:30
+fct_966be898,poi_9c0a82f7,etiquette,Footwear is removed before entering the inner area of Paragliding Launch; socks are advisable in summer.,en-IN,high,4,emb_fact_9c0a82f7,2026-08-18T10:00:00+05:30
+fct_02057e68,poi_d85873d4,trivia,"Ridge Lookout appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,3,emb_fact_d85873d4,2026-08-18T10:00:00+05:30
+fct_f767887b,poi_ee9f14ca,trivia,"Crocodile Park appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,2,emb_fact_ee9f14ca,2026-08-18T10:00:00+05:30
+fct_bd0fc0fa,poi_7e4b1bf1,history,Handloom Cooperative was substantially rebuilt in the 18th century; the earlier structure survives only in the foundations.,en-IN,high,4,emb_fact_7e4b1bf1,2026-08-18T10:00:00+05:30
+fct_bce0f664,poi_a1220965,practical,Allow 90 minutes at Sunset Point. It is busiest between 10:00 and 13:00.,en-IN,high,1,emb_fact_a1220965,2026-08-18T10:00:00+05:30
+fct_fdbe60b8,poi_63594b52,history,Water Palace was substantially rebuilt in the 19th century; the earlier structure survives only in the foundations.,en-IN,high,3,emb_fact_63594b52,2026-08-18T10:00:00+05:30
+fct_8a3b0791,poi_a6ab1a68,etiquette,Footwear is removed before entering the inner area of Quiet Bay; socks are advisable in summer.,en-IN,high,2,emb_fact_a6ab1a68,2026-08-18T10:00:00+05:30
+fct_4ed20e9b,poi_87e0c24e,history,Thiruvananthapuram Street Food Lane was substantially rebuilt in the 18th century; the earlier structure survives only in the foundations.,en-IN,high,5,emb_fact_87e0c24e,2026-08-18T10:00:00+05:30
+fct_7b09f7e9,poi_0f53485c,trivia,"Textile Museum appears on the city's earliest surviving tourist map, misspelled.",en-IN,medium,4,emb_fact_0f53485c,2026-08-18T10:00:00+05:30
+fct_64dad7ec,poi_a1100754,architecture,"The step-well geometry at Ridge Lookout is the detail most guides point out, and the only part not restored.",en-IN,high,4,emb_fact_a1100754,2026-08-18T10:00:00+05:30
+fct_6d5c0c5a,poi_bcc733aa,history,North Beach was substantially rebuilt in the 18th century; the earlier structure survives only in the foundations.,en-IN,medium,5,emb_fact_bcc733aa,2026-08-18T10:00:00+05:30
+fct_033c15f8,poi_2f03bafe,history,Yoga Shala was substantially rebuilt in the 16th century; the earlier structure survives only in the foundations.,en-IN,high,4,emb_fact_2f03bafe,2026-08-18T10:00:00+05:30
+fct_48753d8b,poi_2fc8a8df,history,Yoga Shala was substantially rebuilt in the 17th century; the earlier structure survives only in the foundations.,en-IN,high,4,emb_fact_2fc8a8df,2026-08-18T10:00:00+05:30
+fct_c2490501,poi_1dc221bb,trivia,"Thiruvananthapuram Observatory appears on the city's earliest surviving tourist map, misspelled.",en-IN,medium,2,emb_fact_1dc221bb,2026-08-18T10:00:00+05:30
+fct_f0ae0d75,poi_7061ac7c,history,Rooftop Live Music was substantially rebuilt in the 16th century; the earlier structure survives only in the foundations.,en-IN,high,4,emb_fact_7061ac7c,2026-08-18T10:00:00+05:30
+fct_d3d1a260,poi_7584624c,practical,Allow 150 minutes at Hot Springs. It is busiest between 10:00 and 13:00.,en-IN,medium,4,emb_fact_7584624c,2026-08-18T10:00:00+05:30
+fct_267c42d8,poi_986efb66,practical,Allow 60 minutes at Handloom Cooperative. It is busiest between 10:00 and 13:00.,en-IN,high,4,emb_fact_986efb66,2026-08-18T10:00:00+05:30
+fct_485035cc,poi_95bca120,history,"Jazz Cellar, Thiruvananthapuram was substantially rebuilt in the 19th century; the earlier structure survives only in the foundations.",en-IN,high,4,emb_fact_95bca120,2026-08-18T10:00:00+05:30
+fct_9f9c474a,poi_481e5628,practical,Allow 120 minutes at Cooking Class at Old Town. It is busiest between 10:00 and 13:00.,en-IN,high,5,emb_fact_481e5628,2026-08-18T10:00:00+05:30
+fct_e7318b05,poi_2415e02a,etiquette,Footwear is removed before entering the inner area of North Beach; socks are advisable in summer.,en-IN,high,3,emb_fact_2415e02a,2026-08-18T10:00:00+05:30
+fct_c2fe8c4e,poi_0b113cd1,etiquette,Footwear is removed before entering the inner area of Wayanad Temple; socks are advisable in summer.,en-IN,high,4,emb_fact_0b113cd1,2026-08-18T10:00:00+05:30
+fct_efd910a5,poi_0c5014db,practical,Allow 60 minutes at Lighthouse Beach. It is busiest between 10:00 and 13:00.,en-IN,high,5,emb_fact_0c5014db,2026-08-18T10:00:00+05:30
+fct_6cf46ffa,poi_90ae8bdc,trivia,"City Walls Walk appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,3,emb_fact_90ae8bdc,2026-08-18T10:00:00+05:30
+fct_40ce168e,poi_6b659eca,etiquette,Footwear is removed before entering the inner area of Hot Springs; socks are advisable in summer.,en-IN,high,3,emb_fact_6b659eca,2026-08-18T10:00:00+05:30
+fct_80d6e84d,poi_d2d9d668,practical,Allow 150 minutes at Crocodile Park. It is busiest between 10:00 and 13:00.,en-IN,medium,5,emb_fact_d2d9d668,2026-08-18T10:00:00+05:30
+fct_129ffced,poi_ba254651,history,Ayurveda Centre was substantially rebuilt in the 17th century; the earlier structure survives only in the foundations.,en-IN,high,1,emb_fact_ba254651,2026-08-18T10:00:00+05:30
+fct_97d55629,poi_df26bbb8,practical,Allow 240 minutes at Hot Springs. It is busiest between 10:00 and 13:00.,en-IN,high,5,emb_fact_df26bbb8,2026-08-18T10:00:00+05:30
+fct_28f77cea,poi_3132b4af,history,Wayanad Temple was substantially rebuilt in the 17th century; the earlier structure survives only in the foundations.,en-IN,low,2,emb_fact_3132b4af,2026-08-18T10:00:00+05:30
+fct_dc444d61,poi_679c6407,trivia,"Night Food Bazaar appears on the city's earliest surviving tourist map, misspelled.",en-IN,low,5,emb_fact_679c6407,2026-08-18T10:00:00+05:30
+fct_eebfea5e,poi_ac60ca43,etiquette,Footwear is removed before entering the inner area of Wayanad Viewpoint; socks are advisable in summer.,en-IN,high,4,emb_fact_ac60ca43,2026-08-18T10:00:00+05:30
+fct_bbae6ea8,poi_b5955e68,practical,Allow 45 minutes at Wayanad Fort. It is busiest between 10:00 and 13:00.,en-IN,high,1,emb_fact_b5955e68,2026-08-18T10:00:00+05:30
+fct_751e1428,poi_26b3387f,history,Kayaking at Wayanad was substantially rebuilt in the 16th century; the earlier structure survives only in the foundations.,en-IN,high,5,emb_fact_26b3387f,2026-08-18T10:00:00+05:30
+fct_b11f2a99,poi_89519140,architecture,"The carved lintel at Crocodile Park is the detail most guides point out, and the only part not restored.",en-IN,medium,1,emb_fact_89519140,2026-08-18T10:00:00+05:30
+fct_a9aaf4cd,poi_d029a07e,practical,Allow 45 minutes at Zipline Point. It is busiest between 10:00 and 13:00.,en-IN,high,4,emb_fact_d029a07e,2026-08-18T10:00:00+05:30
+fct_5eee4ee3,poi_1e9ed7f1,trivia,"Elephant Camp appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,2,emb_fact_1e9ed7f1,2026-08-18T10:00:00+05:30
+fct_67b5baf6,poi_92cf9d43,etiquette,Footwear is removed before entering the inner area of Textile Museum; socks are advisable in summer.,en-IN,medium,5,emb_fact_92cf9d43,2026-08-18T10:00:00+05:30
+fct_ecfe8deb,poi_c814b1d0,practical,Allow 150 minutes at Butterfly Reserve. It is busiest between 10:00 and 13:00.,en-IN,high,5,emb_fact_c814b1d0,2026-08-18T10:00:00+05:30
+fct_7375bfe9,poi_1d735a17,trivia,"Crocodile Park appears on the city's earliest surviving tourist map, misspelled.",en-IN,medium,2,emb_fact_1d735a17,2026-08-18T10:00:00+05:30
+fct_e7a69d81,poi_dbf42d12,trivia,"Hyderabad City Museum appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,5,emb_fact_dbf42d12,2026-08-18T10:00:00+05:30
+fct_9e88bb0c,poi_cf0b559b,architecture,"The brass door at Rock Climbing Wall is the detail most guides point out, and the only part not restored.",en-IN,high,2,emb_fact_cf0b559b,2026-08-18T10:00:00+05:30
+fct_1837d69e,poi_efeb9acf,history,Yoga Shala was substantially rebuilt in the 18th century; the earlier structure survives only in the foundations.,en-IN,low,1,emb_fact_efeb9acf,2026-08-18T10:00:00+05:30
+fct_b76da352,poi_855347dc,trivia,"Hyderabad Bird Sanctuary appears on the city's earliest surviving tourist map, misspelled.",en-IN,medium,3,emb_fact_855347dc,2026-08-18T10:00:00+05:30
+fct_a14c3a57,poi_04171cda,architecture,"The brass door at Ayurveda Centre is the detail most guides point out, and the only part not restored.",en-IN,high,3,emb_fact_04171cda,2026-08-18T10:00:00+05:30
+fct_2932599e,poi_bd5ad4bb,trivia,"Backwater Channel appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,3,emb_fact_bd5ad4bb,2026-08-18T10:00:00+05:30
+fct_1d8198a6,poi_c2b659ff,trivia,"Backwater Channel appears on the city's earliest surviving tourist map, misspelled.",en-IN,low,5,emb_fact_c2b659ff,2026-08-18T10:00:00+05:30
+fct_2ef93d2a,poi_6631745a,history,Ridge Lookout was substantially rebuilt in the 19th century; the earlier structure survives only in the foundations.,en-IN,medium,4,emb_fact_6631745a,2026-08-18T10:00:00+05:30
+fct_3aa94488,poi_b97083bd,trivia,"Textile Museum appears on the city's earliest surviving tourist map, misspelled.",en-IN,medium,5,emb_fact_b97083bd,2026-08-18T10:00:00+05:30
+fct_02db22f0,poi_c7ef2f29,history,Museum of Coins was substantially rebuilt in the 19th century; the earlier structure survives only in the foundations.,en-IN,high,4,emb_fact_c7ef2f29,2026-08-18T10:00:00+05:30
+fct_170a022f,poi_f728973d,practical,Allow 120 minutes at Kayaking at Hyderabad. It is busiest between 10:00 and 13:00.,en-IN,medium,3,emb_fact_f728973d,2026-08-18T10:00:00+05:30
+fct_d195f198,poi_3c7df950,history,Ayurveda Centre was substantially rebuilt in the 18th century; the earlier structure survives only in the foundations.,en-IN,high,5,emb_fact_3c7df950,2026-08-18T10:00:00+05:30
+fct_da06b5f2,poi_16ee7fea,trivia,"Crocodile Park appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,1,emb_fact_16ee7fea,2026-08-18T10:00:00+05:30
+fct_6b57d8f3,poi_43fed3a1,trivia,"Cooking Class at Old Town appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,3,emb_fact_43fed3a1,2026-08-18T10:00:00+05:30
+fct_a72837c9,poi_13aa9240,trivia,"Ayurveda Centre appears on the city's earliest surviving tourist map, misspelled.",en-IN,medium,1,emb_fact_13aa9240,2026-08-18T10:00:00+05:30
+fct_96d5e423,poi_6a074d03,practical,Allow 75 minutes at Hot Springs. It is busiest between 10:00 and 13:00.,en-IN,medium,5,emb_fact_6a074d03,2026-08-18T10:00:00+05:30
+fct_5f73596e,poi_697e3901,architecture,"The carved lintel at Crocodile Park is the detail most guides point out, and the only part not restored.",en-IN,low,4,emb_fact_697e3901,2026-08-18T10:00:00+05:30
+fct_61c1f2d4,poi_e9a50799,etiquette,Footwear is removed before entering the inner area of City Walls Walk; socks are advisable in summer.,en-IN,high,5,emb_fact_e9a50799,2026-08-18T10:00:00+05:30
+fct_ec24b6e7,poi_46ade188,history,Maritime Museum was substantially rebuilt in the 16th century; the earlier structure survives only in the foundations.,en-IN,medium,3,emb_fact_46ade188,2026-08-18T10:00:00+05:30
+fct_6187b022,poi_4c2e1d24,history,Visakhapatnam Street Food Lane was substantially rebuilt in the 19th century; the earlier structure survives only in the foundations.,en-IN,high,4,emb_fact_4c2e1d24,2026-08-18T10:00:00+05:30
+fct_60551bab,poi_8843e985,practical,Allow 120 minutes at Fishermen's Cove. It is busiest between 10:00 and 13:00.,en-IN,high,4,emb_fact_8843e985,2026-08-18T10:00:00+05:30
+fct_148f9081,poi_72868d71,etiquette,Footwear is removed before entering the inner area of Coffee Roastery Tour; socks are advisable in summer.,en-IN,medium,5,emb_fact_72868d71,2026-08-18T10:00:00+05:30
+fct_f0f8134e,poi_41fadb4a,etiquette,Footwear is removed before entering the inner area of Visakhapatnam Stepwell; socks are advisable in summer.,en-IN,high,5,emb_fact_41fadb4a,2026-08-18T10:00:00+05:30
+fct_71b30795,poi_336acf21,architecture,"The lattice screen at Crocodile Park is the detail most guides point out, and the only part not restored.",en-IN,high,1,emb_fact_336acf21,2026-08-18T10:00:00+05:30
+fct_62a38a40,poi_b1aec06c,practical,Allow 180 minutes at Spice Market Walk. It is busiest between 10:00 and 13:00.,en-IN,high,2,emb_fact_b1aec06c,2026-08-18T10:00:00+05:30
+fct_6b6259d9,poi_ee54e1e8,etiquette,"Footwear is removed before entering the inner area of Gallery of Modern Art, Visakhapatnam; socks are advisable in summer.",en-IN,high,2,emb_fact_ee54e1e8,2026-08-18T10:00:00+05:30
+fct_5dfd1e34,poi_79d8aa6b,etiquette,Footwear is removed before entering the inner area of Water Palace; socks are advisable in summer.,en-IN,low,1,emb_fact_79d8aa6b,2026-08-18T10:00:00+05:30
+fct_494069bc,poi_04e07eb8,etiquette,Footwear is removed before entering the inner area of Night Food Bazaar; socks are advisable in summer.,en-IN,low,2,emb_fact_04e07eb8,2026-08-18T10:00:00+05:30
+fct_f37970c7,poi_0e67fddb,etiquette,Footwear is removed before entering the inner area of Butterfly Reserve; socks are advisable in summer.,en-IN,high,4,emb_fact_0e67fddb,2026-08-18T10:00:00+05:30
+fct_bfdce721,poi_a7aaf961,etiquette,Footwear is removed before entering the inner area of Butterfly Reserve; socks are advisable in summer.,en-IN,high,2,emb_fact_a7aaf961,2026-08-18T10:00:00+05:30
+fct_85fb9c2e,poi_9096d3f8,history,Elephant Camp was substantially rebuilt in the 17th century; the earlier structure survives only in the foundations.,en-IN,high,5,emb_fact_9096d3f8,2026-08-18T10:00:00+05:30
+fct_672e2bfb,poi_c0f909cd,practical,Allow 180 minutes at Hilltop Shrine. It is busiest between 10:00 and 13:00.,en-IN,high,1,emb_fact_c0f909cd,2026-08-18T10:00:00+05:30
+fct_cc103c79,poi_9cf22283,practical,Allow 75 minutes at Spice Market Walk. It is busiest between 10:00 and 13:00.,en-IN,high,3,emb_fact_9cf22283,2026-08-18T10:00:00+05:30
+fct_b3739688,poi_d4ce5bf9,history,Ayurveda Centre was substantially rebuilt in the 19th century; the earlier structure survives only in the foundations.,en-IN,high,4,emb_fact_d4ce5bf9,2026-08-18T10:00:00+05:30
+fct_9e255e28,poi_f10b95a4,history,Butterfly Reserve was substantially rebuilt in the 16th century; the earlier structure survives only in the foundations.,en-IN,high,4,emb_fact_f10b95a4,2026-08-18T10:00:00+05:30
+fct_8e3e6b74,poi_5e03114d,trivia,"Yoga Shala appears on the city's earliest surviving tourist map, misspelled.",en-IN,low,1,emb_fact_5e03114d,2026-08-18T10:00:00+05:30
+fct_a6117fa7,poi_a15c1505,trivia,"Water Palace appears on the city's earliest surviving tourist map, misspelled.",en-IN,low,5,emb_fact_a15c1505,2026-08-18T10:00:00+05:30
+fct_96fe36bb,poi_2c78a2a6,practical,Allow 120 minutes at Quiet Bay. It is busiest between 10:00 and 13:00.,en-IN,high,5,emb_fact_2c78a2a6,2026-08-18T10:00:00+05:30
+fct_00e3630b,poi_0893c875,history,Maritime Museum was substantially rebuilt in the 19th century; the earlier structure survives only in the foundations.,en-IN,low,4,emb_fact_0893c875,2026-08-18T10:00:00+05:30
+fct_c3529f7c,poi_c26e3e3e,practical,Allow 75 minutes at Blue Pottery Workshop. It is busiest between 10:00 and 13:00.,en-IN,high,4,emb_fact_c26e3e3e,2026-08-18T10:00:00+05:30
+fct_7128a9c5,poi_ba5291a4,practical,Allow 180 minutes at Hot Springs. It is busiest between 10:00 and 13:00.,en-IN,high,2,emb_fact_ba5291a4,2026-08-18T10:00:00+05:30
+fct_6114d6ec,poi_3f1371cd,architecture,"The fresco panel at Jain Temple Complex is the detail most guides point out, and the only part not restored.",en-IN,medium,2,emb_fact_3f1371cd,2026-08-18T10:00:00+05:30
+fct_8f158f2b,poi_f87e3cfb,practical,Allow 180 minutes at Hot Springs. It is busiest between 10:00 and 13:00.,en-IN,high,2,emb_fact_f87e3cfb,2026-08-18T10:00:00+05:30
+fct_31108df4,poi_98d86477,trivia,"Hot Springs appears on the city's earliest surviving tourist map, misspelled.",en-IN,medium,3,emb_fact_98d86477,2026-08-18T10:00:00+05:30
+fct_653fac2e,poi_74c8b35f,etiquette,Footwear is removed before entering the inner area of Fishermen's Cove; socks are advisable in summer.,en-IN,medium,2,emb_fact_74c8b35f,2026-08-18T10:00:00+05:30
+fct_663b4e5b,poi_3f6cade0,etiquette,Footwear is removed before entering the inner area of Hot Springs; socks are advisable in summer.,en-IN,high,2,emb_fact_3f6cade0,2026-08-18T10:00:00+05:30
+fct_aa36b421,poi_9568c284,practical,"Allow 240 minutes at Gallery of Modern Art, Kolkata. It is busiest between 10:00 and 13:00.",en-IN,medium,3,emb_fact_9568c284,2026-08-18T10:00:00+05:30
+fct_071ae73e,poi_31043af1,architecture,"The carved lintel at Riverside Lounge is the detail most guides point out, and the only part not restored.",en-IN,high,3,emb_fact_31043af1,2026-08-18T10:00:00+05:30
+fct_4271426e,poi_adcad9c8,practical,Allow 120 minutes at Textile Museum. It is busiest between 10:00 and 13:00.,en-IN,medium,2,emb_fact_adcad9c8,2026-08-18T10:00:00+05:30
+fct_0478a4f3,poi_5fdabc69,architecture,"The fresco panel at Ridge Lookout is the detail most guides point out, and the only part not restored.",en-IN,medium,4,emb_fact_5fdabc69,2026-08-18T10:00:00+05:30
+fct_31ea6be7,poi_65f210fb,etiquette,Footwear is removed before entering the inner area of Ridge Lookout; socks are advisable in summer.,en-IN,low,1,emb_fact_65f210fb,2026-08-18T10:00:00+05:30
+fct_39f06eb0,poi_0d5f6942,architecture,"The mirror work at Antique Lane is the detail most guides point out, and the only part not restored.",en-IN,medium,5,emb_fact_0d5f6942,2026-08-18T10:00:00+05:30
+fct_8fa6ebb4,poi_d4cbdefe,history,Museum of Coins was substantially rebuilt in the 16th century; the earlier structure survives only in the foundations.,en-IN,medium,2,emb_fact_d4cbdefe,2026-08-18T10:00:00+05:30
+fct_758f74db,poi_688a1740,practical,Allow 45 minutes at Spice Market Walk. It is busiest between 10:00 and 13:00.,en-IN,high,5,emb_fact_688a1740,2026-08-18T10:00:00+05:30
+fct_101fe966,poi_be89732e,practical,Allow 45 minutes at Hot Springs. It is busiest between 10:00 and 13:00.,en-IN,high,4,emb_fact_be89732e,2026-08-18T10:00:00+05:30
+fct_115e4b36,poi_1ecd5b2f,trivia,"Rock Garden appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,5,emb_fact_1ecd5b2f,2026-08-18T10:00:00+05:30
+fct_b22365f3,poi_31805fa5,etiquette,Footwear is removed before entering the inner area of Coffee Roastery Tour; socks are advisable in summer.,en-IN,high,4,emb_fact_31805fa5,2026-08-18T10:00:00+05:30
+fct_ee13c3e5,poi_18f884dd,architecture,"The mirror work at Spice Market Walk is the detail most guides point out, and the only part not restored.",en-IN,high,5,emb_fact_18f884dd,2026-08-18T10:00:00+05:30
+fct_175c788a,poi_3def22c2,trivia,"Kayaking at Darjeeling appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,3,emb_fact_3def22c2,2026-08-18T10:00:00+05:30
+fct_51651c3a,poi_faaa44a9,etiquette,Footwear is removed before entering the inner area of Cycling Loop; socks are advisable in summer.,en-IN,low,1,emb_fact_faaa44a9,2026-08-18T10:00:00+05:30
+fct_3122154a,poi_efe6c1a0,etiquette,Footwear is removed before entering the inner area of Tea Estate Trail; socks are advisable in summer.,en-IN,high,2,emb_fact_efe6c1a0,2026-08-18T10:00:00+05:30
+fct_4dd0cd8a,poi_997aec22,history,Darjeeling Street Food Lane was substantially rebuilt in the 19th century; the earlier structure survives only in the foundations.,en-IN,high,1,emb_fact_997aec22,2026-08-18T10:00:00+05:30
+fct_b3a5a9d2,poi_8b544e3b,etiquette,Footwear is removed before entering the inner area of Handloom Cooperative; socks are advisable in summer.,en-IN,high,1,emb_fact_8b544e3b,2026-08-18T10:00:00+05:30
+fct_0815af8e,poi_b2c3a1df,architecture,"The fresco panel at Ridge Lookout is the detail most guides point out, and the only part not restored.",en-IN,medium,5,emb_fact_b2c3a1df,2026-08-18T10:00:00+05:30
+fct_1ff33113,poi_9d9e5117,history,Sunset Point was substantially rebuilt in the 19th century; the earlier structure survives only in the foundations.,en-IN,high,2,emb_fact_9d9e5117,2026-08-18T10:00:00+05:30
+fct_bbcfa47c,poi_ee45a4c9,history,North Beach was substantially rebuilt in the 19th century; the earlier structure survives only in the foundations.,en-IN,medium,3,emb_fact_ee45a4c9,2026-08-18T10:00:00+05:30
+fct_58e41092,poi_217fa998,trivia,"Ayurveda Centre appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,3,emb_fact_217fa998,2026-08-18T10:00:00+05:30
+fct_f579a5f5,poi_fe237777,practical,Allow 90 minutes at Blue Pottery Workshop. It is busiest between 10:00 and 13:00.,en-IN,high,2,emb_fact_fe237777,2026-08-18T10:00:00+05:30
+fct_c772a326,poi_e6d9039a,practical,Allow 60 minutes at Botanical Gardens. It is busiest between 10:00 and 13:00.,en-IN,high,5,emb_fact_e6d9039a,2026-08-18T10:00:00+05:30
+fct_6090c12a,poi_b74d6f04,trivia,"Zipline Point appears on the city's earliest surviving tourist map, misspelled.",en-IN,medium,3,emb_fact_b74d6f04,2026-08-18T10:00:00+05:30
+fct_7288f0cc,poi_99d11758,trivia,"Hot Springs appears on the city's earliest surviving tourist map, misspelled.",en-IN,medium,5,emb_fact_99d11758,2026-08-18T10:00:00+05:30
+fct_73da72a1,poi_f3a12207,practical,Allow 60 minutes at Ayurveda Centre. It is busiest between 10:00 and 13:00.,en-IN,high,5,emb_fact_f3a12207,2026-08-18T10:00:00+05:30
+fct_e7e84862,poi_38e00d19,history,City Walls Walk was substantially rebuilt in the 16th century; the earlier structure survives only in the foundations.,en-IN,high,4,emb_fact_38e00d19,2026-08-18T10:00:00+05:30
+fct_0fb0bb13,poi_9eab0466,trivia,"Cooking Class at Old Town appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,3,emb_fact_9eab0466,2026-08-18T10:00:00+05:30
+fct_005fc406,poi_0d5f59c1,architecture,"The lattice screen at St Mary's Church, Puri is the detail most guides point out, and the only part not restored.",en-IN,high,4,emb_fact_0d5f59c1,2026-08-18T10:00:00+05:30
+fct_bbd77e27,poi_5cc02bcd,trivia,"Rock Climbing Wall appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,3,emb_fact_5cc02bcd,2026-08-18T10:00:00+05:30
+fct_4ab409a9,poi_b52743ff,history,Elephant Camp was substantially rebuilt in the 16th century; the earlier structure survives only in the foundations.,en-IN,high,4,emb_fact_b52743ff,2026-08-18T10:00:00+05:30
+fct_7b522b31,poi_0090275b,history,Rock Climbing Wall was substantially rebuilt in the 16th century; the earlier structure survives only in the foundations.,en-IN,high,1,emb_fact_0090275b,2026-08-18T10:00:00+05:30
+fct_2aa53f21,poi_fd2b63a5,architecture,"The inscription at Antique Lane is the detail most guides point out, and the only part not restored.",en-IN,high,1,emb_fact_fd2b63a5,2026-08-18T10:00:00+05:30
+fct_42315220,poi_444a594d,history,Lighthouse Beach was substantially rebuilt in the 18th century; the earlier structure survives only in the foundations.,en-IN,medium,4,emb_fact_444a594d,2026-08-18T10:00:00+05:30
+fct_5dcbd6b5,poi_a72e75f0,etiquette,Footwear is removed before entering the inner area of Yoga Shala; socks are advisable in summer.,en-IN,high,5,emb_fact_a72e75f0,2026-08-18T10:00:00+05:30
+fct_c24d7c53,poi_09642bc5,architecture,"The lattice screen at Lighthouse Beach is the detail most guides point out, and the only part not restored.",en-IN,high,3,emb_fact_09642bc5,2026-08-18T10:00:00+05:30
+fct_f6400d3a,poi_3ff2e625,practical,Allow 240 minutes at Crocodile Park. It is busiest between 10:00 and 13:00.,en-IN,medium,3,emb_fact_3ff2e625,2026-08-18T10:00:00+05:30
+fct_6967a7f6,poi_bba10c21,trivia,"Spice Market Walk appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,3,emb_fact_bba10c21,2026-08-18T10:00:00+05:30
+fct_727ac517,poi_5c2d2dd5,etiquette,Footwear is removed before entering the inner area of North Beach; socks are advisable in summer.,en-IN,medium,5,emb_fact_5c2d2dd5,2026-08-18T10:00:00+05:30
+fct_86a78f31,poi_b96fd714,practical,Allow 45 minutes at City Walls Walk. It is busiest between 10:00 and 13:00.,en-IN,medium,5,emb_fact_b96fd714,2026-08-18T10:00:00+05:30
+fct_1adbb8d1,poi_a23e13bb,history,Kayaking at Puri was substantially rebuilt in the 16th century; the earlier structure survives only in the foundations.,en-IN,high,1,emb_fact_a23e13bb,2026-08-18T10:00:00+05:30
+fct_5450c767,poi_dcc40577,architecture,"The inscription at Hot Springs is the detail most guides point out, and the only part not restored.",en-IN,high,5,emb_fact_dcc40577,2026-08-18T10:00:00+05:30
+fct_88fc11de,poi_64524fe6,etiquette,Footwear is removed before entering the inner area of Coffee Roastery Tour; socks are advisable in summer.,en-IN,high,1,emb_fact_64524fe6,2026-08-18T10:00:00+05:30
+fct_c8ec67d2,poi_fd385481,etiquette,Footwear is removed before entering the inner area of Maritime Museum; socks are advisable in summer.,en-IN,high,4,emb_fact_fd385481,2026-08-18T10:00:00+05:30
+fct_38c6034f,poi_048c1097,practical,Allow 60 minutes at Rooftop Live Music. It is busiest between 10:00 and 13:00.,en-IN,high,3,emb_fact_048c1097,2026-08-18T10:00:00+05:30
+fct_b2453ab7,poi_02b5baa6,practical,Allow 90 minutes at Puppet Museum. It is busiest between 10:00 and 13:00.,en-IN,high,4,emb_fact_02b5baa6,2026-08-18T10:00:00+05:30
+fct_ea7eb5bb,poi_2c81c51e,architecture,"The step-well geometry at Watchtower Terrace is the detail most guides point out, and the only part not restored.",en-IN,high,3,emb_fact_2c81c51e,2026-08-18T10:00:00+05:30
+fct_3006bb01,poi_83511939,architecture,"The lattice screen at City Walls Walk is the detail most guides point out, and the only part not restored.",en-IN,high,3,emb_fact_83511939,2026-08-18T10:00:00+05:30
+fct_613c6602,poi_5d21f663,trivia,"Ayurveda Centre appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,2,emb_fact_5d21f663,2026-08-18T10:00:00+05:30
+fct_cc2d85ce,poi_abed8837,trivia,"Riverside Lounge appears on the city's earliest surviving tourist map, misspelled.",en-IN,medium,2,emb_fact_abed8837,2026-08-18T10:00:00+05:30
+fct_11a570db,poi_3a505801,trivia,"Bhubaneswar Observatory appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,2,emb_fact_3a505801,2026-08-18T10:00:00+05:30
+fct_67cc5878,poi_2bb93f07,history,Rooftop Live Music was substantially rebuilt in the 17th century; the earlier structure survives only in the foundations.,en-IN,high,5,emb_fact_2bb93f07,2026-08-18T10:00:00+05:30
+fct_1d729887,poi_b4c99618,practical,Allow 60 minutes at Riverside Lounge. It is busiest between 10:00 and 13:00.,en-IN,high,1,emb_fact_b4c99618,2026-08-18T10:00:00+05:30
+fct_79b450b2,poi_c2f1a07e,history,Night Food Bazaar was substantially rebuilt in the 16th century; the earlier structure survives only in the foundations.,en-IN,high,2,emb_fact_c2f1a07e,2026-08-18T10:00:00+05:30
+fct_b61ad68c,poi_4fae986a,history,City Walls Walk was substantially rebuilt in the 18th century; the earlier structure survives only in the foundations.,en-IN,high,2,emb_fact_4fae986a,2026-08-18T10:00:00+05:30
+fct_a979c9a1,poi_9f7fc300,history,Crocodile Park was substantially rebuilt in the 18th century; the earlier structure survives only in the foundations.,en-IN,low,2,emb_fact_9f7fc300,2026-08-18T10:00:00+05:30
+fct_ef1adb17,poi_b9be2b67,history,Fishermen's Cove was substantially rebuilt in the 16th century; the earlier structure survives only in the foundations.,en-IN,high,3,emb_fact_b9be2b67,2026-08-18T10:00:00+05:30
+fct_c4454f03,poi_5ff5c84a,etiquette,Footwear is removed before entering the inner area of Fishermen's Cove; socks are advisable in summer.,en-IN,high,1,emb_fact_5ff5c84a,2026-08-18T10:00:00+05:30
+fct_3ab0f690,poi_3eddf245,etiquette,Footwear is removed before entering the inner area of Great Mosque of Guwahati; socks are advisable in summer.,en-IN,high,5,emb_fact_3eddf245,2026-08-18T10:00:00+05:30
+fct_8ebea64d,poi_b7e5ce86,history,Antique Lane was substantially rebuilt in the 17th century; the earlier structure survives only in the foundations.,en-IN,high,1,emb_fact_b7e5ce86,2026-08-18T10:00:00+05:30
+fct_b7162dec,poi_fad8c27c,history,Ridge Lookout was substantially rebuilt in the 18th century; the earlier structure survives only in the foundations.,en-IN,high,2,emb_fact_fad8c27c,2026-08-18T10:00:00+05:30
+fct_38654315,poi_71db86db,etiquette,Footwear is removed before entering the inner area of Ayurveda Centre; socks are advisable in summer.,en-IN,high,2,emb_fact_71db86db,2026-08-18T10:00:00+05:30
+fct_91a2f346,poi_b0b60242,architecture,"The fresco panel at Jazz Cellar, Guwahati is the detail most guides point out, and the only part not restored.",en-IN,high,3,emb_fact_b0b60242,2026-08-18T10:00:00+05:30
+fct_1f70ef43,poi_7b31701e,trivia,"Quiet Bay appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,5,emb_fact_7b31701e,2026-08-18T10:00:00+05:30
+fct_0b1c7674,poi_89f63dd0,practical,Allow 240 minutes at Antique Lane. It is busiest between 10:00 and 13:00.,en-IN,high,4,emb_fact_89f63dd0,2026-08-18T10:00:00+05:30
+fct_628e36d5,poi_f2bc64a8,trivia,"Lighthouse Beach appears on the city's earliest surviving tourist map, misspelled.",en-IN,medium,1,emb_fact_f2bc64a8,2026-08-18T10:00:00+05:30
+fct_758a4d71,poi_dc28b40b,trivia,"Jazz Cellar, Guwahati appears on the city's earliest surviving tourist map, misspelled.",en-IN,low,2,emb_fact_dc28b40b,2026-08-18T10:00:00+05:30
+fct_d18645b5,poi_18bfd097,etiquette,Footwear is removed before entering the inner area of Blue Pottery Workshop; socks are advisable in summer.,en-IN,medium,1,emb_fact_18bfd097,2026-08-18T10:00:00+05:30
+fct_38a1ecd4,poi_7ec7da38,practical,Allow 240 minutes at Ridge Lookout. It is busiest between 10:00 and 13:00.,en-IN,high,4,emb_fact_7ec7da38,2026-08-18T10:00:00+05:30
+fct_e8e7123f,poi_820fce45,history,Ridge Lookout was substantially rebuilt in the 19th century; the earlier structure survives only in the foundations.,en-IN,high,3,emb_fact_820fce45,2026-08-18T10:00:00+05:30
+fct_9c7d08da,poi_930952ab,history,"St Mary's Church, Guwahati was substantially rebuilt in the 17th century; the earlier structure survives only in the foundations.",en-IN,medium,2,emb_fact_930952ab,2026-08-18T10:00:00+05:30
+fct_9b8c878f,poi_77a0ad40,etiquette,Footwear is removed before entering the inner area of Yoga Shala; socks are advisable in summer.,en-IN,high,2,emb_fact_77a0ad40,2026-08-18T10:00:00+05:30
+fct_6605676d,poi_9a9d7e0e,history,City Walls Walk was substantially rebuilt in the 16th century; the earlier structure survives only in the foundations.,en-IN,high,1,emb_fact_9a9d7e0e,2026-08-18T10:00:00+05:30
+fct_ad59b50f,poi_a73142fa,practical,Allow 60 minutes at Ridge Lookout. It is busiest between 10:00 and 13:00.,en-IN,low,2,emb_fact_a73142fa,2026-08-18T10:00:00+05:30
+fct_1743e118,poi_d7f0deab,trivia,"Hilltop Shrine appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,5,emb_fact_d7f0deab,2026-08-18T10:00:00+05:30
+fct_21648ee1,poi_0fd7ac72,etiquette,Footwear is removed before entering the inner area of Riverside Ghats; socks are advisable in summer.,en-IN,low,4,emb_fact_0fd7ac72,2026-08-18T10:00:00+05:30
+fct_09aaa925,poi_5a4b1db1,architecture,"The lattice screen at Lighthouse Beach is the detail most guides point out, and the only part not restored.",en-IN,medium,4,emb_fact_5a4b1db1,2026-08-18T10:00:00+05:30
+fct_1ac9b7d0,poi_48e7f870,architecture,"The fresco panel at Blue Pottery Workshop is the detail most guides point out, and the only part not restored.",en-IN,medium,5,emb_fact_48e7f870,2026-08-18T10:00:00+05:30
+fct_7fde6d50,poi_7c469878,history,Riverside Ghats was substantially rebuilt in the 16th century; the earlier structure survives only in the foundations.,en-IN,high,5,emb_fact_7c469878,2026-08-18T10:00:00+05:30
+fct_615bccd5,poi_ba79f08d,architecture,"The brass door at Great Mosque of Shillong is the detail most guides point out, and the only part not restored.",en-IN,high,4,emb_fact_ba79f08d,2026-08-18T10:00:00+05:30
+fct_d423cda8,poi_5ad79628,practical,Allow 150 minutes at Riverside Ghats. It is busiest between 10:00 and 13:00.,en-IN,high,4,emb_fact_5ad79628,2026-08-18T10:00:00+05:30
+fct_8f27249b,poi_07f7299f,practical,Allow 150 minutes at Butterfly Reserve. It is busiest between 10:00 and 13:00.,en-IN,medium,4,emb_fact_07f7299f,2026-08-18T10:00:00+05:30
+fct_fb436dba,poi_d962443d,trivia,"Ridge Lookout appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,2,emb_fact_d962443d,2026-08-18T10:00:00+05:30
+fct_229fd843,poi_9a8440a8,architecture,"The mirror work at Shillong Bazaar is the detail most guides point out, and the only part not restored.",en-IN,high,2,emb_fact_9a8440a8,2026-08-18T10:00:00+05:30
+fct_781cd0e2,poi_54f6b9ab,trivia,"Great Mosque of Shillong appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,1,emb_fact_54f6b9ab,2026-08-18T10:00:00+05:30
+fct_10cd2e39,poi_01826480,practical,Allow 90 minutes at Shillong Bird Sanctuary. It is busiest between 10:00 and 13:00.,en-IN,low,1,emb_fact_01826480,2026-08-18T10:00:00+05:30
+fct_8d75f2a8,poi_89dfcf7d,etiquette,Footwear is removed before entering the inner area of Kayaking at Gangtok; socks are advisable in summer.,en-IN,medium,5,emb_fact_89dfcf7d,2026-08-18T10:00:00+05:30
+fct_10c5805b,poi_042b5737,architecture,"The fresco panel at Riverside Lounge is the detail most guides point out, and the only part not restored.",en-IN,high,2,emb_fact_042b5737,2026-08-18T10:00:00+05:30
+fct_4bba6634,poi_fb2bf178,history,Hot Air Balloon Field was substantially rebuilt in the 18th century; the earlier structure survives only in the foundations.,en-IN,high,2,emb_fact_fb2bf178,2026-08-18T10:00:00+05:30
+fct_ab66ec21,poi_5cc799a4,architecture,"The lattice screen at Gangtok Stepwell is the detail most guides point out, and the only part not restored.",en-IN,medium,4,emb_fact_5cc799a4,2026-08-18T10:00:00+05:30
+fct_517be3d5,poi_09ad9d0b,history,Royal Cenotaphs was substantially rebuilt in the 19th century; the earlier structure survives only in the foundations.,en-IN,high,5,emb_fact_09ad9d0b,2026-08-18T10:00:00+05:30
+fct_e9b4f9d7,poi_e0062f3a,practical,Allow 60 minutes at Night Food Bazaar. It is busiest between 10:00 and 13:00.,en-IN,high,1,emb_fact_e0062f3a,2026-08-18T10:00:00+05:30
+fct_0b8a73a6,poi_c9b77fcd,architecture,"The fresco panel at Gangtok Observatory is the detail most guides point out, and the only part not restored.",en-IN,high,2,emb_fact_c9b77fcd,2026-08-18T10:00:00+05:30
+fct_362567a2,poi_ceb016d6,history,Fishermen's Cove was substantially rebuilt in the 17th century; the earlier structure survives only in the foundations.,en-IN,high,5,emb_fact_ceb016d6,2026-08-18T10:00:00+05:30
+fct_1328f446,poi_41d2fe0c,architecture,"The brass door at Jazz Cellar, Gangtok is the detail most guides point out, and the only part not restored.",en-IN,high,2,emb_fact_41d2fe0c,2026-08-18T10:00:00+05:30
+fct_75b11bf0,poi_959f437e,trivia,"City Walls Walk appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,4,emb_fact_959f437e,2026-08-18T10:00:00+05:30
+fct_8cdfc4a2,poi_caa6c359,history,Riverside Lounge was substantially rebuilt in the 16th century; the earlier structure survives only in the foundations.,en-IN,medium,2,emb_fact_caa6c359,2026-08-18T10:00:00+05:30
+fct_168a036f,poi_76c67412,practical,Allow 180 minutes at Water Palace. It is busiest between 10:00 and 13:00.,en-IN,medium,3,emb_fact_76c67412,2026-08-18T10:00:00+05:30
+fct_23e5871e,poi_813f1ef8,architecture,"The lattice screen at Jazz Cellar, Gangtok is the detail most guides point out, and the only part not restored.",en-IN,high,5,emb_fact_813f1ef8,2026-08-18T10:00:00+05:30
+fct_86858e10,poi_3b3ffda3,practical,Allow 150 minutes at Lighthouse Beach. It is busiest between 10:00 and 13:00.,en-IN,high,5,emb_fact_3b3ffda3,2026-08-18T10:00:00+05:30
+fct_228b7959,poi_ee0bae13,history,Jain Temple Complex was substantially rebuilt in the 17th century; the earlier structure survives only in the foundations.,en-IN,low,1,emb_fact_ee0bae13,2026-08-18T10:00:00+05:30
+fct_3505560a,poi_087e39c1,architecture,"The fresco panel at Colombo Bird Sanctuary is the detail most guides point out, and the only part not restored.",en-IN,high,5,emb_fact_087e39c1,2026-08-18T10:00:00+05:30
+fct_14e9f4cf,poi_e607799f,practical,Allow 60 minutes at Ridge Lookout. It is busiest between 10:00 and 13:00.,en-IN,medium,3,emb_fact_e607799f,2026-08-18T10:00:00+05:30
+fct_ea445c8e,poi_635f25bf,etiquette,Footwear is removed before entering the inner area of Colombo Bird Sanctuary; socks are advisable in summer.,en-IN,high,5,emb_fact_635f25bf,2026-08-18T10:00:00+05:30
+fct_61be0772,poi_88685566,history,Colombo Bird Sanctuary was substantially rebuilt in the 16th century; the earlier structure survives only in the foundations.,en-IN,medium,5,emb_fact_88685566,2026-08-18T10:00:00+05:30
+fct_7acaf742,poi_666df4c4,architecture,"The mirror work at Colombo Street Food Lane is the detail most guides point out, and the only part not restored.",en-IN,high,3,emb_fact_666df4c4,2026-08-18T10:00:00+05:30
+fct_95b8b565,poi_79d812fe,practical,Allow 150 minutes at Blue Pottery Workshop. It is busiest between 10:00 and 13:00.,en-IN,high,3,emb_fact_79d812fe,2026-08-18T10:00:00+05:30
+fct_75cfa3da,poi_781c5215,history,Colombo Viewpoint was substantially rebuilt in the 17th century; the earlier structure survives only in the foundations.,en-IN,high,2,emb_fact_781c5215,2026-08-18T10:00:00+05:30
+fct_5254e2a9,poi_51bdae21,etiquette,Footwear is removed before entering the inner area of Cliff Walk; socks are advisable in summer.,en-IN,high,2,emb_fact_51bdae21,2026-08-18T10:00:00+05:30
+fct_71e0e0e8,poi_74153e8b,practical,Allow 60 minutes at Butterfly Reserve. It is busiest between 10:00 and 13:00.,en-IN,medium,2,emb_fact_74153e8b,2026-08-18T10:00:00+05:30
+fct_dafa1254,poi_3253659e,practical,Allow 45 minutes at Colombo Bird Sanctuary. It is busiest between 10:00 and 13:00.,en-IN,high,2,emb_fact_3253659e,2026-08-18T10:00:00+05:30
+fct_b2317c1d,poi_713fb7e0,practical,Allow 240 minutes at Colombo Viewpoint. It is busiest between 10:00 and 13:00.,en-IN,high,2,emb_fact_713fb7e0,2026-08-18T10:00:00+05:30
+fct_ff62d241,poi_d54e3e96,history,Museum of Coins was substantially rebuilt in the 19th century; the earlier structure survives only in the foundations.,en-IN,medium,4,emb_fact_d54e3e96,2026-08-18T10:00:00+05:30
+fct_760653dc,poi_103de9e0,practical,Allow 240 minutes at Spice Market Walk. It is busiest between 10:00 and 13:00.,en-IN,medium,2,emb_fact_103de9e0,2026-08-18T10:00:00+05:30
+fct_1216843b,poi_4395d2bd,architecture,"The lattice screen at Antique Lane is the detail most guides point out, and the only part not restored.",en-IN,high,5,emb_fact_4395d2bd,2026-08-18T10:00:00+05:30
+fct_58e86ff9,poi_0419848e,architecture,"The step-well geometry at Cooking Class at Old Town is the detail most guides point out, and the only part not restored.",en-IN,high,1,emb_fact_0419848e,2026-08-18T10:00:00+05:30
+fct_b82bf831,poi_45a913e2,etiquette,Footwear is removed before entering the inner area of Lighthouse Beach; socks are advisable in summer.,en-IN,high,1,emb_fact_45a913e2,2026-08-18T10:00:00+05:30
+fct_32db1e4b,poi_932b65dc,architecture,"The brass door at Riverside Ghats is the detail most guides point out, and the only part not restored.",en-IN,high,3,emb_fact_932b65dc,2026-08-18T10:00:00+05:30
+fct_3ca23cf5,poi_a1337353,practical,Allow 75 minutes at Rooftop Live Music. It is busiest between 10:00 and 13:00.,en-IN,high,3,emb_fact_a1337353,2026-08-18T10:00:00+05:30
+fct_dfbfe8c1,poi_3222744b,trivia,"Rock Climbing Wall appears on the city's earliest surviving tourist map, misspelled.",en-IN,medium,5,emb_fact_3222744b,2026-08-18T10:00:00+05:30
+fct_0cddf61f,poi_493eac5b,etiquette,"Footwear is removed before entering the inner area of St Mary's Church, Kandy; socks are advisable in summer.",en-IN,high,2,emb_fact_493eac5b,2026-08-18T10:00:00+05:30
+fct_5c7040a9,poi_f6d9652b,practical,Allow 60 minutes at Quiet Bay. It is busiest between 10:00 and 13:00.,en-IN,high,4,emb_fact_f6d9652b,2026-08-18T10:00:00+05:30
+fct_c9721158,poi_6c366b48,practical,Allow 45 minutes at Puppet Museum. It is busiest between 10:00 and 13:00.,en-IN,medium,5,emb_fact_6c366b48,2026-08-18T10:00:00+05:30
+fct_23a71bb4,poi_df352f3a,architecture,"The inscription at Puppet Museum is the detail most guides point out, and the only part not restored.",en-IN,medium,4,emb_fact_df352f3a,2026-08-18T10:00:00+05:30
+fct_79cc14bb,poi_cfa920ab,practical,Allow 45 minutes at Great Mosque of Kandy. It is busiest between 10:00 and 13:00.,en-IN,high,3,emb_fact_cfa920ab,2026-08-18T10:00:00+05:30
+fct_f01eedc6,poi_006cc81d,etiquette,Footwear is removed before entering the inner area of Kandy Bird Sanctuary; socks are advisable in summer.,en-IN,high,3,emb_fact_006cc81d,2026-08-18T10:00:00+05:30
+fct_d6b26c67,poi_0a0915f9,history,North Beach was substantially rebuilt in the 17th century; the earlier structure survives only in the foundations.,en-IN,high,1,emb_fact_0a0915f9,2026-08-18T10:00:00+05:30
+fct_5191953c,poi_e8073ad8,architecture,"The brass door at Kandy Bazaar is the detail most guides point out, and the only part not restored.",en-IN,low,5,emb_fact_e8073ad8,2026-08-18T10:00:00+05:30
+fct_3bd2bc1e,poi_e5f3caea,trivia,"Old Palace, Kandy appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,5,emb_fact_e5f3caea,2026-08-18T10:00:00+05:30
+fct_607d3bde,poi_829372bf,etiquette,Footwear is removed before entering the inner area of North Beach; socks are advisable in summer.,en-IN,high,2,emb_fact_829372bf,2026-08-18T10:00:00+05:30
+fct_6d65c5c1,poi_6aa41eb7,etiquette,Footwear is removed before entering the inner area of Elephant Camp; socks are advisable in summer.,en-IN,high,4,emb_fact_6aa41eb7,2026-08-18T10:00:00+05:30
+fct_fb43711a,poi_b72c42e5,trivia,"Ayurveda Centre appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,5,emb_fact_b72c42e5,2026-08-18T10:00:00+05:30
+fct_ed33496f,poi_bc82e986,architecture,"The step-well geometry at Kathmandu Viewpoint is the detail most guides point out, and the only part not restored.",en-IN,medium,2,emb_fact_bc82e986,2026-08-18T10:00:00+05:30
+fct_f7c75baf,poi_08ddfd62,practical,Allow 75 minutes at Watchtower Terrace. It is busiest between 10:00 and 13:00.,en-IN,high,5,emb_fact_08ddfd62,2026-08-18T10:00:00+05:30
+fct_2d8eb766,poi_0d199b84,history,Rooftop Live Music was substantially rebuilt in the 16th century; the earlier structure survives only in the foundations.,en-IN,high,4,emb_fact_0d199b84,2026-08-18T10:00:00+05:30
+fct_f2d64a97,poi_38456be9,trivia,"Kathmandu Street Food Lane appears on the city's earliest surviving tourist map, misspelled.",en-IN,medium,3,emb_fact_38456be9,2026-08-18T10:00:00+05:30
+fct_eb51c066,poi_252f76b3,history,Royal Cenotaphs was substantially rebuilt in the 18th century; the earlier structure survives only in the foundations.,en-IN,high,1,emb_fact_252f76b3,2026-08-18T10:00:00+05:30
+fct_35e6040f,poi_387a71ad,trivia,"Kathmandu Lake appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,3,emb_fact_387a71ad,2026-08-18T10:00:00+05:30
+fct_34375266,poi_01a95571,history,Yoga Shala was substantially rebuilt in the 18th century; the earlier structure survives only in the foundations.,en-IN,high,3,emb_fact_01a95571,2026-08-18T10:00:00+05:30
+fct_61aca278,poi_8743dced,practical,Allow 45 minutes at Jain Temple Complex. It is busiest between 10:00 and 13:00.,en-IN,medium,2,emb_fact_8743dced,2026-08-18T10:00:00+05:30
+fct_718da0ff,poi_586568b0,practical,Allow 60 minutes at Riverside Lounge. It is busiest between 10:00 and 13:00.,en-IN,medium,2,emb_fact_586568b0,2026-08-18T10:00:00+05:30
+fct_4dd57b9d,poi_bf2fe1b8,etiquette,Footwear is removed before entering the inner area of Kathmandu Stepwell; socks are advisable in summer.,en-IN,medium,4,emb_fact_bf2fe1b8,2026-08-18T10:00:00+05:30
+fct_3417a111,poi_12199456,etiquette,Footwear is removed before entering the inner area of Yoga Shala; socks are advisable in summer.,en-IN,low,3,emb_fact_12199456,2026-08-18T10:00:00+05:30
+fct_5c3edd29,poi_d349b995,history,Hot Springs was substantially rebuilt in the 18th century; the earlier structure survives only in the foundations.,en-IN,high,1,emb_fact_d349b995,2026-08-18T10:00:00+05:30
+fct_5ace8f2e,poi_db424623,practical,Allow 240 minutes at Tea Estate Trail. It is busiest between 10:00 and 13:00.,en-IN,high,1,emb_fact_db424623,2026-08-18T10:00:00+05:30
+fct_b6d85cf7,poi_37bfdcc0,history,Kathmandu Street Food Lane was substantially rebuilt in the 19th century; the earlier structure survives only in the foundations.,en-IN,high,5,emb_fact_37bfdcc0,2026-08-18T10:00:00+05:30
+fct_9d24ba5e,poi_a1498a91,architecture,"The tile mosaic at Watchtower Terrace is the detail most guides point out, and the only part not restored.",en-IN,high,1,emb_fact_a1498a91,2026-08-18T10:00:00+05:30
+fct_7a8c22c5,poi_0aa7daf7,trivia,"Hilltop Shrine appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,1,emb_fact_0aa7daf7,2026-08-18T10:00:00+05:30
+fct_8aaaba65,poi_e784aeca,history,Night Food Bazaar was substantially rebuilt in the 16th century; the earlier structure survives only in the foundations.,en-IN,high,2,emb_fact_e784aeca,2026-08-18T10:00:00+05:30
+fct_ee2a5f98,poi_11e096fc,practical,Allow 75 minutes at Rock Garden. It is busiest between 10:00 and 13:00.,en-IN,high,1,emb_fact_11e096fc,2026-08-18T10:00:00+05:30
+fct_ef8bcc46,poi_29d547a4,etiquette,Footwear is removed before entering the inner area of Backwater Channel; socks are advisable in summer.,en-IN,medium,1,emb_fact_29d547a4,2026-08-18T10:00:00+05:30
+fct_c45823e8,poi_b8450f6f,history,Pokhara Street Food Lane was substantially rebuilt in the 17th century; the earlier structure survives only in the foundations.,en-IN,medium,3,emb_fact_b8450f6f,2026-08-18T10:00:00+05:30
+fct_b98bf5a5,poi_a010c1ba,history,Backwater Channel was substantially rebuilt in the 19th century; the earlier structure survives only in the foundations.,en-IN,high,2,emb_fact_a010c1ba,2026-08-18T10:00:00+05:30
+fct_8e913007,poi_204e9388,history,Cliff Walk was substantially rebuilt in the 19th century; the earlier structure survives only in the foundations.,en-IN,medium,3,emb_fact_204e9388,2026-08-18T10:00:00+05:30
+fct_4ac0f672,poi_48787ec6,history,Zipline Point was substantially rebuilt in the 16th century; the earlier structure survives only in the foundations.,en-IN,high,1,emb_fact_48787ec6,2026-08-18T10:00:00+05:30
+fct_f2c7a467,poi_a4f7cc8b,architecture,"The lattice screen at Quiet Bay is the detail most guides point out, and the only part not restored.",en-IN,high,4,emb_fact_a4f7cc8b,2026-08-18T10:00:00+05:30
+fct_9bf503fe,poi_ab48d16e,etiquette,Footwear is removed before entering the inner area of Quiet Bay; socks are advisable in summer.,en-IN,high,3,emb_fact_ab48d16e,2026-08-18T10:00:00+05:30
+fct_453134a4,poi_132d3868,architecture,"The carved lintel at Cliff Walk is the detail most guides point out, and the only part not restored.",en-IN,high,3,emb_fact_132d3868,2026-08-18T10:00:00+05:30
+fct_4036b6f6,poi_ef2400fa,etiquette,Footwear is removed before entering the inner area of Watchtower Terrace; socks are advisable in summer.,en-IN,low,4,emb_fact_ef2400fa,2026-08-18T10:00:00+05:30
+fct_1dd9cfaf,poi_49791c2d,trivia,"Crocodile Park appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,1,emb_fact_49791c2d,2026-08-18T10:00:00+05:30
+fct_68872ac8,poi_39f134c5,architecture,"The lattice screen at Zipline Point is the detail most guides point out, and the only part not restored.",en-IN,high,1,emb_fact_39f134c5,2026-08-18T10:00:00+05:30
+fct_32cb46c0,poi_68cc2f6d,history,Quiet Bay was substantially rebuilt in the 18th century; the earlier structure survives only in the foundations.,en-IN,high,4,emb_fact_68cc2f6d,2026-08-18T10:00:00+05:30
+fct_e0b1d23a,poi_c8feccee,architecture,"The tile mosaic at Ridge Lookout is the detail most guides point out, and the only part not restored.",en-IN,high,3,emb_fact_c8feccee,2026-08-18T10:00:00+05:30
+fct_5013f48a,poi_13aa1bd7,trivia,"North Beach appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,2,emb_fact_13aa1bd7,2026-08-18T10:00:00+05:30
+fct_d3634ecf,poi_f4eeb66a,trivia,"Cycling Loop appears on the city's earliest surviving tourist map, misspelled.",en-IN,medium,5,emb_fact_f4eeb66a,2026-08-18T10:00:00+05:30
+fct_b3dd750e,poi_4ab34c66,etiquette,Footwear is removed before entering the inner area of Kayaking at Thimphu; socks are advisable in summer.,en-IN,medium,5,emb_fact_4ab34c66,2026-08-18T10:00:00+05:30
+fct_a3108d19,poi_359c6161,trivia,"Kayaking at Thimphu appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,3,emb_fact_359c6161,2026-08-18T10:00:00+05:30
+fct_3631b893,poi_eb535fc6,architecture,"The carved lintel at North Beach is the detail most guides point out, and the only part not restored.",en-IN,high,2,emb_fact_eb535fc6,2026-08-18T10:00:00+05:30
+fct_b87dd0cc,poi_935b4fdb,architecture,"The step-well geometry at Elephant Camp is the detail most guides point out, and the only part not restored.",en-IN,high,4,emb_fact_935b4fdb,2026-08-18T10:00:00+05:30
+fct_03e65d47,poi_9f5cc706,trivia,"Thimphu City Museum appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,5,emb_fact_9f5cc706,2026-08-18T10:00:00+05:30
+fct_a4dd8334,poi_00bd0042,practical,Allow 75 minutes at North Beach. It is busiest between 10:00 and 13:00.,en-IN,high,5,emb_fact_00bd0042,2026-08-18T10:00:00+05:30
+fct_c6f2f4da,poi_d748ceaa,etiquette,Footwear is removed before entering the inner area of Lighthouse Beach; socks are advisable in summer.,en-IN,high,3,emb_fact_d748ceaa,2026-08-18T10:00:00+05:30
+fct_e1b3b98a,poi_daf5e087,history,Cycling Loop was substantially rebuilt in the 18th century; the earlier structure survives only in the foundations.,en-IN,medium,1,emb_fact_daf5e087,2026-08-18T10:00:00+05:30
+fct_860d759c,poi_ec5a00fb,history,Backwater Channel was substantially rebuilt in the 19th century; the earlier structure survives only in the foundations.,en-IN,low,3,emb_fact_ec5a00fb,2026-08-18T10:00:00+05:30
+fct_7de4248a,poi_eb997264,practical,Allow 150 minutes at Crocodile Park. It is busiest between 10:00 and 13:00.,en-IN,high,1,emb_fact_eb997264,2026-08-18T10:00:00+05:30
+fct_e884b40b,poi_6532241a,practical,Allow 45 minutes at Cliff Walk. It is busiest between 10:00 and 13:00.,en-IN,low,2,emb_fact_6532241a,2026-08-18T10:00:00+05:30
+fct_d64ee1b8,poi_9b3237a3,etiquette,Footwear is removed before entering the inner area of Butterfly Reserve; socks are advisable in summer.,en-IN,high,2,emb_fact_9b3237a3,2026-08-18T10:00:00+05:30
+fct_831b0d1d,poi_48aa21f1,history,Male Observatory was substantially rebuilt in the 16th century; the earlier structure survives only in the foundations.,en-IN,medium,1,emb_fact_48aa21f1,2026-08-18T10:00:00+05:30
+fct_40d744ff,poi_98cf2950,architecture,"The lattice screen at Backwater Channel is the detail most guides point out, and the only part not restored.",en-IN,high,4,emb_fact_98cf2950,2026-08-18T10:00:00+05:30
+fct_545080d4,poi_567aa575,trivia,"Male Observatory appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,4,emb_fact_567aa575,2026-08-18T10:00:00+05:30
+fct_326e8b0c,poi_4cb3a2d4,history,Blue Pottery Workshop was substantially rebuilt in the 16th century; the earlier structure survives only in the foundations.,en-IN,high,3,emb_fact_4cb3a2d4,2026-08-18T10:00:00+05:30
+fct_d4721111,poi_26fca860,trivia,"Tea Estate Trail appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,4,emb_fact_26fca860,2026-08-18T10:00:00+05:30
+fct_d8af67a5,poi_9af6a696,practical,Allow 180 minutes at Male Lake. It is busiest between 10:00 and 13:00.,en-IN,low,3,emb_fact_9af6a696,2026-08-18T10:00:00+05:30
+fct_044e2dc8,poi_a71ffa2e,practical,Allow 180 minutes at Quiet Bay. It is busiest between 10:00 and 13:00.,en-IN,high,3,emb_fact_a71ffa2e,2026-08-18T10:00:00+05:30
+fct_72b35d4f,poi_c09c7423,etiquette,Footwear is removed before entering the inner area of Crocodile Park; socks are advisable in summer.,en-IN,high,4,emb_fact_c09c7423,2026-08-18T10:00:00+05:30
+fct_41bb6a4a,poi_3457ab13,etiquette,Footwear is removed before entering the inner area of Sunset Point; socks are advisable in summer.,en-IN,medium,5,emb_fact_3457ab13,2026-08-18T10:00:00+05:30
+fct_2997b210,poi_42b84f74,history,Handloom Cooperative was substantially rebuilt in the 19th century; the earlier structure survives only in the foundations.,en-IN,low,1,emb_fact_42b84f74,2026-08-18T10:00:00+05:30
+fct_bcb251a6,poi_85d28439,trivia,"Great Mosque of Male appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,1,emb_fact_85d28439,2026-08-18T10:00:00+05:30
+fct_d9a6f007,poi_78b732e3,practical,Allow 180 minutes at Botanical Gardens. It is busiest between 10:00 and 13:00.,en-IN,high,3,emb_fact_78b732e3,2026-08-18T10:00:00+05:30
+fct_5e252675,poi_3c7d9152,practical,"Allow 180 minutes at Jazz Cellar, Male. It is busiest between 10:00 and 13:00.",en-IN,low,5,emb_fact_3c7d9152,2026-08-18T10:00:00+05:30
+fct_0c3a8188,poi_fcf3ec8d,history,Ayurveda Centre was substantially rebuilt in the 16th century; the earlier structure survives only in the foundations.,en-IN,high,5,emb_fact_fcf3ec8d,2026-08-18T10:00:00+05:30
+fct_126386d8,poi_09409c63,architecture,"The fresco panel at City Walls Walk is the detail most guides point out, and the only part not restored.",en-IN,medium,3,emb_fact_09409c63,2026-08-18T10:00:00+05:30
+fct_19e9ff3d,poi_83533555,history,Dubai Observatory was substantially rebuilt in the 18th century; the earlier structure survives only in the foundations.,en-IN,high,2,emb_fact_83533555,2026-08-18T10:00:00+05:30
+fct_339e07a6,poi_80512660,practical,Allow 75 minutes at Butterfly Reserve. It is busiest between 10:00 and 13:00.,en-IN,high,4,emb_fact_80512660,2026-08-18T10:00:00+05:30
+fct_ef76b443,poi_34992d1f,etiquette,Footwear is removed before entering the inner area of Handloom Cooperative; socks are advisable in summer.,en-IN,high,5,emb_fact_34992d1f,2026-08-18T10:00:00+05:30
+fct_41fac070,poi_ca481e64,practical,Allow 150 minutes at Dubai Bazaar. It is busiest between 10:00 and 13:00.,en-IN,medium,5,emb_fact_ca481e64,2026-08-18T10:00:00+05:30
+fct_51470e59,poi_33111021,practical,Allow 180 minutes at Dubai Observatory. It is busiest between 10:00 and 13:00.,en-IN,high,4,emb_fact_33111021,2026-08-18T10:00:00+05:30
+fct_644bae2a,poi_34b126e7,trivia,"Cliff Walk appears on the city's earliest surviving tourist map, misspelled.",en-IN,medium,2,emb_fact_34b126e7,2026-08-18T10:00:00+05:30
+fct_1780b2ad,poi_354a6a7e,practical,Allow 120 minutes at Butterfly Reserve. It is busiest between 10:00 and 13:00.,en-IN,high,1,emb_fact_354a6a7e,2026-08-18T10:00:00+05:30
+fct_fac4b234,poi_2ef9dd71,trivia,"Dubai Bird Sanctuary appears on the city's earliest surviving tourist map, misspelled.",en-IN,medium,4,emb_fact_2ef9dd71,2026-08-18T10:00:00+05:30
+fct_b38e6235,poi_0b57a65c,architecture,"The lattice screen at Rooftop Live Music is the detail most guides point out, and the only part not restored.",en-IN,low,5,emb_fact_0b57a65c,2026-08-18T10:00:00+05:30
+fct_e0e51b93,poi_298b5ad9,etiquette,Footwear is removed before entering the inner area of Riverside Lounge; socks are advisable in summer.,en-IN,high,1,emb_fact_298b5ad9,2026-08-18T10:00:00+05:30
+fct_ad865337,poi_8f09155f,architecture,"The lattice screen at Dubai Street Food Lane is the detail most guides point out, and the only part not restored.",en-IN,low,3,emb_fact_8f09155f,2026-08-18T10:00:00+05:30
+fct_9873191e,poi_425aeafb,etiquette,Footwear is removed before entering the inner area of Hot Springs; socks are advisable in summer.,en-IN,high,2,emb_fact_425aeafb,2026-08-18T10:00:00+05:30
+fct_2597c747,poi_ae95e1be,trivia,"Hot Springs appears on the city's earliest surviving tourist map, misspelled.",en-IN,low,1,emb_fact_ae95e1be,2026-08-18T10:00:00+05:30
+fct_4dca38cc,poi_65d65d15,etiquette,Footwear is removed before entering the inner area of Cooking Class at Old Town; socks are advisable in summer.,en-IN,high,1,emb_fact_65d65d15,2026-08-18T10:00:00+05:30
+fct_c3bf5210,poi_88179724,trivia,"Riverside Lounge appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,2,emb_fact_88179724,2026-08-18T10:00:00+05:30
+fct_f9952271,poi_76a11c20,history,Cycling Loop was substantially rebuilt in the 17th century; the earlier structure survives only in the foundations.,en-IN,high,4,emb_fact_76a11c20,2026-08-18T10:00:00+05:30
+fct_4e5e10ec,poi_6a46e565,architecture,"The brass door at North Beach is the detail most guides point out, and the only part not restored.",en-IN,medium,2,emb_fact_6a46e565,2026-08-18T10:00:00+05:30
+fct_f9d3c163,poi_6ba7ee43,practical,Allow 75 minutes at City Walls Walk. It is busiest between 10:00 and 13:00.,en-IN,high,2,emb_fact_6ba7ee43,2026-08-18T10:00:00+05:30
+fct_d15724b8,poi_1b0e68c0,etiquette,Footwear is removed before entering the inner area of Abu Dhabi Street Food Lane; socks are advisable in summer.,en-IN,medium,5,emb_fact_1b0e68c0,2026-08-18T10:00:00+05:30
+fct_15324b2f,poi_4c0e8968,etiquette,Footwear is removed before entering the inner area of Hot Air Balloon Field; socks are advisable in summer.,en-IN,high,4,emb_fact_4c0e8968,2026-08-18T10:00:00+05:30
+fct_b47495be,poi_6be08c1c,practical,Allow 240 minutes at Antique Lane. It is busiest between 10:00 and 13:00.,en-IN,high,1,emb_fact_6be08c1c,2026-08-18T10:00:00+05:30
+fct_f0b3da31,poi_ebbd9619,history,"Jazz Cellar, Abu Dhabi was substantially rebuilt in the 19th century; the earlier structure survives only in the foundations.",en-IN,low,2,emb_fact_ebbd9619,2026-08-18T10:00:00+05:30
+fct_5af3e0f3,poi_a2c46b6b,practical,Allow 45 minutes at Coffee Roastery Tour. It is busiest between 10:00 and 13:00.,en-IN,medium,4,emb_fact_a2c46b6b,2026-08-18T10:00:00+05:30
+fct_ba934f9b,poi_7d1dd83c,history,Cycling Loop was substantially rebuilt in the 19th century; the earlier structure survives only in the foundations.,en-IN,high,3,emb_fact_7d1dd83c,2026-08-18T10:00:00+05:30
+fct_3846bcba,poi_0f836f1a,architecture,"The mirror work at Abu Dhabi Bazaar is the detail most guides point out, and the only part not restored.",en-IN,high,3,emb_fact_0f836f1a,2026-08-18T10:00:00+05:30
+fct_8cc912b0,poi_2a99be47,practical,Allow 90 minutes at Abu Dhabi Street Food Lane. It is busiest between 10:00 and 13:00.,en-IN,high,2,emb_fact_2a99be47,2026-08-18T10:00:00+05:30
+fct_d53d10cf,poi_4fc9345d,practical,Allow 240 minutes at North Beach. It is busiest between 10:00 and 13:00.,en-IN,high,2,emb_fact_4fc9345d,2026-08-18T10:00:00+05:30
+fct_d5b379ea,poi_22ce875f,history,"Jazz Cellar, Abu Dhabi was substantially rebuilt in the 17th century; the earlier structure survives only in the foundations.",en-IN,high,3,emb_fact_22ce875f,2026-08-18T10:00:00+05:30
+fct_07943722,poi_ea89965b,etiquette,Footwear is removed before entering the inner area of Quiet Bay; socks are advisable in summer.,en-IN,medium,4,emb_fact_ea89965b,2026-08-18T10:00:00+05:30
+fct_569cd95c,poi_b76d6bf5,architecture,"The fresco panel at Riverside Ghats is the detail most guides point out, and the only part not restored.",en-IN,high,1,emb_fact_b76d6bf5,2026-08-18T10:00:00+05:30
+fct_89d62c29,poi_f5306b2a,architecture,"The tile mosaic at Watchtower Terrace is the detail most guides point out, and the only part not restored.",en-IN,high,5,emb_fact_f5306b2a,2026-08-18T10:00:00+05:30
+fct_f739cd81,poi_c54e9c8a,practical,Allow 240 minutes at Cliff Walk. It is busiest between 10:00 and 13:00.,en-IN,high,3,emb_fact_c54e9c8a,2026-08-18T10:00:00+05:30
+fct_0b3fa4bb,poi_47d68050,etiquette,Footwear is removed before entering the inner area of Ridge Lookout; socks are advisable in summer.,en-IN,high,1,emb_fact_47d68050,2026-08-18T10:00:00+05:30
+fct_30e16f6a,poi_f161b897,etiquette,Footwear is removed before entering the inner area of Riverside Lounge; socks are advisable in summer.,en-IN,high,5,emb_fact_f161b897,2026-08-18T10:00:00+05:30
+fct_23f60382,poi_53bf0d16,architecture,"The tile mosaic at Handloom Cooperative is the detail most guides point out, and the only part not restored.",en-IN,high,2,emb_fact_53bf0d16,2026-08-18T10:00:00+05:30
+fct_2c6c56bb,poi_abe5a41e,architecture,"The fresco panel at Cliff Walk is the detail most guides point out, and the only part not restored.",en-IN,high,1,emb_fact_abe5a41e,2026-08-18T10:00:00+05:30
+fct_6e15b959,poi_ae2101df,architecture,"The tile mosaic at Hot Springs is the detail most guides point out, and the only part not restored.",en-IN,high,3,emb_fact_ae2101df,2026-08-18T10:00:00+05:30
+fct_e1ac1da9,poi_89bf902e,architecture,"The mirror work at Lighthouse Beach is the detail most guides point out, and the only part not restored.",en-IN,high,4,emb_fact_89bf902e,2026-08-18T10:00:00+05:30
+fct_8199ea09,poi_8e3a62a3,etiquette,Footwear is removed before entering the inner area of Doha Viewpoint; socks are advisable in summer.,en-IN,high,3,emb_fact_8e3a62a3,2026-08-18T10:00:00+05:30
+fct_af59cc1a,poi_6ecd8564,etiquette,Footwear is removed before entering the inner area of Rooftop Live Music; socks are advisable in summer.,en-IN,high,1,emb_fact_6ecd8564,2026-08-18T10:00:00+05:30
+fct_f8cf8838,poi_d9da6279,architecture,"The carved lintel at Coffee Roastery Tour is the detail most guides point out, and the only part not restored.",en-IN,low,5,emb_fact_d9da6279,2026-08-18T10:00:00+05:30
+fct_c259ca9a,poi_b7df1f45,etiquette,Footwear is removed before entering the inner area of Yoga Shala; socks are advisable in summer.,en-IN,high,4,emb_fact_b7df1f45,2026-08-18T10:00:00+05:30
+fct_c0fff26b,poi_d108c40d,history,Rock Garden was substantially rebuilt in the 16th century; the earlier structure survives only in the foundations.,en-IN,high,4,emb_fact_d108c40d,2026-08-18T10:00:00+05:30
+fct_e648ee25,poi_2254e322,trivia,"Spice Market Walk appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,5,emb_fact_2254e322,2026-08-18T10:00:00+05:30
+fct_0176b7b6,poi_d30698db,architecture,"The mirror work at Museum of Coins is the detail most guides point out, and the only part not restored.",en-IN,high,5,emb_fact_d30698db,2026-08-18T10:00:00+05:30
+fct_d78a3dae,poi_38dfbd85,trivia,"Watchtower Terrace appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,3,emb_fact_38dfbd85,2026-08-18T10:00:00+05:30
+fct_7a97e60f,poi_995c7c81,architecture,"The step-well geometry at Singapore Street Food Lane is the detail most guides point out, and the only part not restored.",en-IN,high,3,emb_fact_995c7c81,2026-08-18T10:00:00+05:30
+fct_fe3329c8,poi_80e3ffe4,architecture,"The inscription at Antique Lane is the detail most guides point out, and the only part not restored.",en-IN,high,3,emb_fact_80e3ffe4,2026-08-18T10:00:00+05:30
+fct_5d43292c,poi_354c91c9,trivia,"Ridge Lookout appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,5,emb_fact_354c91c9,2026-08-18T10:00:00+05:30
+fct_7b5e9a5f,poi_61b5cf0b,trivia,"Riverside Lounge appears on the city's earliest surviving tourist map, misspelled.",en-IN,medium,2,emb_fact_61b5cf0b,2026-08-18T10:00:00+05:30
+fct_97059a37,poi_b110a36b,practical,Allow 240 minutes at Yoga Shala. It is busiest between 10:00 and 13:00.,en-IN,low,2,emb_fact_b110a36b,2026-08-18T10:00:00+05:30
+fct_71b3790b,poi_facb346b,history,Singapore Viewpoint was substantially rebuilt in the 16th century; the earlier structure survives only in the foundations.,en-IN,high,3,emb_fact_facb346b,2026-08-18T10:00:00+05:30
+fct_9a89839f,poi_f31cfd33,trivia,"Butterfly Reserve appears on the city's earliest surviving tourist map, misspelled.",en-IN,low,4,emb_fact_f31cfd33,2026-08-18T10:00:00+05:30
+fct_8fb27a42,poi_18500e1c,trivia,"Riverside Lounge appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,5,emb_fact_18500e1c,2026-08-18T10:00:00+05:30
+fct_eed197fa,poi_055ec68f,trivia,"Rooftop Live Music appears on the city's earliest surviving tourist map, misspelled.",en-IN,medium,1,emb_fact_055ec68f,2026-08-18T10:00:00+05:30
+fct_18f57e7a,poi_ac095ceb,trivia,"Butterfly Reserve appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,2,emb_fact_ac095ceb,2026-08-18T10:00:00+05:30
+fct_c0cf2c7c,poi_a460f77a,etiquette,Footwear is removed before entering the inner area of Blue Pottery Workshop; socks are advisable in summer.,en-IN,high,3,emb_fact_a460f77a,2026-08-18T10:00:00+05:30
+fct_73335ca9,poi_c8753eab,etiquette,Footwear is removed before entering the inner area of Crocodile Park; socks are advisable in summer.,en-IN,high,3,emb_fact_c8753eab,2026-08-18T10:00:00+05:30
+fct_a3bb928b,poi_ab7dc80e,practical,Allow 45 minutes at Maritime Museum. It is busiest between 10:00 and 13:00.,en-IN,high,4,emb_fact_ab7dc80e,2026-08-18T10:00:00+05:30
+fct_2a05b572,poi_33fc148a,history,Bangkok Bird Sanctuary was substantially rebuilt in the 16th century; the earlier structure survives only in the foundations.,en-IN,medium,2,emb_fact_33fc148a,2026-08-18T10:00:00+05:30
+fct_1c7f94ba,poi_21a012fe,history,"Gallery of Modern Art, Bangkok was substantially rebuilt in the 17th century; the earlier structure survives only in the foundations.",en-IN,high,2,emb_fact_21a012fe,2026-08-18T10:00:00+05:30
+fct_6921e167,poi_64085486,trivia,"Hot Springs appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,3,emb_fact_64085486,2026-08-18T10:00:00+05:30
+fct_bb457131,poi_d0d48d2e,architecture,"The brass door at Rock Garden is the detail most guides point out, and the only part not restored.",en-IN,high,2,emb_fact_d0d48d2e,2026-08-18T10:00:00+05:30
+fct_3b333f9c,poi_90b70970,practical,Allow 150 minutes at Watchtower Terrace. It is busiest between 10:00 and 13:00.,en-IN,high,5,emb_fact_90b70970,2026-08-18T10:00:00+05:30
+fct_f3204417,poi_c9bd1fcd,history,Rock Garden was substantially rebuilt in the 18th century; the earlier structure survives only in the foundations.,en-IN,high,1,emb_fact_c9bd1fcd,2026-08-18T10:00:00+05:30
+fct_cb575a88,poi_adef3914,practical,Allow 180 minutes at Bangkok City Museum. It is busiest between 10:00 and 13:00.,en-IN,high,5,emb_fact_adef3914,2026-08-18T10:00:00+05:30
+fct_c01728f0,poi_c3cf2431,practical,Allow 90 minutes at Royal Cenotaphs. It is busiest between 10:00 and 13:00.,en-IN,medium,5,emb_fact_c3cf2431,2026-08-18T10:00:00+05:30
+fct_6783bc74,poi_2100d6d3,trivia,"Water Palace appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,2,emb_fact_2100d6d3,2026-08-18T10:00:00+05:30
+fct_3951bf85,poi_c5ec38ec,practical,"Allow 75 minutes at Gallery of Modern Art, Bangkok. It is busiest between 10:00 and 13:00.",en-IN,high,4,emb_fact_c5ec38ec,2026-08-18T10:00:00+05:30
+fct_80ba10f0,poi_9a25581d,architecture,"The inscription at Bangkok Bird Sanctuary is the detail most guides point out, and the only part not restored.",en-IN,high,3,emb_fact_9a25581d,2026-08-18T10:00:00+05:30
+fct_4d3bb2eb,poi_fb892134,trivia,"Cycling Loop appears on the city's earliest surviving tourist map, misspelled.",en-IN,medium,3,emb_fact_fb892134,2026-08-18T10:00:00+05:30
+fct_c5ef5035,poi_91f66035,etiquette,Footwear is removed before entering the inner area of Hot Springs; socks are advisable in summer.,en-IN,high,4,emb_fact_91f66035,2026-08-18T10:00:00+05:30
+fct_116740ec,poi_aeffb89e,architecture,"The step-well geometry at Ayurveda Centre is the detail most guides point out, and the only part not restored.",en-IN,high,5,emb_fact_aeffb89e,2026-08-18T10:00:00+05:30
+fct_2e1317fb,poi_670d2abe,etiquette,Footwear is removed before entering the inner area of Ayurveda Centre; socks are advisable in summer.,en-IN,high,3,emb_fact_670d2abe,2026-08-18T10:00:00+05:30
+fct_39ad478f,poi_23cb8612,trivia,"Fishermen's Cove appears on the city's earliest surviving tourist map, misspelled.",en-IN,medium,3,emb_fact_23cb8612,2026-08-18T10:00:00+05:30
+fct_05b44ce1,poi_042b48b8,architecture,"The carved lintel at Zipline Point is the detail most guides point out, and the only part not restored.",en-IN,high,5,emb_fact_042b48b8,2026-08-18T10:00:00+05:30
+fct_932902b1,poi_ee320088,etiquette,Footwear is removed before entering the inner area of Cycling Loop; socks are advisable in summer.,en-IN,high,5,emb_fact_ee320088,2026-08-18T10:00:00+05:30
+fct_a0c61265,poi_b68d9ac4,trivia,"North Beach appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,2,emb_fact_b68d9ac4,2026-08-18T10:00:00+05:30
+fct_17572256,poi_a0cb84df,etiquette,Footwear is removed before entering the inner area of Watchtower Terrace; socks are advisable in summer.,en-IN,high,4,emb_fact_a0cb84df,2026-08-18T10:00:00+05:30
+fct_68314488,poi_277d6ca8,trivia,"Kuala Lumpur Bazaar appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,2,emb_fact_277d6ca8,2026-08-18T10:00:00+05:30
+fct_33df8f95,poi_ac776f7b,architecture,"The step-well geometry at Cycling Loop is the detail most guides point out, and the only part not restored.",en-IN,low,4,emb_fact_ac776f7b,2026-08-18T10:00:00+05:30
+fct_86f1a9e3,poi_448dd95a,trivia,"Hot Air Balloon Field appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,5,emb_fact_448dd95a,2026-08-18T10:00:00+05:30
+fct_ca2e7053,poi_baaea645,history,Great Mosque of Kuala Lumpur was substantially rebuilt in the 17th century; the earlier structure survives only in the foundations.,en-IN,high,3,emb_fact_baaea645,2026-08-18T10:00:00+05:30
+fct_3cb19c11,poi_47a367e4,architecture,"The tile mosaic at Maritime Museum is the detail most guides point out, and the only part not restored.",en-IN,high,4,emb_fact_47a367e4,2026-08-18T10:00:00+05:30
+fct_52aac0e7,poi_391f3e77,practical,Allow 120 minutes at Watchtower Terrace. It is busiest between 10:00 and 13:00.,en-IN,high,4,emb_fact_391f3e77,2026-08-18T10:00:00+05:30
+fct_929c95a1,poi_dd011b96,history,Spice Market Walk was substantially rebuilt in the 17th century; the earlier structure survives only in the foundations.,en-IN,medium,5,emb_fact_dd011b96,2026-08-18T10:00:00+05:30
+fct_7296fe32,poi_566ecbdf,trivia,"Ridge Lookout appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,5,emb_fact_566ecbdf,2026-08-18T10:00:00+05:30
+fct_6d2ca6bf,poi_8740f93b,trivia,"Jain Temple Complex appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,3,emb_fact_8740f93b,2026-08-18T10:00:00+05:30
+fct_8e42c603,poi_9d150a02,practical,Allow 75 minutes at Kuala Lumpur Bird Sanctuary. It is busiest between 10:00 and 13:00.,en-IN,high,5,emb_fact_9d150a02,2026-08-18T10:00:00+05:30
+fct_94772a4b,poi_29af0a10,etiquette,Footwear is removed before entering the inner area of Coffee Roastery Tour; socks are advisable in summer.,en-IN,high,5,emb_fact_29af0a10,2026-08-18T10:00:00+05:30
+fct_47cf8abc,poi_45d40c26,etiquette,Footwear is removed before entering the inner area of Bali City Museum; socks are advisable in summer.,en-IN,high,2,emb_fact_45d40c26,2026-08-18T10:00:00+05:30
+fct_e6c86046,poi_67992007,practical,Allow 60 minutes at Ayurveda Centre. It is busiest between 10:00 and 13:00.,en-IN,medium,2,emb_fact_67992007,2026-08-18T10:00:00+05:30
+fct_d26e3f2f,poi_19b1930f,etiquette,Footwear is removed before entering the inner area of Bali Viewpoint; socks are advisable in summer.,en-IN,medium,3,emb_fact_19b1930f,2026-08-18T10:00:00+05:30
+fct_9714027a,poi_edbbfa7c,etiquette,Footwear is removed before entering the inner area of Water Palace; socks are advisable in summer.,en-IN,high,3,emb_fact_edbbfa7c,2026-08-18T10:00:00+05:30
+fct_b72fc55e,poi_4083e010,history,Fishermen's Cove was substantially rebuilt in the 16th century; the earlier structure survives only in the foundations.,en-IN,high,5,emb_fact_4083e010,2026-08-18T10:00:00+05:30
+fct_f947a99b,poi_7fd38d45,history,Night Food Bazaar was substantially rebuilt in the 18th century; the earlier structure survives only in the foundations.,en-IN,high,5,emb_fact_7fd38d45,2026-08-18T10:00:00+05:30
+fct_b1ecac40,poi_adab11df,history,Bali Stepwell was substantially rebuilt in the 16th century; the earlier structure survives only in the foundations.,en-IN,high,4,emb_fact_adab11df,2026-08-18T10:00:00+05:30
+fct_c5085c64,poi_f9130509,etiquette,Footwear is removed before entering the inner area of Bali Bazaar; socks are advisable in summer.,en-IN,high,1,emb_fact_f9130509,2026-08-18T10:00:00+05:30
+fct_eb9ed0a9,poi_c82b2d5e,architecture,"The tile mosaic at Textile Museum is the detail most guides point out, and the only part not restored.",en-IN,high,1,emb_fact_c82b2d5e,2026-08-18T10:00:00+05:30
+fct_781ef8be,poi_6f8881e5,practical,Allow 240 minutes at Watchtower Terrace. It is busiest between 10:00 and 13:00.,en-IN,medium,2,emb_fact_6f8881e5,2026-08-18T10:00:00+05:30
+fct_74f0c876,poi_8bbc9fa1,practical,Allow 45 minutes at Blue Pottery Workshop. It is busiest between 10:00 and 13:00.,en-IN,high,5,emb_fact_8bbc9fa1,2026-08-18T10:00:00+05:30
+fct_60db2293,poi_47522fff,history,Blue Pottery Workshop was substantially rebuilt in the 16th century; the earlier structure survives only in the foundations.,en-IN,low,1,emb_fact_47522fff,2026-08-18T10:00:00+05:30
+fct_5907f72d,poi_13d980c4,history,Lighthouse Beach was substantially rebuilt in the 18th century; the earlier structure survives only in the foundations.,en-IN,high,2,emb_fact_13d980c4,2026-08-18T10:00:00+05:30
+fct_cb6b8ff4,poi_4f98940c,trivia,"Zipline Point appears on the city's earliest surviving tourist map, misspelled.",en-IN,low,5,emb_fact_4f98940c,2026-08-18T10:00:00+05:30
+fct_a7e49060,poi_25297fae,history,Rock Garden was substantially rebuilt in the 19th century; the earlier structure survives only in the foundations.,en-IN,high,3,emb_fact_25297fae,2026-08-18T10:00:00+05:30
+fct_372c2a28,poi_b6e36b7d,history,Watchtower Terrace was substantially rebuilt in the 18th century; the earlier structure survives only in the foundations.,en-IN,high,5,emb_fact_b6e36b7d,2026-08-18T10:00:00+05:30
+fct_60233805,poi_7dbcbc93,practical,Allow 60 minutes at Cliff Walk. It is busiest between 10:00 and 13:00.,en-IN,high,5,emb_fact_7dbcbc93,2026-08-18T10:00:00+05:30
+fct_866d5584,poi_7222df37,trivia,"Riverside Lounge appears on the city's earliest surviving tourist map, misspelled.",en-IN,medium,4,emb_fact_7222df37,2026-08-18T10:00:00+05:30
+fct_c552932d,poi_7b3b06ba,history,Jain Temple Complex was substantially rebuilt in the 18th century; the earlier structure survives only in the foundations.,en-IN,medium,1,emb_fact_7b3b06ba,2026-08-18T10:00:00+05:30
+fct_ce646eea,poi_5f0425b4,trivia,"Kyoto Bazaar appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,1,emb_fact_5f0425b4,2026-08-18T10:00:00+05:30
+fct_ad4b966c,poi_1fcbd044,architecture,"The lattice screen at Old Palace, Kyoto is the detail most guides point out, and the only part not restored.",en-IN,high,2,emb_fact_1fcbd044,2026-08-18T10:00:00+05:30
+fct_6cbfd4b0,poi_d2db3dab,practical,Allow 240 minutes at Blue Pottery Workshop. It is busiest between 10:00 and 13:00.,en-IN,high,5,emb_fact_d2db3dab,2026-08-18T10:00:00+05:30
+fct_8d96c7a0,poi_d1c73e68,architecture,"The tile mosaic at Museum of Coins is the detail most guides point out, and the only part not restored.",en-IN,high,3,emb_fact_d1c73e68,2026-08-18T10:00:00+05:30
+fct_5cb873e6,poi_1fcba288,architecture,"The brass door at Crocodile Park is the detail most guides point out, and the only part not restored.",en-IN,low,1,emb_fact_1fcba288,2026-08-18T10:00:00+05:30
+fct_2d17f93e,poi_18c77529,architecture,"The carved lintel at Botanical Gardens is the detail most guides point out, and the only part not restored.",en-IN,high,5,emb_fact_18c77529,2026-08-18T10:00:00+05:30
+fct_a42026b8,poi_4814eeb4,trivia,"Maritime Museum appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,1,emb_fact_4814eeb4,2026-08-18T10:00:00+05:30
+fct_553ff36a,poi_1b12b60f,architecture,"The tile mosaic at Elephant Camp is the detail most guides point out, and the only part not restored.",en-IN,high,1,emb_fact_1b12b60f,2026-08-18T10:00:00+05:30
+fct_655d57d8,poi_9ebb50cc,architecture,"The step-well geometry at Jain Temple Complex is the detail most guides point out, and the only part not restored.",en-IN,medium,3,emb_fact_9ebb50cc,2026-08-18T10:00:00+05:30
+fct_aeb02ee9,poi_e8cfe658,history,Kyoto Temple was substantially rebuilt in the 19th century; the earlier structure survives only in the foundations.,en-IN,medium,4,emb_fact_e8cfe658,2026-08-18T10:00:00+05:30
+fct_88803d23,poi_36344a67,practical,Allow 120 minutes at Night Food Bazaar. It is busiest between 10:00 and 13:00.,en-IN,low,2,emb_fact_36344a67,2026-08-18T10:00:00+05:30
+fct_78073611,poi_a2683340,architecture,"The lattice screen at Cliff Walk is the detail most guides point out, and the only part not restored.",en-IN,high,4,emb_fact_a2683340,2026-08-18T10:00:00+05:30
+fct_445f0f49,poi_0d0097d8,history,Cycling Loop was substantially rebuilt in the 18th century; the earlier structure survives only in the foundations.,en-IN,high,2,emb_fact_0d0097d8,2026-08-18T10:00:00+05:30
+fct_a95de10e,poi_91b95b2c,etiquette,Footwear is removed before entering the inner area of Zipline Point; socks are advisable in summer.,en-IN,high,1,emb_fact_91b95b2c,2026-08-18T10:00:00+05:30
+fct_b652428e,poi_7858bc94,architecture,"The carved lintel at Riverside Lounge is the detail most guides point out, and the only part not restored.",en-IN,medium,5,emb_fact_7858bc94,2026-08-18T10:00:00+05:30
+fct_5ff3fa85,poi_0f290346,etiquette,Footwear is removed before entering the inner area of Zurich City Museum; socks are advisable in summer.,en-IN,medium,3,emb_fact_0f290346,2026-08-18T10:00:00+05:30
+fct_7672fda0,poi_6a47f431,trivia,"Riverside Lounge appears on the city's earliest surviving tourist map, misspelled.",en-IN,high,3,emb_fact_6a47f431,2026-08-18T10:00:00+05:30
+fct_9fe4884f,poi_2de73961,trivia,"Museum of Coins appears on the city's earliest surviving tourist map, misspelled.",en-IN,low,5,emb_fact_2de73961,2026-08-18T10:00:00+05:30
+fct_eab35e49,poi_e42ee142,history,Rock Garden was substantially rebuilt in the 17th century; the earlier structure survives only in the foundations.,en-IN,medium,5,emb_fact_e42ee142,2026-08-18T10:00:00+05:30
+fct_9c182dc3,poi_691b9d78,etiquette,Footwear is removed before entering the inner area of Kayaking at Zurich; socks are advisable in summer.,en-IN,high,2,emb_fact_691b9d78,2026-08-18T10:00:00+05:30
+fct_5bfb0e7d,poi_84400ff6,history,Hot Springs was substantially rebuilt in the 16th century; the earlier structure survives only in the foundations.,en-IN,low,4,emb_fact_84400ff6,2026-08-18T10:00:00+05:30
+fct_33ddd606,poi_4af84782,history,Paragliding Launch was substantially rebuilt in the 17th century; the earlier structure survives only in the foundations.,en-IN,high,5,emb_fact_4af84782,2026-08-18T10:00:00+05:30
+fct_5c47b5de,poi_44b0ea0b,history,Zurich Stepwell was substantially rebuilt in the 18th century; the earlier structure survives only in the foundations.,en-IN,medium,3,emb_fact_44b0ea0b,2026-08-18T10:00:00+05:30
+fct_4dbca3ab,poi_2751dae9,etiquette,Footwear is removed before entering the inner area of Puppet Museum; socks are advisable in summer.,en-IN,high,2,emb_fact_2751dae9,2026-08-18T10:00:00+05:30
+fct_1be42fd4,poi_1351648f,etiquette,Footwear is removed before entering the inner area of Maritime Museum; socks are advisable in summer.,en-IN,high,5,emb_fact_1351648f,2026-08-18T10:00:00+05:30
