@@ -1,5 +1,5 @@
 # LensGuide — Visual Search & AR Travel Companion
-# Kognivera Hackathon 2026 · PS-06 · Team Reboot Rebels
+# Kognivera Hackathon 2026 · PS-06 · Team Reboot Rebels · data model v1.1.0-rc2
 
 Point your camera at a landmark, dish, or foreign-language sign. Get a grounded
 info card, nearby places, a sign translation, and a snap-to-book action.
