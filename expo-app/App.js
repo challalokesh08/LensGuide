@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { SafeAreaView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import { StatusBar } from "expo-status-bar";
 import SnapScreen from "./src/SnapScreen";
 import TranslateScreen from "./src/TranslateScreen";
@@ -32,7 +33,8 @@ export default function App() {
     server === "ok" ? "● Server online" : server === "error" ? "✗ Server unreachable — tap" : "… checking";
 
   return (
-    <SafeAreaView style={s.root}>
+    <SafeAreaProvider>
+      <SafeAreaView style={s.root} edges={["top", "bottom"]}>
       <StatusBar style="light" />
       <View style={s.header}>
         <Text style={s.logo}>🪄 LensGuide</Text>
@@ -63,7 +65,8 @@ export default function App() {
       </View>
 
       {arScene ? <ARView scene={arScene} onExit={() => setArScene(null)} /> : null}
-    </SafeAreaView>
+      </SafeAreaView>
+    </SafeAreaProvider>
   );
 }
 
