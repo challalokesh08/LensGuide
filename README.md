@@ -262,7 +262,8 @@ kv-hack2026-reboot-rebels/
 ├── tests/
 │   └── test_llm_fallback.py
 ├── scripts/
-│   └── start_local_ai.sh        # Load model + start LM Studio server
+│   ├── start_local_ai.sh        # Load model + start LM Studio server
+│   └── make_ppt.py              # Generates the pitch deck (8 slides)
 ├── serve.sh                     # Start HTTPS (8000) + HTTP (8004) servers
 ├── data/
 │   └── PS-06.db                 # Read-only catalogue (tracked with repo)
@@ -272,6 +273,8 @@ kv-hack2026-reboot-rebels/
 │       └── build/outputs/apk/debug/app-debug.apk
 ├── dist/
 │   └── LensGuide-myapplication3.apk   # Copy of the release asset (gitignored)
+├── LensGuide_Pitch.pptx         # Pitch deck — 8 slides
+├── LensGuide_Pitch.pdf          # PDF export of the deck
 ├── .env.example
 └── .gitignore
 ```
