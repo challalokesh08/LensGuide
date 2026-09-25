@@ -31,8 +31,8 @@
                     ┌──────┴──────┐    ┌───────┴───────┐
                     ▼             ▼    ▼               ▼
              ┌───────────┐ ┌───────────┐ ┌─────────────────┐
-             │ Read-only │ │ File Cache│ │ LM Studio       │
-             │  PS-06.db │ │ (.cache/) │ │ Qwen3.5 4B      │
+             │ Read-only │ │ In-memory │ │ LM Studio       │
+             │  PS-06.db │ │ cache     │ │ Qwen3.5 4B      │
              └───────────┘ └───────────┘ └─────────────────┘
 ```
 
@@ -80,7 +80,7 @@
 |---------|-------|-----------|-----------|
 | **Identify (vision)** | Qwen3.5 4B (LM Studio) | JSON-only prompt + `enable_thinking=false` | Returns only structured JSON; no free text |
 | **Translate** | Qwen3.5 4B / Gemini | English pivot for kn-IN/te-IN | Script validation (Kannada/Telugu Unicode blocks) |
-| **Cache** | In-memory + JSON file | SHA-256 of messages | Shared across HTTPS/HTTP servers |
+| **Cache** | In-memory (per server) | SHA-256 of message hashes | Separate in each server process (8000/8004); cleared on restart |
 
 **Prompts**: `ai/prompts/identify.md`, `ai/prompts/translate.md`  
 **Pipeline**: `ai/pipeline/llm.py` (provider chain, caching, script validation)
@@ -110,7 +110,7 @@ cp .env.example .env
 
 # 5. Open
 # Web:  https://localhost:8000  (or https://<LAN-IP>:8000)
-# App:  http://localhost:8004   (Expo/React Native)
+# App:  http://localhost:8004   (Expo / Android app)
 ```
 
 **`.env.example`** contains all required vars with dummy values.
@@ -162,8 +162,8 @@ but **Snap→Identify** and **Snap-to-Book** talk to your Flask backend, so:
    `./serve.sh` (listens on `0.0.0.0:8004`).
 2. Find your PC's LAN IP address:
    - Windows: `ipconfig`  ·  macOS: `ipconfig getifaddr en0`  ·  Linux: `hostname -I`
-3. In the app, open **☰ → Server URL**, enter
-   `http://<YOUR-PC-IP>:8004`, and tap **Save**.
+3. In the app, tap the **⚙ Server IP** button in the top bar (or tap the
+   provider badge), enter `http://<YOUR-PC-IP>:8004`, and tap **Save**.
    - **Emulator preset**: `http://10.0.2.2:8004` (the emulator's built-in alias
      for your PC's `localhost`) — fastest for testing on a PC.
    - **Physical phone**: use your PC's real LAN IP (same Wi-Fi network);
@@ -202,18 +202,19 @@ at `MyApplication3/app/build/outputs/apk/debug/app-debug.apk`.
 ## Tests / Proof
 
 ```bash
-# Backend tests (provider fallback, cache, rate-limit contracts)
+# Backend contract tests (provider fallback, cache, rate-limit contracts)
 cd /path/to/repo
 source .venv/bin/activate
 python -m pytest tests/test_llm_fallback.py -v
 
-# Expected: 11 tests covering:
-# - primary rate-limit → fallback
-# - quota exhaustion → 429 with quota_exhausted:true
-# - transport error → structured LLMError
-# - cache prevents repeated calls
-# - only 3 target languages accepted
-# - dataset reference fallback on quota fail
+# Suite: 11 contract tests — transport → structured LLMError, 429/rate-limit
+# handling, provider fallback, cache, 3-language gate, dataset fallback.
+# Currently green (3/11):
+# - transport error → structured LLMError (503, provider_unreachable)
+# - only 3 target languages accepted (400)
+# - quota failure → dataset reference fallback
+# Note: 8 fallback/provider-chain tests still reference the old multi-provider
+# API and need aligning with the current LM Studio-first implementation.
 
 # Data model conformance
 python3 PS-06_LensGuide/tools/validate_conformance.py data/PS-06.db
@@ -257,10 +258,10 @@ kv-hack2026-reboot-rebels/
 ├── tests/
 │   └── test_llm_fallback.py
 ├── scripts/
-│   ├── start_local_ai.sh        # Load model + start LM Studio server
-│   └── serve.sh                 # Start HTTPS (8000) + HTTP (8004)
+│   └── start_local_ai.sh        # Load model + start LM Studio server
+├── serve.sh                     # Start HTTPS (8000) + HTTP (8004) servers
 ├── data/
-│   └── PS-06.db                 # Read-only catalogue (gitignored, download)
+│   └── PS-06.db                 # Read-only catalogue (tracked with repo)
 ├── MyApplication3/              # Android app source (builds the APK)
 │   └── app/
 │       ├── src/main/assets/     # Bundled web UI + PS-06.db
