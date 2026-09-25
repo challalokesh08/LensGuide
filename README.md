@@ -16,6 +16,7 @@
 - ✅ **Snap-to-Book**: Hours, cost (currency-exponent-aware), accessibility
 - ✅ **Offline Demo Mode**: POI picker works without AI keys
 - ✅ **Local-First AI**: LM Studio (Qwen3.5 4B) runs entirely on-device; no paid APIs required
+- ✅ **Android App (APK)**: native shell + bundled catalogue, on-device OCR & EN↔KN/TE translation (ML Kit) — download via GitHub Release
 
 ---
 
@@ -116,6 +117,75 @@ cp .env.example .env
 
 ---
 
+## 📱 Android App — download & run on your PC
+
+LensGuide also ships as a standalone Android app (`myapplication3`) — a native
+shell (`com.example.myapplication`, **Android 7.0+**) that bundles the full
+catalogue (**PS-06.db** on-device) plus **offline OCR** and **offline
+English ↔ Kannada/Telugu translation** via Google ML Kit. AI Snap→Identify and
+booking call your PC's backend over the local network — still zero paid APIs.
+
+### Step 1 — Download the APK
+
+| Asset | Where |
+|---|---|
+| **LensGuide-myapplication3.apk** (~108 MB) | [GitHub Release — android-v1.0](https://github.com/challalokesh08/LensGuide/releases/download/android-v1.0/LensGuide-myapplication3.apk) |
+| App source | `MyApplication3/` in the project workspace (build with Android Studio) |
+
+> The APK is **>100 MB**, above GitHub's per-file code limit, so it ships as a
+> **Release asset** (2 GB cap) instead of a tracked file — it stays out of git.
+> The `dist/LensGuide-myapplication3.apk` copy in this workspace is identical.
+
+### Step 2 — Run it (PC emulator or a real phone)
+
+**Option A — on a Windows / macOS / Linux PC (emulator)**
+
+1. Install **Android Studio** (or **BlueStacks** on Windows) and create an AVD
+   running **Android 7.0 (API 24)** or newer. (BlueStacks: open the `.apk`
+   file directly instead of steps 2–3.)
+2. Drag-and-drop the APK onto the running emulator window — or
+   `adb install LensGuide-myapplication3.apk`.
+3. Open **LensGuide**; allow **Camera** and **Location** when prompted.
+
+**Option B — on a real Android phone**
+
+1. Copy the APK to the phone and tap it to install (enable
+   **Install unknown apps** for your file manager).
+2. On first launch, allow **Camera** and **Location**.
+
+### Step 3 — Point the app at your PC's backend
+
+The app can run fully offline (browse, POI cards, nearby, OCR, translation),
+but **Snap→Identify** and **Snap-to-Book** talk to your Flask backend, so:
+
+1. Start the backend on your PC and keep it running:
+   `./serve.sh` (listens on `0.0.0.0:8004`).
+2. Find your PC's LAN IP address:
+   - Windows: `ipconfig`  ·  macOS: `ipconfig getifaddr en0`  ·  Linux: `hostname -I`
+3. In the app, open **☰ → Server URL**, enter
+   `http://<YOUR-PC-IP>:8004`, and tap **Save**.
+   - **Emulator preset**: `http://10.0.2.2:8004` (the emulator's built-in alias
+     for your PC's `localhost`) — fastest for testing on a PC.
+   - **Physical phone**: use your PC's real LAN IP (same Wi-Fi network);
+     the built-in default `http://192.168.1.100:8004` is just a placeholder.
+
+### What works where
+
+| Capability | On-device (offline) | Needs your PC's backend |
+|---|---|---|
+| Browse catalogue + POI info cards | ✅ bundled `PS-06.db` | — |
+| Nearby landmarks (real GPS distance) | ✅ haversine on-device | — |
+| Sign/menu OCR + EN→KN/TE translation | ✅ ML Kit (offline) | — |
+| Snap → AI identify (landmark/dish/sign) | — | ✅ `/api/identify` |
+| Booking — hours, cost, accessibility | — | ✅ `/api/poi/<id>/book` |
+
+### Rebuilding the APK (optional)
+
+Open `MyApplication3/` in **Android Studio** → **Build → Build APK(s)** → output
+at `MyApplication3/app/build/outputs/apk/debug/app-debug.apk`.
+
+---
+
 ## Demo Path (Terminal MVP Outcome)
 
 1. **Open** https://localhost:8000 (or LAN IP) in Chrome/Android
@@ -191,6 +261,12 @@ kv-hack2026-reboot-rebels/
 │   └── serve.sh                 # Start HTTPS (8000) + HTTP (8004)
 ├── data/
 │   └── PS-06.db                 # Read-only catalogue (gitignored, download)
+├── MyApplication3/              # Android app source (builds the APK)
+│   └── app/
+│       ├── src/main/assets/     # Bundled web UI + PS-06.db
+│       └── build/outputs/apk/debug/app-debug.apk
+├── dist/
+│   └── LensGuide-myapplication3.apk   # Copy of the release asset (gitignored)
 ├── .env.example
 └── .gitignore
 ```

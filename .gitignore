@@ -13,3 +13,13 @@ expo-app/node_modules/
 expo-app/.expo/
 expo-app/dist/
 expo-app/npm-debug.*
+
+# Android app (myapplication3) — build outputs & APKs stay out of git
+*.apk
+MyApplication3/.gradle/
+MyApplication3/build/
+MyApplication3/app/build/
+MyApplication3/.idea/
+MyApplication3/local.properties
+MyApplication3/*.log
+dist/
