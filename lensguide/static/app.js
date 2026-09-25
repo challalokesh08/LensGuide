@@ -22,20 +22,7 @@ function switchTab(name) {
     startCamera();
     requestSnapLocation(); // get device location for nearby landmarks
   }
-  if (name === "browse") {
-    if (!availablePois) loadPoiList();
-    initPoiMap();
-    if (!mapYou && "geolocation" in navigator) {
-      navigator.geolocation.getCurrentPosition(
-        (pos) => {
-          mapYou = { lat: pos.coords.latitude, lng: pos.coords.longitude };
-          drawPoiMap();
-        },
-        () => {},
-        { enableHighAccuracy: true, timeout: 8000 }
-      );
-    }
-  }
+  if (name === "browse" && !availablePois) loadPoiList();
 }
 window.switchTab = switchTab;
 
@@ -685,100 +672,6 @@ async function loadPoiList() {
   }
 }
 window.loadPoiList = loadPoiList;
-
-/* ---------- finger-click map ---------- */
-let mapPois = null; // all active POIs with GPS
-let mapYou = null;  // device location { lat, lng }
-
-async function initPoiMap() {
-  const cv = $("poi-map");
-  if (!cv || mapPois) return;
-  const hint = $("map-hint");
-  try {
-    const d = await api("/api/map");
-    mapPois = d && d.pois ? d.pois : [];
-    if (hint) hint.hidden = true;
-    drawPoiMap();
-  } catch (e) {
-    if (hint) hint.textContent = "map unavailable — " + (e.message || e);
-  }
-}
-window.initPoiMap = initPoiMap;
-
-function drawPoiMap() {
-  const cv = $("poi-map");
-  const wrap = $("map-wrap");
-  if (!cv || !wrap || !mapPois || !mapPois.length) return;
-  const W = wrap.clientWidth || 400;
-  const H = Math.min(460, Math.max(280, Math.round(W * 0.55)));
-  const dpr = window.devicePixelRatio || 1;
-  cv.width = W * dpr; cv.height = H * dpr;
-  cv.style.width = W + "px"; cv.style.height = H + "px";
-  const g = cv.getContext("2d");
-  g.setTransform(dpr, 0, 0, dpr, 0, 0);
-
-  const ok = mapPois.filter((p) => Number.isFinite(p.lat) && Number.isFinite(p.lng));
-  if (!ok.length) return;
-  const lats = ok.map((p) => p.lat), lngs = ok.map((p) => p.lng);
-  const minLat = Math.min.apply(null, lats), maxLat = Math.max.apply(null, lats);
-  const minLng = Math.min.apply(null, lngs), maxLng = Math.max.apply(null, lngs);
-  const pad = 0.06;
-  const spanLng = (maxLng - minLng) || 0.001, spanLat = (maxLat - minLat) || 0.001;
-  const px = (lng) => ((lng - minLng + spanLng * pad) / (spanLng * (1 + 2 * pad))) * W;
-  const py = (lat) => (1 - (lat - minLat + spanLat * pad) / (spanLat * (1 + 2 * pad))) * H;
-
-  // dark background + subtle grid (single accent)
-  g.fillStyle = "#0b1220";
-  g.fillRect(0, 0, W, H);
-  g.strokeStyle = "rgba(56,225,255,0.08)";
-  g.lineWidth = 1;
-  for (let i = 0; i <= W; i += 40) { g.beginPath(); g.moveTo(i, 0); g.lineTo(i, H); g.stroke(); }
-  for (let j = 0; j <= H; j += 40) { g.beginPath(); g.moveTo(0, j); g.lineTo(W, j); g.stroke(); }
-
-  // pins — glow scales with popularity
-  const popMax = Math.max.apply(null, ok.map((p) => p.popularity_score || 0)) || 1;
-  for (const p of ok) {
-    const t = Math.max(0.12, Math.min(1, (p.popularity_score || 0) / popMax));
-    const r = 1.5 + 4.5 * t;
-    g.fillStyle = "rgba(56,225,255," + (0.18 + 0.78 * t).toFixed(2) + ")";
-    g.shadowColor = "rgba(56,225,255,0.9)";
-    g.shadowBlur = 7 + 13 * t;
-    g.beginPath();
-    g.arc(px(p.lng), py(p.lat), r, 0, Math.PI * 2);
-    g.fill();
-  }
-  g.shadowBlur = 0;
-
-  // you-are-here marker
-  if (mapYou && Number.isFinite(mapYou.lat) && Number.isFinite(mapYou.lng)) {
-    const x = px(mapYou.lng), y = py(mapYou.lat);
-    g.strokeStyle = "#eef2ff"; g.lineWidth = 1.5;
-    g.beginPath(); g.arc(x, y, 7, 0, Math.PI * 2); g.stroke();
-    g.fillStyle = "#38e1ff"; g.shadowColor = "#38e1ff"; g.shadowBlur = 16;
-    g.beginPath(); g.arc(x, y, 3, 0, Math.PI * 2); g.fill();
-    g.shadowBlur = 0;
-  }
-
-  // tap a pin → open that place's card (amenities / directions / book)
-  cv.onclick = (e) => {
-    const rect = cv.getBoundingClientRect();
-    const x = e.clientX - rect.left, y = e.clientY - rect.top;
-    let best = null, bestD = Infinity;
-    for (const p of ok) {
-      const dx = x - px(p.lng), dy = y - py(p.lat);
-      const d2 = dx * dx + dy * dy;
-      if (d2 < bestD) { bestD = d2; best = p; }
-    }
-    if (best && bestD < 42 * 42) {
-      const sel = $("poi-select");
-      if (sel) sel.value = best.poi_id;
-      loadPoiFromSelect();
-      toast("◎ " + best.name + " — amenities & directions", 2200);
-    }
-  };
-}
-
-window.addEventListener("resize", () => { if (mapPois) drawPoiMap(); });
 
 async function useMyLocation() {
   if (!("geolocation" in navigator)) { toast("Geolocation not supported"); return; }

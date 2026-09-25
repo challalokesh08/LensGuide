@@ -138,23 +138,6 @@ def pois():
     return jsonify(list_pois())
 
 
-@app.route("/api/map")
-def map_pois():
-    """All active POIs with GPS coordinates — powers the finger-click map view."""
-    conn = db.connect()
-    rows = [
-        dict(r)
-        for r in conn.execute(
-            "SELECT poi_id, name, poi_category, city_id, lat, lng, popularity_score "
-            "FROM activities_poi "
-            "WHERE lat IS NOT NULL AND lng IS NOT NULL AND status='active' "
-            "ORDER BY popularity_score DESC"
-        )
-    ]
-    conn.close()
-    return jsonify({"pois": rows, "count": len(rows)})
-
-
 @app.route("/api/poi/<poi_id>")
 def poi(poi_id):
     info = poi_info(poi_id)

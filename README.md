@@ -15,7 +15,6 @@
 - ✅ **Grounded Info Cards**: POI facts from `poi_facts_kb`, knowledge from `place_kb`
 - ✅ **Snap-to-Book**: Hours, cost (currency-exponent-aware), accessibility
 - ✅ **Offline Demo Mode**: POI picker works without AI keys
-- ✅ **Finger-Click Map**: 900 catalogue POIs plotted from GPS — tap any pin to open its place card (amenities · directions · book)
 - ✅ **Local-First AI**: LM Studio (Qwen3.5 4B) runs entirely on-device; no paid APIs required
 
 ---
