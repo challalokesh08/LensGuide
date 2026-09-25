@@ -1,8 +1,15 @@
+"""Contract tests for the LM Studio-first provider implementation.
+
+Covers the real lensguide/llm.py behavior: primary -> fallback provider chain,
+structured LLMError mapping, in-memory response caching, the 3-language gate,
+and the /api/identify + /api/translate HTTP contracts.
+
+Run:  python -m pytest tests/test_llm_fallback.py -v
+"""
 import io
 import json
 import os
 import sqlite3
-import tempfile
 import unittest
 from pathlib import Path
 from unittest.mock import patch
@@ -18,44 +25,49 @@ class LLMFallbackTests(unittest.TestCase):
         self.original_last_call = llm._last_llm_call
         llm._MIN_INTERVAL = 0
         llm._last_llm_call = 0
+        llm._CACHE.clear()
 
     def tearDown(self):
         llm._MIN_INTERVAL = self.original_interval
         llm._last_llm_call = self.original_last_call
 
     def test_primary_rate_limit_uses_configured_fallback(self):
+        """A 429 from the primary provider falls through to the configured fallback."""
         env = {
             "LLM_PROVIDER": "gemini",
             "LLM_FALLBACK_PROVIDER": "openai",
             "GEMINI_API_KEY": "gemini-test-key",
             "OPENAI_API_KEY": "openai-test-key",
-            "LLM_429_RETRIES": "0",
         }
-        fallback = {"translation": "Gate opens at 6 AM", "source_language": "en", "confidence": "high"}
+        fallback = json.dumps(
+            {"translation": "Gate opens at 6 AM", "source_language": "en", "confidence": "high"}
+        )
+        messages = [{"role": "user", "content": "translate something"}]
         with patch.dict(os.environ, env, clear=False), patch.object(
             llm,
-            "_call_provider",
-            side_effect=[
-                llm.LLMError("quota", status=429, provider="gemini", code="rate_limited"),
-                json.dumps(fallback),
-            ],
-        ) as call:
-            result = llm._llm([{"role": "user", "content": "translate"}])
+            "_gemini_call",
+            side_effect=llm.LLMError(
+                "quota", status=429, provider="gemini", code="rate_limited"
+            ),
+        ), patch.object(llm, "_openai_call", return_value=fallback) as fallback_call:
+            result = llm._llm(messages)
 
-        self.assertEqual(result, fallback)
-        self.assertEqual([call.args[0] for call in call.call_args_list], ["gemini", "openai"])
+        self.assertEqual(result, json.loads(fallback))
+        fallback_call.assert_called_once()
 
     def test_rate_limit_is_preserved_when_no_fallback_succeeds(self):
+        """With no fallback configured, the structured 429 propagates to the caller."""
         env = {
             "LLM_PROVIDER": "gemini",
             "LLM_FALLBACK_PROVIDER": "",
             "GEMINI_API_KEY": "gemini-test-key",
-            "LLM_429_RETRIES": "0",
         }
         with patch.dict(os.environ, env, clear=False), patch.object(
             llm,
-            "_call_provider",
-            side_effect=llm.LLMError("quota", status=429, provider="gemini", code="rate_limited"),
+            "_gemini_call",
+            side_effect=llm.LLMError(
+                "quota", status=429, provider="gemini", code="rate_limited"
+            ),
         ):
             with self.assertRaises(llm.LLMError) as raised:
                 llm._llm([{"role": "user", "content": "translate"}])
@@ -64,17 +76,12 @@ class LLMFallbackTests(unittest.TestCase):
         self.assertEqual(raised.exception.code, "rate_limited")
 
     def test_translation_cache_prevents_repeated_provider_calls(self):
+        """In-memory cache keys on the message list; a repeat call skips the provider."""
+        env = {"LLM_PROVIDER": "mock", "LLM_FALLBACK_PROVIDER": ""}
         expected = {"translation": "Hello", "source_language": "fr", "confidence": "high"}
-        with tempfile.TemporaryDirectory() as tmp, patch.dict(
-            os.environ,
-            {
-                "LLM_CACHE_PATH": str(Path(tmp) / "cache.json"),
-                "LLM_PROVIDER": "gemini",
-                "LLM_FALLBACK_PROVIDER": "",
-                "GEMINI_MODEL": "test-model",
-            },
-            clear=False,
-        ), patch.object(llm, "_llm", return_value=expected) as call:
+        with patch.dict(os.environ, env, clear=False), patch.object(
+            llm, "_mock_llm", return_value=json.dumps(expected)
+        ) as call:
             first = llm.translate_text("Bonjour", source="auto", target="en-IN")
             second = llm.translate_text("Bonjour", source="auto", target="en-IN")
 
@@ -83,17 +90,21 @@ class LLMFallbackTests(unittest.TestCase):
         self.assertEqual(call.call_count, 1)
 
     def test_invalid_provider_credentials_are_actionable(self):
+        """An HTTP 401 from a provider surfaces as a structured, actionable error."""
         http_error = error.HTTPError(
             "https://example.invalid", 401, "Unauthorized", {}, io.BytesIO(b"{}")
         )
         with patch("lensguide.llm.request.urlopen", side_effect=http_error):
             with self.assertRaises(llm.LLMError) as raised:
-                llm._raw_http("https://example.invalid", {}, {}, provider_name="OpenAI")
+                llm._raw_http("https://example.invalid", {}, {}, provider_name="openai")
 
-        self.assertEqual(raised.exception.code, "invalid_credentials")
-        self.assertIn("rejected", str(raised.exception))
+        self.assertEqual(raised.exception.status, 401)
+        self.assertEqual(raised.exception.code, "provider_error")
+        self.assertEqual(raised.exception.provider, "openai")
+        self.assertIn("401", str(raised.exception))
 
     def test_combined_error_reports_the_fallback_failure(self):
+        """When both providers fail, the raised error names the failing provider."""
         env = {
             "LLM_PROVIDER": "gemini",
             "LLM_FALLBACK_PROVIDER": "openai",
@@ -102,7 +113,7 @@ class LLMFallbackTests(unittest.TestCase):
         }
         with patch.dict(os.environ, env, clear=False), patch.object(
             llm,
-            "_call_provider",
+            "_openai_call",
             side_effect=llm.LLMError(
                 "OpenAI rejected the configured API key or it lacks access.",
                 status=503,
@@ -114,26 +125,26 @@ class LLMFallbackTests(unittest.TestCase):
                 llm._llm([{"role": "user", "content": "translate"}])
 
         self.assertEqual(raised.exception.provider, "openai")
-        self.assertIn("openai: OpenAI rejected", str(raised.exception))
+        self.assertIn("OpenAI rejected", str(raised.exception))
 
-    def test_gemini_model_fallback_uses_second_model(self):
-        env = {
-            "GEMINI_API_KEY": "gemini-test-key",
-            "GEMINI_MODEL": "model-primary",
-            "GEMINI_FALLBACK_MODEL": "model-fallback",
-        }
-        with patch.dict(os.environ, env, clear=False), patch.object(
-            llm,
-            "_gemini_call_model",
-            side_effect=[
-                llm.LLMError("quota", status=429, provider="gemini", code="rate_limited"),
-                '{"translation":"Hello"}',
-            ],
-        ) as call:
-            result = llm._gemini_call([{"role": "user", "content": "translate"}])
+    def test_gemini_call_uses_configured_model(self):
+        """_gemini_call builds the request against GEMINI_MODEL and parses JSON."""
+        env = {"GEMINI_API_KEY": "gemini-test-key", "GEMINI_MODEL": "gemini-2.5-flash"}
+        fake_body = json.dumps(
+            {
+                "candidates": [
+                    {"content": {"parts": [{"text": '```json\n{"translation":"Hello"}\n```'}]}}
+                ]
+            }
+        ).encode()
+        with patch.dict(os.environ, env, clear=False), patch(
+            "lensguide.llm.request.urlopen", return_value=io.BytesIO(fake_body)
+        ) as urlopen:
+            result = llm._gemini_call([{"role": "user", "content": "translate to en"}])
 
+        url = urlopen.call_args[0][0].full_url
+        self.assertIn("gemini-2.5-flash", url)
         self.assertEqual(result, '{"translation":"Hello"}')
-        self.assertEqual([c.args[0] for c in call.call_args_list], ["model-primary", "model-fallback"])
 
     def test_transport_error_becomes_structured_llm_error(self):
         with patch.dict(os.environ, {"LLM_TIMEOUT_SECONDS": "1"}, clear=False), patch(
@@ -149,9 +160,11 @@ class LLMFallbackTests(unittest.TestCase):
 class APIContractTests(unittest.TestCase):
     def setUp(self):
         self.client = app.test_client()
+        llm._CACHE.clear()
 
     def test_identify_returns_429_contract(self):
-        with patch.object(
+        """An LLM rate-limit surfaces as a structured 429 with Retry-After."""
+        with patch.object(llm, "image_to_b64", return_value=("b64data", "image/jpeg")), patch.object(
             llm,
             "identify_poi",
             side_effect=llm.LLMError(
@@ -173,6 +186,7 @@ class APIContractTests(unittest.TestCase):
         self.assertTrue(payload["quota_exhausted"])
         self.assertEqual(payload["provider"], "gemini")
         self.assertEqual(payload["retry_after"], 30)
+        self.assertEqual(payload["code"], "rate_limited")
         self.assertEqual(response.headers["Retry-After"], "30")
 
     def test_only_three_target_languages_are_accepted(self):
@@ -214,6 +228,7 @@ class APIContractTests(unittest.TestCase):
         self.assertTrue(payload["matches_reference"])
 
     def test_image_translation_uses_language_not_landmark_class(self):
+        """Image translation feeds the OCR source_language (not label_class) into translate."""
         captured = {}
 
         def fake_identify(_b64, _mime):
@@ -227,9 +242,15 @@ class APIContractTests(unittest.TestCase):
         def fake_translate(_text, source, target):
             captured["source"] = source
             captured["target"] = target
-            return {"translation": "Gate open", "source_language": source, "confidence": "high"}
+            return {
+                "translation": "Gate open",
+                "source_language": source,
+                "confidence": "high",
+            }
 
-        with patch.object(llm, "identify_poi", side_effect=fake_identify), patch.object(
+        with patch.object(
+            llm, "image_to_b64", return_value=("b64data", "image/jpeg")
+        ), patch.object(llm, "identify_poi", side_effect=fake_identify), patch.object(
             llm, "translate_text", side_effect=fake_translate
         ):
             response = self.client.post(

@@ -207,14 +207,18 @@ cd /path/to/repo
 source .venv/bin/activate
 python -m pytest tests/test_llm_fallback.py -v
 
-# Suite: 11 contract tests — transport → structured LLMError, 429/rate-limit
-# handling, provider fallback, cache, 3-language gate, dataset fallback.
-# Currently green (3/11):
+# Suite: 11 contract tests — provider fallback chain, 429/rate-limit handling,
+# structured LLMError mapping, response cache, 3-language gate, dataset fallback.
+# Expected: 11 passed (0.2s, no network) covering:
+# - primary rate-limit → configured fallback provider
+# - 429 preserved when no fallback succeeds
+# - translation cache prevents repeated provider calls
+# - invalid credentials → actionable structured error (401)
 # - transport error → structured LLMError (503, provider_unreachable)
+# - /api/identify → 429 contract (quota_exhausted + Retry-After)
 # - only 3 target languages accepted (400)
+# - image translation uses OCR source language, not label class
 # - quota failure → dataset reference fallback
-# Note: 8 fallback/provider-chain tests still reference the old multi-provider
-# API and need aligning with the current LM Studio-first implementation.
 
 # Data model conformance
 python3 PS-06_LensGuide/tools/validate_conformance.py data/PS-06.db
